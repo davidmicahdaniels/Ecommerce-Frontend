@@ -1,12 +1,19 @@
 import React from 'react'
 import classes from "./Wallet.module.css"
+import { useNavigate } from 'react-router-dom'
 
 const Wallet = () => {
+    const navigate = useNavigate();
+
+    const goBack = () => {
+        navigate(-1)
+    }
+
   return (
     <div>
       <div className={classes.wallet_top}>
         <div className={classes.wallet_top_main}>
-            <ion-icon name="arrow-back-outline"></ion-icon>
+            <ion-icon name="arrow-back-outline" onClick={goBack}></ion-icon>
             <h3>Wallet</h3>
         </div>
 

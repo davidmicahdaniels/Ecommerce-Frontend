@@ -77,3 +77,8 @@
     display: none;
   }
 }
+
+
+.wallet_cta{
+  cursor: pointer;
+}

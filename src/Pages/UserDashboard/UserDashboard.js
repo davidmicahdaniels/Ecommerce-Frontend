@@ -27,6 +27,10 @@ const UserDashboard = () => {
     navigate("/vendorsignup")
   }
 
+  const viewWallet = () => {
+    navigate("/wallet")
+  }
+
   return (
     <div className={classes.dashboard_body}>
       <DashboardNavbar />
@@ -42,6 +46,14 @@ const UserDashboard = () => {
               <div className="">
                 <p>CALL TO ORDER</p>
                 <p>0700-600-0000</p>
+              </div>
+            </div>
+            <div className={`${classes.details_box} ${classes.wallet_cta}`} onClick={viewWallet}>
+            {/* change icon */}
+              <BsTelephoneOutboundFill size={20} color="#4caf50" />
+              <div className="">
+                <p>View Wallet</p>
+                <small>click to view wallet</small>
               </div>
             </div>
             {/* <div className={classes.details_box}>
