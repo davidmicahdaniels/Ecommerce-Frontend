@@ -64,6 +64,7 @@ const CheckoutBody = () => {
   };
 
     const closeCheckoutModal = () => {
+        navigate("/wallet") 
         SetisModalOpen(false)
         localStorage.setItem('cartProducts', JSON.stringify([]));
         console.log(isModalOpen);

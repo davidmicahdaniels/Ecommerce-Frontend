@@ -79,6 +79,9 @@
     outline: none;
     padding: 0.3rem 0.7rem;
 }
+.wallet_card_bottom small{
+    text-align: center;
+}
 
 
 .action_box{
@@ -93,7 +96,7 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 0;
-}
+} 
 
 .gift_card_area{
     margin-top: 2.5rem;
@@ -104,4 +107,50 @@
 
 .action_box ion-icon{
     font-size: 1.5rem;
+}
+
+
+@media (max-width: 1100px) {
+    .wallet_body{
+        width: 50vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .wallet_body{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 730px) {
+    .wallet_body{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .wallet_body{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 530px) {
+    .wallet_body{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 460px) {
+    .wallet_body{
+        width: 95vw;
+    }
+}
+
+@media (max-width: 410px) {
+    .wallet_card_bottom{
+        padding: 2rem 1rem;
+    }
+    .account_dieplay p{
+        font-style: 0.8rem;
+    }
 }
