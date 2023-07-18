@@ -129,3 +129,11 @@
     height: 37vh;
   }
 }
+
+
+
+.delivery_options{
+  padding: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+}

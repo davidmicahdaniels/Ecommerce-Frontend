@@ -48,7 +48,7 @@ const Signup = () => {
               <input type="text" placeholder="Confirm your password" />
             </div>
 
-            <button>Sign Up</button>
+            <button>Next</button>
 
             <small className={classes.login_action}>
               Already have an account?{" "}

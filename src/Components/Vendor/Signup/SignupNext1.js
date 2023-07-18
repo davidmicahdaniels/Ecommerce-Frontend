@@ -27,27 +27,27 @@ const SignupNext1 = () => {
 
             <div className={classes.input_box}>
               <p>Matric Number:</p>
-              <input type="text" placeholder="Enter your Fullname" />
+              <input type="text" placeholder="Matric Number" />
             </div>
 
             <div className={classes.input_box}>
               <p>Faculty / Department:</p>
-              <input type="text" placeholder="Enter your phone number" />
+              <input type="text" placeholder="Faculty / Department" />
             </div>
 
             <div className={classes.input_box}>
               <p>Level / Year of Study:</p>
-              <input type="text" placeholder="Enter your email" />
+              <input type="text" placeholder="Level / Year of Study" />
             </div>
 
             <div className={classes.input_box}>
               <p>Delivery Location:</p>
-              <input type="text" placeholder="Enter your password" />
+              <input type="text" placeholder="Delivery Location" />
             </div>
 
             <div className={classes.input_box}>
               <p>Hostel or Block Name:</p>
-              <input type="text" placeholder="Confirm your password" />
+              <input type="text" placeholder="Hostel or Block Name" />
             </div>
             <div className={classes.input_box}>
               <p>Preferred Delivery Method:</p>
@@ -58,7 +58,7 @@ const SignupNext1 = () => {
               </select>
             </div>
 
-            <button>Sign Up</button>
+            <button>Next</button>
 
             <small className={classes.login_action}>
               Already have an account?{" "}
