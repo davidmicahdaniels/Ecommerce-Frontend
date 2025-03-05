@@ -6,19 +6,19 @@ const Navbar = () => {
     <nav>
       <h1>Logo</h1>
 
-      <ul class="nav_links_wrapper">
+      <ul className={classes.nav_links_wrapper}>
         <li>Home</li>
         <li>Category</li>
         <li>About Us</li>
         <li>Contact Us</li>
       </ul>
 
-      <div class="searchbar_wrapper">
+      <div className={classes.searchbar_wrapper}>
         icon
         <input type="text" />
       </div>
 
-      <div class="nav_buttons_wrapper">
+      <div className={classes.nav_buttons_wrapper}>
         <button>Sign up</button>
         <button>Sign in</button>
       </div>
