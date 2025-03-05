@@ -3,7 +3,7 @@ import classes from "./Homepagehero.module.css"
 
 const Homepagehero = () => {
   return (
-    <div>Homepagehero</div>
+    <section className={classes.homepage_hero}>Homepagehero</section>
   )
 }
 
