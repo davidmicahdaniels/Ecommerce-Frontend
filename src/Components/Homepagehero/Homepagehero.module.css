@@ -5,5 +5,11 @@
     background-position: center;
 
 
-    
+
+}
+
+
+.hero_buttons_wrapper{
+    display: flex;
+    display: 0.5rem;
 }
