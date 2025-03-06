@@ -1,6 +1,13 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .nav_content_wrapper{
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
+    width: 90vw;
 }
 
 .nav_links_wrapper{
