@@ -1,15 +1,12 @@
-.homepage_hero{
-    background-image: url();
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-
-
+.homepage_hero {
+  background-image: url(../../Assets/Images/hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
 }
 
-
-.hero_buttons_wrapper{
-    display: flex;
-    display: 0.5rem;
+.hero_buttons_wrapper {
+  display: flex;
+  display: 0.5rem;
 }
