@@ -17,13 +17,13 @@ const UserSignupForm = () => {
           <h2>Sign Up</h2>
 
           <div className={classes.input_box}>
-            <p>First Name:</p>
-            <input type="text" placeholder="Enter your Firstname" />
+            <p>Full Name:</p>
+            <input type="text" placeholder="Enter your Fullname" />
           </div>
 
           <div className={classes.input_box}>
-            <p>Last Name:</p>
-            <input type="text" placeholder="Enter your Lastname" />
+            <p>Phone number:</p>
+            <input type="text" placeholder="Enter your phone number" />
           </div>
 
           <div className={classes.input_box}>
@@ -36,10 +36,15 @@ const UserSignupForm = () => {
             <input type="text" placeholder="Enter your password" />
           </div>
 
+          <div className={classes.input_box}>
+            <p>Confirm Password:</p>
+            <input type="text" placeholder="Confirm your password" />
+          </div>
+
           <button>Sign Up</button>
 
           <small className={classes.login_action}>
-            Alrready have an account? <a href="#">Login</a>
+            Already have an account? <a href="#">Login</a>
           </small>
         </div>
       </div>
