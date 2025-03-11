@@ -1,91 +1,98 @@
-.navbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #efefef;
+/* Navbar styles  */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
 }
-.nav_content_wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 0;
-    width: 85vw;
+.nav_content_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 1.5rem 0;
+  width: 85vw;
 }
-
-.nav_content_wrapper h1{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-
-.flexed{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-.nav_links_wrapper{
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    font-size: 1.1rem;
+ 
+.nav_content_wrapper h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4caf50;
+  cursor: pointer;
+} 
+.nav_content_wrapper h1 span{ 
+    display: block;
+    font-weight: 600 !important;
 }
 
-
-.searchbar_wrapper{
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-    padding: 0.4rem 1rem;
-    background-color: white;
-    border: 1px solid #4CAF50;
-    border-radius: 0.4rem;
+.flexed {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
-.searchbar_wrapper input{
-    padding: 0.3rem 1rem;
-    font-size: 1rem;
-    outline: none;
-    border: none;
+.nav_links_wrapper {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  font-size: 1.1rem;
 }
 
-
-.nav_buttons_wrapper{
-    display: flex;
-    gap: 0.4rem;
+.searchbar_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.4rem 1rem;
+  background-color: white;
+  border: 1px solid #4caf50;
+  border-radius: 0.4rem;
+}
+.searchbar_wrapper input {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: none;
 }
 
-
-.colore_btn{
-    padding: 0.7rem 1rem;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    background-color: #4CAF50;
-    color: white;
-    outline: none;
-    border: none;
+.nav_buttons_wrapper {
+  display: flex;
+  gap: 0.4rem;
 }
 
-.btn{
-    padding: 0.7rem 1rem;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    color: #4CAF50;
-    background: white;
-    outline: none;
-    border: none;
+.colore_btn {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  background-color: #4caf50;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
-.menu_wrapper{
-    display: none;
+
+.btn {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  color: #4caf50;
+  background: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
-.menu_wrapper ion-icon{
-    font-size: 1.8rem;
+.menu_wrapper {
+  display: none;
+}
+.menu_wrapper ion-icon {
+  font-size: 1.8rem;
 }
 
 @media (max-width: 1000px) {
-    .nav_links_wrapper, .searchbar_wrapper, .nav_buttons_wrapper{
-        display: none;
-    }
-    .menu_wrapper{
-        display: block;
-    }
+  .nav_links_wrapper,
+  .searchbar_wrapper,
+  .nav_buttons_wrapper {
+    display: none;
+  }
+  .menu_wrapper {
+    display: block;
+  }
 }

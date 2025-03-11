@@ -60,3 +60,14 @@
     right: 1.5rem;
     font-size: 2rem;
 }
+
+
+.seller_btn_wrapper{
+  margin-top: 1rem;
+}
+
+.seller_btn_wrapper button{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}

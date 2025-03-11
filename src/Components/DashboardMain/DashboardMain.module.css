@@ -2,4 +2,29 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    width: 65vw;
+}
+.product_display_top{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.product_display_top h3{
+    font-weight: 600;
+}
+
+.product_display_top input{
+    font-size: 1.1rem;
+    border-radius: 0.3rem;
+    border: 1px solid #d8d7d7;
+    padding: 0.3rem 0.6rem;
+    outline: none;
+    width: 17vw;
+} 
+
+
+.product_display_top input:placeholder-shown{
+    font-size: 1rem;
 }

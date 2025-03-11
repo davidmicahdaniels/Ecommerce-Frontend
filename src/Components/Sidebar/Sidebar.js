@@ -4,7 +4,7 @@ import classes from "./Sidebar.module.css";
 const Sidebar = () => {
   return (
     <aside className={classes.sidebar}>
-      <h2>Categories</h2>
+      <h3>Categories</h3>
       <ul>
         <li>Mens wear</li>
         <li>Womens wear</li>

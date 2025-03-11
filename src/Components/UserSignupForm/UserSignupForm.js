@@ -1,8 +1,14 @@
 import React from 'react'
 import classes from "./UserSignupForm.module.css"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const UserSignupForm = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/userlogin");
+  };
+  
   return (
     <section className={classes.signup_form_section}>
       <div className={classes.from_content_wrapper}>
@@ -44,7 +50,10 @@ const UserSignupForm = () => {
           <button>Sign Up</button>
 
           <small className={classes.login_action}>
-            Already have an account? <a href="#">Login</a>
+            Already have an account?{" "}
+            <a href="#" onClick={handleLogin}>
+              Login
+            </a>
           </small>
         </div>
       </div>

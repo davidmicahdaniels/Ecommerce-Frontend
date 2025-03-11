@@ -5,7 +5,7 @@ const MobileNav = (props) => {
   return (
     <nav className={classes.mobilenav}>
       <div className={classes.nav_content_wrappe}>
-        <h1>Mariam</h1>
+        <h1>EduMart</h1>
 
         <ul className={classes.nav_links_wrapper}>
           <li>Home</li>
@@ -14,14 +14,21 @@ const MobileNav = (props) => {
           <li>Contact Us</li>
         </ul>
 
-        <div className={classes.nav_buttons_wrapper}> 
+        <div className={classes.nav_buttons_wrapper}>
           <button className={classes.colore_btn}>Sign up</button>
           <button className={classes.btn}>Sign in</button>
         </div>
 
+        <div className={classes.seller_btn_wrapper}>
+          <button className={classes.btn}>
+            <p>Become a Seller</p>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+        </div>
+
         <div className={classes.close_icon_wrapper} onClick={props.close}>
           <ion-icon name="close-outline"></ion-icon>
-        </div> 
+        </div>
       </div>
     </nav>
   );
