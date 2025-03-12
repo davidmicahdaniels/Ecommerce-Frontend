@@ -7,7 +7,10 @@ const ProductsDisplay = () => {
       <div className={classes.product_content_wrapper}>
         <div className={classes.product_display_top}>
           <h2>Trending Ads</h2>
-          <button>View All Products</button>
+          <button>
+            <p>View All Products</p>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
         </div>
 
         <div className={classes.product_cards_wrapper}>
