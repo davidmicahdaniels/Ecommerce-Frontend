@@ -14,7 +14,6 @@ const UserDashboard = () => {
         <Sidebar />
         <DashboardMain />
       </div>
-      <Footer /> 
     </>
   );
 };

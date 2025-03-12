@@ -1,9 +1,9 @@
 .sidebar{
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(236, 236, 236);
     padding: 1rem;
     border-radius: 0.5rem;
     width: 20vw;
-    height: 70vh;
+    height: 70vh; 
 }
 
 .sidebar ul{
