@@ -1,7 +1,10 @@
-.dashboard_main{
-    width: 90vw;
-    margin: auto;
-    padding: 3rem 0;
-    display: flex;
-    gap: 1rem;
+.dashboard_main { 
+  margin: auto;
+  display: flex;
+  gap: 1rem;
 }
+.dashboard_body{ 
+  overflow: hidden;
+}
+ 
+ 

@@ -6,7 +6,7 @@ const DashboardMain = () => {
   return (
     <div>
       <div className={classes.product_display_top}>
-        <h3>Explore Products</h3>
+        <h3>Explore Products </h3>
 
         <input type="text" placeholder="Filter Products"/>
       </div>

@@ -3,6 +3,8 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     width: 65vw;
+    height: 90vh;
+    overflow-y: scroll;
 }
 .product_display_top{
     padding: 1rem 0;
