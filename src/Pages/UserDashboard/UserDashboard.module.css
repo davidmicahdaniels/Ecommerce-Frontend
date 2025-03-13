@@ -1,7 +1,7 @@
 .dashboard_main { 
   margin: auto;
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 .dashboard_body{ 
   overflow: hidden;

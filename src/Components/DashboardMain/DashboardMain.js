@@ -4,7 +4,7 @@ import classes from "./DashboardMain.module.css";
 
 const DashboardMain = () => {
   return (
-    <div>
+    <div className={classes.page_container}>
       <div className={classes.product_display_top}>
         <h3>Explore Products </h3>
 
