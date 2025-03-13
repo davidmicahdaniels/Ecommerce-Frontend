@@ -1,0 +1,22 @@
+.dashboard_nav{
+    padding: 0.5rem 0;
+    background-color: #f3f3f3;
+}
+
+.dashboard_nav_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    margin: auto;
+}
+.dashboard_nav_wrapper ion-icon{
+    font-size: 1.8rem;
+    padding: 0.8rem 0;
+}
+
+.dashboard_nav_wrapper div{
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem;
+}
