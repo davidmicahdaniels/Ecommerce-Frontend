@@ -11,7 +11,7 @@ const Sidebar = () => {
         <li>Discount</li>
         <li>Ascending order</li>
         <li>Discending order</li>
-      </ul>
+      </ul> 
       <h3>Categories</h3>
       <ul>
         <li>Mens wear</li>
