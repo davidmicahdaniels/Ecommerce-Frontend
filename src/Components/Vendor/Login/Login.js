@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
-import img from "../../../Assets/Images/signup.jpg";
+import vendor from "../../../Assets/Images/vendor.jpg";
 import Navbar from "../../../Components/Navbar/Navbar";
 import Footer from "../../../Components/Footer/Footer";
 
@@ -18,7 +18,7 @@ const Login = () => {
       <section className={classes.signup_form_section}>
         <div className={`${classes.from_content_wrapper} ${classes.alinged}`}>
           <div className={classes.signup_form_img_wrapper}>
-            <img src={img} alt="" className={classes.form_img} />
+            <img src={vendor} alt="" className={classes.form_img} />
           </div>
           <div className={classes.form_action_box}>
             <h2>Vendor Login</h2>
