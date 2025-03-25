@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from "./UserSignupForm.module.css"
 import { Link, useNavigate } from 'react-router-dom';
+import img from "../../Assets/Images/signup.jpg"
 
 const UserSignupForm = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const UserSignupForm = () => {
       <div className={classes.from_content_wrapper}>
         <div className={classes.form_img_wrapper}>
           <img
-            src="https://i.pinimg.com/736x/65/83/01/658301cd6282bde41788d8e8bdfbce77.jpg"
+            src={img}
             alt=""
             className={classes.form_img}
           />

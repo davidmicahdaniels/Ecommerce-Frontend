@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from "../UserSignupForm/UserSignupForm.module.css"
 import { useNavigate } from 'react-router-dom';
+import img from "../../Assets/Images/signup.jpg"
 
 const UserLoginForm = () => {
   const navigate = useNavigate();
@@ -14,11 +15,7 @@ const UserLoginForm = () => {
     <section className={classes.signup_form_section}>
       <div className={`${classes.from_content_wrapper} ${classes.alinged}`}>
         <div className={classes.signup_form_img_wrapper}>
-          <img
-            src="https://i.pinimg.com/736x/65/83/01/658301cd6282bde41788d8e8bdfbce77.jpg"
-            alt=""
-            className={classes.form_img}
-          />
+          <img src={img} alt="" className={classes.form_img} />
         </div>
         <div className={classes.form_action_box}>
           <h2>Login</h2>
