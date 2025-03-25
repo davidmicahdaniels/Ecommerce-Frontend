@@ -1,7 +1,14 @@
 import React from 'react'
 import classes from "./Homepagehero.module.css"
+import { useNavigate } from 'react-router-dom';
 
 const Homepagehero = () => {
+  const navigate = useNavigate();
+
+  const vendorSignupAction = () => {
+    navigate("/vendorsignup")
+  }
+  
   return (
     <section className={classes.homepage_hero}>
       <div className={classes.hero_content_wrapper}>
@@ -12,7 +19,7 @@ const Homepagehero = () => {
 
         <div className={classes.hero_buttons_wrapper}>
           <button className={classes.colored_btn}>Buy Now</button>
-          <button className={classes.btn}>
+          <button className={classes.btn} onClick={vendorSignupAction}>
             <p>Become a Seller</p>
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </button>
