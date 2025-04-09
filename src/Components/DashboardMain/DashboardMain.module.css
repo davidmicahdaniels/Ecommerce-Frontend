@@ -1,7 +1,7 @@
 .page_container{
     overflow-y: scroll;
-    padding: 1rem 2rem;
-    width: 76vw;
+    padding: 1rem 1rem;
+    width: 60vw;
     height: 90vh;
     padding-bottom: 4rem;
 }
@@ -33,4 +33,18 @@
 
 .product_display_top input:placeholder-shown{
     font-size: 1rem;
+}
+
+
+.banner_Img_wrapper{
+    width: 100%;
+    height: 40vh;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+.banner_Img_wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }

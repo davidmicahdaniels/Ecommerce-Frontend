@@ -5,7 +5,7 @@ const DashboardNavbar = () => {
   return (
     <nav className={classes.dashboard_nav}>
       <div className={classes.dashboard_nav_wrapper}>
-        <div>
+        <div className={classes.logo}>
             <ion-icon name="cart-outline"></ion-icon>
             <h2>EduMart</h2>
         </div>
