@@ -1,10 +1,11 @@
 .sidebar{
-    background-color: rgb(231, 230, 230);
+    background-color: rgb(245, 245, 245);
     padding: 1.5rem;
-    width: 18vw;
+    width: 17vw;
     height: 80vh;
     margin: 1rem 2rem; 
     border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgb(117, 116, 116);
 }
 
 .sidebar ul{
@@ -15,12 +16,17 @@
 .sidebar ul li{
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    line-height: 2.5; 
+    gap: 0.8rem;
+    line-height: 3; 
+    font-size: 1.1rem;
+}
+.sidebar ion-icon{
+    color: #4caf50;
 }
  
 .sidebar h3{
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
+    color: #4caf50;
 }
