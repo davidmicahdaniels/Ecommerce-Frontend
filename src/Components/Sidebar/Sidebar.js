@@ -7,10 +7,10 @@ const Sidebar = () => {
       <h3>Categories</h3>
       <ul>
         <li>
-          <ion-icon name="shirt-outline"></ion-icon> <p>Food</p>
+          <ion-icon name="fast-food-outline"></ion-icon> <p>Food</p>
         </li>
         <li>
-          <ion-icon name="shirt-outline"></ion-icon> <p>Perfume</p>
+          <ion-icon name="flask-outline"></ion-icon> <p>Perfume</p>
         </li>
         <li>
           <ion-icon name="shirt-outline"></ion-icon> <p>Laundry</p>
