@@ -23,6 +23,23 @@ const UserDashboard = () => {
       <div className={classes.dashboard_main}>
         <Sidebar />
         <DashboardMain />
+        <div>
+          <div className={classes.cotact_details_box}>
+            <div className={classes.details_box}>
+              icon
+              <p>CALL TO ORDER</p>
+              <p>0700-600-0000</p>
+            </div>
+            <div className={classes.details_box}>
+              icon
+              <p>Sell on EduMart</p>
+            </div>
+            <div className={classes.details_box}>
+              icon
+              <p>Send your package</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 .sidebar{
-    background-color: rgb(245, 245, 245);
-    padding: 1.5rem;
-    width: 17vw;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    width: 18vw;
     height: 80vh;
     margin: 1rem 2rem; 
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgb(117, 116, 116);
+    box-shadow: 0 2px 4px rgb(206, 206, 206);
 }
 
 .sidebar ul{
