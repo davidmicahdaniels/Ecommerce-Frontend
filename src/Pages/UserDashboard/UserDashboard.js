@@ -5,6 +5,8 @@ import classes from "./UserDashboard.module.css";
 import DashboardMain from "../../Components/DashboardMain/DashboardMain";
 import DashboardNavbar from "../../Components/DashboardNavbar/DashboardNavbar";
 
+import deco_img from "../../Assets/Images/vendor.jpg"
+
 const UserDashboard = () => {
   useEffect(() => {
     // Set overflow hidden when the component mounts
@@ -23,7 +25,8 @@ const UserDashboard = () => {
       <div className={classes.dashboard_main}>
         <Sidebar />
         <DashboardMain />
-        <div>
+        <div className={classes.dashboard_end}>
+          <h2 className="">Quick Actions</h2>
           <div className={classes.cotact_details_box}>
             <div className={classes.details_box}>
               icon
@@ -41,6 +44,12 @@ const UserDashboard = () => {
               <p>Send your package</p>
             </div>
           </div>
+
+          <div className={classes.decor_img_wrapper}>
+            <img src={deco_img} alt="img"  className=""/>
+          </div>
+
+          <button className="">Become a Vendor</button>
         </div>
       </div>
     </div>
