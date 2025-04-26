@@ -5,6 +5,7 @@ import UserLogin from "./Pages/UserLogin/UserLogin";
 import UserSignup from "./Pages/UserSignup/UserSignup";
 import Login from "./Components/Vendor/Login/Login";
 import Signup from "./Components/Vendor/Signup/Signup";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/vendorlogin" element={<Login />} />
           <Route exact path="/vendorsignup" element={<Signup />} />
           <Route exact path="/shop" element={<UserDashboard />} />
+          <Route exact path="/ProductDetails" element={<ProductDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

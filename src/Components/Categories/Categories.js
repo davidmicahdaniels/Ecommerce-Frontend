@@ -1,6 +1,9 @@
 import React from "react";
 import classes from "./Categories.module.css";
 import food_img from "../../Assets/Icons/food.png";
+import { TbPerfume } from "react-icons/tb";
+import { MdOutlineLocalLaundryService } from "react-icons/md";
+import { FaShoppingBag } from "react-icons/fa";
 
 const Categories = () => {
   return (
@@ -21,23 +24,23 @@ const Categories = () => {
             <h3>Food</h3>
           </div>
           <div className={classes.catrgory_item}>
-            <ion-icon name="funnel-outline"></ion-icon>
+            <TbPerfume size={60} color="#4caf50"/>
             <h3>Perfume</h3>
           </div>
           <div className={classes.catrgory_item}>
-            <ion-icon name="shirt-outline"></ion-icon>
+            <MdOutlineLocalLaundryService size={60} color="#4caf50"/>
             <h3>Laundry</h3>
           </div>
           <div className={classes.catrgory_item}>
-            <ion-icon name="bag-handle-outline"></ion-icon>
+            <FaShoppingBag size={60} color="#4caf50"/>
             <h3>Fashion</h3>
           </div>
           <div className={classes.catrgory_item}>
-            <ion-icon name="pricetag-outline"></ion-icon>
+            <MdOutlineLocalLaundryService size={60} color="#4caf50"/>
             <h3>Cosmetics</h3>
           </div>
           <div className={classes.catrgory_item}>
-            <ion-icon name="body-outline"></ion-icon>
+            <FaShoppingBag size={60} color="#4caf50"/>
             <h3>Fashion</h3>
           </div>
         </div>

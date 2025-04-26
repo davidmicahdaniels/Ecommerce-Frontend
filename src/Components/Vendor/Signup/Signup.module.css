@@ -11,7 +11,7 @@
   background-color: rgb(231, 231, 231);
   border-radius: 1rem;
   overflow: hidden;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .alinged{
