@@ -27,8 +27,10 @@ const UserDashboard = () => {
           <div className={classes.cotact_details_box}>
             <div className={classes.details_box}>
               icon
-              <p>CALL TO ORDER</p>
-              <p>0700-600-0000</p>
+              <div className="">
+                <p>CALL TO ORDER</p>
+                <p>0700-600-0000</p>
+              </div>
             </div>
             <div className={classes.details_box}>
               icon
