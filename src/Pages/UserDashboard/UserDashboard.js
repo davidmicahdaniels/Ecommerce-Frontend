@@ -4,8 +4,10 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import classes from "./UserDashboard.module.css";
 import DashboardMain from "../../Components/DashboardMain/DashboardMain";
 import DashboardNavbar from "../../Components/DashboardNavbar/DashboardNavbar";
-
+import { BsTelephoneOutboundFill  } from "react-icons/bs";
+import { BsCartCheckFill   } from "react-icons/bs";
 import deco_img from "../../Assets/Images/vendor.jpg"
+
 
 const UserDashboard = () => {
   useEffect(() => {
@@ -26,21 +28,21 @@ const UserDashboard = () => {
         <Sidebar />
         <DashboardMain />
         <div className={classes.dashboard_end}>
-          <h2 className="">Quick Actions</h2>
+          <h3 className="">Quick Actions</h3>
           <div className={classes.cotact_details_box}>
             <div className={classes.details_box}>
-              icon
+              <BsTelephoneOutboundFill size={20} color="#4caf50" />
               <div className="">
                 <p>CALL TO ORDER</p>
                 <p>0700-600-0000</p>
               </div>
             </div>
             <div className={classes.details_box}>
-              icon
+              <BsCartCheckFill size={20} color="#4caf50" />
               <p>Sell on EduMart</p>
             </div>
             <div className={classes.details_box}>
-              icon
+              <BsCartCheckFill size={20} color="#4caf50" />
               <p>Send your package</p>
             </div>
           </div>
@@ -49,7 +51,7 @@ const UserDashboard = () => {
             <img src={deco_img} alt="img"  className=""/>
           </div>
 
-          <button className="">Become a Vendor</button>
+          <button className={classes.vendor_btn}><p>Become a Vendor</p><ion-icon name="arrow-forward-outline"></ion-icon></button>
         </div>
       </div>
     </div>

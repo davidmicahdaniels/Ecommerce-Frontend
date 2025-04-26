@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from "./DashboardNavbar.module.css"
+import { BsCartPlusFill    } from "react-icons/bs";
 
 const DashboardNavbar = () => {
   return (
@@ -9,7 +10,10 @@ const DashboardNavbar = () => {
             <ion-icon name="cart-outline"></ion-icon>
             <h2>EduMart</h2>
         </div>
-        <ion-icon name="menu-outline"></ion-icon>
+        <div className={classes.cart}>
+          <BsCartPlusFill  size={25} />
+          <h3 className="">Cart</h3>
+        </div>
       </div>
     </nav>
   );
