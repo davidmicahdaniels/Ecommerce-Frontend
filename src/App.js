@@ -6,6 +6,7 @@ import UserSignup from "./Pages/UserSignup/UserSignup";
 import Login from "./Components/Vendor/Login/Login";
 import Signup from "./Components/Vendor/Signup/Signup";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import AdminDashboard from "./AdminDashboard/AdminDashboard";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/vendorsignup" element={<Signup />} />
           <Route exact path="/shop" element={<UserDashboard />} />
           <Route exact path="/ProductDetails" element={<ProductDetails />} />
+          <Route exact path="/AdminDashboard" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
     </div>
