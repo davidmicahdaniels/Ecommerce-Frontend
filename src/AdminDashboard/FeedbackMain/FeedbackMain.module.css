@@ -1,3 +1,9 @@
 .main_area{
     padding: 1rem; 
 }
+
+.feesbacks_box_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
