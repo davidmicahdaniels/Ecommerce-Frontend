@@ -21,6 +21,30 @@ const FeedbackMain = () => {
           </div>
           <button className="">View Review</button>
         </div>
+        <div className={classes.feedback_box}>
+          <h2>Bad product condition</h2> 
+          <p>The goods i ordered was delivered to me in avery bad condition rather than what i saw on the website...</p>
+          <div className="">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+          <button className="">View Review</button>
+        </div>
+        <div className={classes.feedback_box}>
+          <h2>Bad product condition</h2> 
+          <p>The goods i ordered was delivered to me in avery bad condition rather than what i saw on the website...</p>
+          <div className="">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+          <button className="">View Review</button>
+        </div>
       </div>
     </div>
   )
