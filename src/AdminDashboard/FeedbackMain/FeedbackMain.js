@@ -10,7 +10,7 @@ const FeedbackMain = () => {
 
       <div className={classes.feesbacks_box_wrapper}>
         <div className={classes.feedback_box}>
-          <h2>Bad product condition</h2> 
+          <h3>Bad product condition</h3> 
           <p>The goods i ordered was delivered to me in avery bad condition rather than what i saw on the website...</p>
           <div className="">
             <FaStar />
@@ -19,10 +19,10 @@ const FeedbackMain = () => {
             <FaStar />
             <FaStar />
           </div>
-          <button className="">View Review</button>
+          <button className={classes.review_btn}>View Review</button>
         </div>
         <div className={classes.feedback_box}>
-          <h2>Bad product condition</h2> 
+          <h3>Bad product condition</h3> 
           <p>The goods i ordered was delivered to me in avery bad condition rather than what i saw on the website...</p>
           <div className="">
             <FaStar />
@@ -31,10 +31,10 @@ const FeedbackMain = () => {
             <FaStar />
             <FaStar />
           </div>
-          <button className="">View Review</button>
+          <button className={classes.review_btn}>View Review</button>
         </div>
         <div className={classes.feedback_box}>
-          <h2>Bad product condition</h2> 
+          <h3>Bad product condition</h3> 
           <p>The goods i ordered was delivered to me in avery bad condition rather than what i saw on the website...</p>
           <div className="">
             <FaStar />
@@ -43,7 +43,43 @@ const FeedbackMain = () => {
             <FaStar />
             <FaStar />
           </div>
-          <button className="">View Review</button>
+          <button className={classes.review_btn}>View Review</button>
+        </div>
+        <div className={classes.feedback_box}>
+          <h3>Bad product condition</h3> 
+          <p>The goods i ordered was delivered to me in avery bad condition rather than what i saw on the website...</p>
+          <div className="">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+          <button className={classes.review_btn}>View Review</button>
+        </div>
+        <div className={classes.feedback_box}>
+          <h3>Bad product condition</h3> 
+          <p>The goods i ordered was delivered to me in avery bad condition rather than what i saw on the website...</p>
+          <div className="">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+          <button className={classes.review_btn}>View Review</button>
+        </div>
+        <div className={classes.feedback_box}>
+          <h3>Bad product condition</h3> 
+          <p>The goods i ordered was delivered to me in avery bad condition rather than what i saw on the website...</p>
+          <div className="">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+          <button className={classes.review_btn}>View Review</button>
         </div>
       </div>
     </div>
