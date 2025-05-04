@@ -25,7 +25,7 @@ const Categories = () => {
           </div>
           <div className={classes.catrgory_item}>
             <TbPerfume size={60} color="#4caf50"/>
-            <h3>Perfume</h3>
+            <h3>Fashion</h3>
           </div>
           <div className={classes.catrgory_item}>
             <MdOutlineLocalLaundryService size={60} color="#4caf50"/>
@@ -33,15 +33,16 @@ const Categories = () => {
           </div>
           <div className={classes.catrgory_item}>
             <FaShoppingBag size={60} color="#4caf50"/>
-            <h3>Fashion</h3>
+            <h3>Stationeries</h3>
           </div>
           <div className={classes.catrgory_item}>
             <MdOutlineLocalLaundryService size={60} color="#4caf50"/>
-            <h3>Cosmetics</h3>
+            <h3>Electronics</h3>
           </div>
           <div className={classes.catrgory_item}>
             <FaShoppingBag size={60} color="#4caf50"/>
-            <h3>Fashion</h3>
+            <h3>Cosmetics</h3>
+            {/* <h3>Remaining categories: personal care/beauty care, IT services,</h3> */}
           </div>
         </div>
       </div>
