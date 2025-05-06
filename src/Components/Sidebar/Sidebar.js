@@ -13,7 +13,7 @@ const Sidebar = () => {
           <ion-icon name="flask-outline"></ion-icon> <p>Fashion</p>
         </li>
         <li>
-          <ion-icon name="shirt-outline"></ion-icon> <p>Laundry</p>
+          <ion-icon name="shirt-outline"></ion-icon> <p>Laundry</ p>
         </li>
         <li>
           <ion-icon name="shirt-outline"></ion-icon> <p>Stationeries</p>
