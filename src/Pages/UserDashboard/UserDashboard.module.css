@@ -70,3 +70,9 @@
   align-items: center;
   gap: 0.4rem;
 }
+
+@media (max-width: 1050px) {
+  .dashboard_end{
+    display: none;
+  }
+}

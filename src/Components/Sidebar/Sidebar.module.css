@@ -46,3 +46,11 @@
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
 }
+
+
+@media (max-width: 1050px) {
+    .sidebar{
+        width: 25vw;
+        padding: 1rem;
+    }
+}
