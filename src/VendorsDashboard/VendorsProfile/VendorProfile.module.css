@@ -1,0 +1,17 @@
+.vendors_profile{
+    display: flex;
+    flex: 1;
+}
+
+.profile_main{
+    width: 70%;
+    border-right: 1px solid rgb(172, 172, 172);
+    padding: 1rem;
+}
+
+
+
+
+.vendor_product_display{
+    padding: 1rem;
+}
