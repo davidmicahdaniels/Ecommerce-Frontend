@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/shop" element={<UserDashboard />} />
           <Route exact path="/ProductDetails" element={<ProductDetails />} />
           <Route exact path="/VendorDashboard" element={<VendorDashboard />} />
-          <Route exact path="/VendorFeedbacks" element={<VendoFeedbackRoute />} />
+          <Route exact path="/VendorReviews" element={<VendoFeedbackRoute />} />
           <Route exact path="/VendorProfile" element={<VendorProfileRoute />} />
           <Route exact path="/AdminDashboard" element={<AdminDashboard />} />
         </Routes>
