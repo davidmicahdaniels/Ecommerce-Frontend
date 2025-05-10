@@ -1,5 +1,5 @@
 .overview_area{
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     flex: 1;
 }
 
@@ -17,3 +17,24 @@
     padding: 1rem 2rem;
     border-radius: 0.5rem;
 }
+.box_header{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+/* .box_header  */
+
+
+
+
+.header{
+    margin-top: 1rem;
+}
+.top_products_wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
