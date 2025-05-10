@@ -1,0 +1,19 @@
+.overview_area{
+    padding: 1rem 2rem;
+    flex: 1;
+}
+
+.quick_overview{
+    background-color: aliceblue;
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+.overview_box{
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
