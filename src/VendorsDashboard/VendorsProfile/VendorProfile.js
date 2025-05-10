@@ -20,19 +20,21 @@ const VendorProfile = () => {
             <div className={classes.brand_img_Wrapper}>
               <img src={prod} alt='brand logo' />
             </div>
-            <div>
+            <div className={classes.brand_details}>
               <h2>Premium Class Store</h2>
-              <p><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
-              <small>5 star of 45 reviews</small>
+              <p>Clothing and food store</p>
               <p className={classes.location}><FaLocationDot /> <p>Abuja, Nigeria</p></p>
+              <p><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
+              <p>5 star of 45 reviews</p>
             </div>
           </div>
-          <p>Description:</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 
-          <p>Address:</p>
-          <p>Plot 7 Jakande street, afebabalola avenue, Abuja</p>
+          <p className={classes.profile_header}>Description:</p>
+          <p className={classes.profile_txt}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          <p className={classes.profile_txt}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+
+          <p className={classes.profile_header}>Address:</p>
+          <p className={classes.profile_txt}>Plot 7 Jakande street, afebabalola avenue, Abuja</p>
         </div>
 
 
