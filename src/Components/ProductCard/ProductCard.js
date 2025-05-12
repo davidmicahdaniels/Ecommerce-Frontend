@@ -1,7 +1,14 @@
 import classes from "./ProductCard.module.css"
 import img from "../../Assets/Images/prod2.png"
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = () => {
+  const navigate = useNavigate();
+
+  const viewProductDetails = () => {
+    navigate("/ProductDetails")
+  }
+
   return (
     <div className={classes.product_card}>
       <div className={classes.product_card_img_wrapper}>
