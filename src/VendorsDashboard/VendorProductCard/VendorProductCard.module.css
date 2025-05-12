@@ -1,8 +1,8 @@
+
 .product_card {
   border: 1px solid #efefef;
   padding: 1rem;
   border-radius: 0.5rem;
-  cursor: pointer;
 }
 .product_card_img_wrapper {
   width: 100%;
@@ -57,3 +57,4 @@
   border: none;
   cursor: pointer;
 }
+

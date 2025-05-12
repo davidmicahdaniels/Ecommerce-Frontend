@@ -14,12 +14,18 @@ import product_img4 from "../../Assets/Images/prod4.png"
 import { FaStar } from "react-icons/fa6";
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import SimilarProducts from '../../Components/SimilarProducts/SimilarProducts';
+import { useNavigate } from 'react-router-dom';
 
 const ProductDetailsArea = () => {
+  const navigate =  useNavigate();
+
+  const visitShop = () =>{
+    navigate("/shop")
+  }
     return(
         <div className={classes.product_details_area}>
             <div className={classes.product_details_top}>
-                <MdArrowBack size={30} />
+                <MdArrowBack size={30} onClick={visitShop} />
                 <h2 className="">Product details</h2>
             </div>
 

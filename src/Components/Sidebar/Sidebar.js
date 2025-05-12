@@ -25,7 +25,7 @@ const Sidebar = () => {
           <ion-icon name="shirt-outline"></ion-icon> <p>Cosmetics</p>
         </li>
         <li>
-          <ion-icon name="shirt-outline"></ion-icon> <p>Personal care</p>
+          <ion-icon name="shirt-outline"></ion-icon> <p>Self care</p>
         </li>
         <li>
           <ion-icon name="shirt-outline"></ion-icon> <p>IT services</p>
