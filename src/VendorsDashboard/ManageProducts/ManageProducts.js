@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from "./ManageProducts.module.css"
 import VendorProductCard from '../VendorProductCard/VendorProductCard';
+import { CiImageOn } from "react-icons/ci";
 
 const ManageProducts = () => {
   return (
@@ -33,10 +34,32 @@ const ManageProducts = () => {
      <div className={classes.add_product_area}>
         <h2>Add new product</h2>
 
-        <div>
+        <div className={classes.input_box}>
             <label>Product Name</label>
-            <input type="text" />
+            <input type="text" placeholder='Product name' />
         </div>
+        <div className={classes.input_box}>
+            <label>Product Description</label>
+            <textarea type="text" placeholder='Product description'></textarea>
+        </div>
+
+        <div className={classes.prod_img_box}>
+            <CiImageOn size={35} />
+            <p>Upload Image</p>
+        </div>
+        <div className={classes.prod_images_bxes_wrapper}>
+            <div className={classes.prod_img_box}>
+                <CiImageOn />
+            </div>
+            <div className={classes.prod_img_box}>
+                <CiImageOn />
+            </div>
+            <div className={classes.prod_img_box}>
+                <CiImageOn />
+            </div>
+        </div>
+
+        <button className={classes.submit_btn}>Add Product</button>
      </div> 
     </div>
   )
