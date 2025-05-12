@@ -10,6 +10,7 @@ import AdminDashboard from "./AdminDashboard/AdminDashboard";
 import VendorDashboard from "./VendorsDashboard/VendorDashboard";
 import VendoFeedbackRoute from "./VendorsDashboard/Routes/VendoFeedbackRoute";
 import VendorProfileRoute from "./VendorsDashboard/Routes/VendorProfileRoute";
+import ManageProductRoute from "./VendorsDashboard/Routes/ManageProductRoute";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/VendorDashboard" element={<VendorDashboard />} />
           <Route exact path="/VendorReviews" element={<VendoFeedbackRoute />} />
           <Route exact path="/VendorProfile" element={<VendorProfileRoute />} />
+          <Route exact path="/ManageProductRoute" element={<ManageProductRoute />} />
           <Route exact path="/AdminDashboard" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>

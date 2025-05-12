@@ -17,6 +17,10 @@ const VendorSidebar = () => {
         navigate("/VendorProfile")
     }
 
+    const manageProduct = () => {
+        navigate("/ManageProductRoute")
+    }
+
   return (
     <div className={classes.sidebar}>
         <div>
@@ -26,7 +30,7 @@ const VendorSidebar = () => {
             <ul className="">
                 <li onClick={viewOvervire}>Overview</li>
                 <li>Manage Orders</li>
-                <li>Mamage Products</li>
+                <li onClick={manageProduct}>Mamage Products</li>
                 <li>Earnings</li>
                 <li onClick={viewReviews}>Reviews</li>
             </ul>
