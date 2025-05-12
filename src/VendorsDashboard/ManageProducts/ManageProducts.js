@@ -4,8 +4,8 @@ import VendorProductCard from '../VendorProductCard/VendorProductCard';
 
 const ManageProducts = () => {
   return (
-    <div>
-      <div>
+    <div className={classes.manageproducts_main}>
+      <div className={classes.manage_prod_main_area}>
         <h2>Manage Products</h2>
 
         <h3>Fashion:</h3>
@@ -29,8 +29,14 @@ const ManageProducts = () => {
             <VendorProductCard />
         </div>
       </div>
-     <div>
 
+     <div className={classes.add_product_area}>
+        <h2>Add new product</h2>
+
+        <div>
+            <label>Product Name</label>
+            <input type="text" />
+        </div>
      </div> 
     </div>
   )

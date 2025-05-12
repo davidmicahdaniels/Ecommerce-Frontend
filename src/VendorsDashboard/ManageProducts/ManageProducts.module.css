@@ -1,0 +1,33 @@
+.manageproducts_main{
+    flex: 1;
+
+    display: flex;
+}
+
+.manage_prod_main_area{
+    flex: 1;
+    padding: 1rem 1.3rem;
+    border-right: 1px solid #d6d6d6;
+    
+    height: 99vh;
+    overflow-y: scroll;
+}
+.manage_prod_main_area > h2{
+    font-weight: bold;
+}
+.manage_prod_main_area > h3{
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.product_card_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.add_product_area{
+    width: 23vw;
+    padding: 1rem;
+}
