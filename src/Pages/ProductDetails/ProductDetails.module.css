@@ -192,3 +192,32 @@
     margin: auto;
   }
 }
+
+
+
+@media (max-width: 770px) {
+  .details_body{
+    width: 80vw;
+  }
+  .product_details_top{
+    width: 80vw;
+  }
+}
+
+@media (max-width: 680px) {
+  .details_body{
+    width: 90vw;
+  }
+  .product_details_top{
+    width: 90vw;
+  }
+}
+
+@media (max-width: 590px) {
+  .details_body{
+    width: 95vw;
+  }
+  .product_details_top{
+    width: 95vw;
+  }
+}
