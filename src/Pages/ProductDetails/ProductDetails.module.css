@@ -181,6 +181,7 @@
   .product_details_area{
     overflow-y: scroll;
     height: 88vh;
+    overflow-x: hidden;
   }
   .details_body{
     grid-template-columns: repeat(1, 1fr);
@@ -219,5 +220,33 @@
   }
   .product_details_top{
     width: 95vw;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .main_img{
+    height: 35vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .main_img{
+    height: 32vh;
+  }
+}
+
+@media (max-width: 410px) {
+  .main_img{
+    height: 30vh;
+  }
+  .images_diaplay, .description_area{
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .main_img{
+    height: 27vh;
   }
 }
