@@ -187,6 +187,7 @@
     grid-template-columns: repeat(1, 1fr);
     width: 70vw;
     margin: auto;
+    padding-bottom: 3rem;
   }
   .product_details_top{
     width: 70vw;
