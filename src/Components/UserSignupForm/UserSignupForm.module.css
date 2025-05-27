@@ -104,7 +104,7 @@
     width: 75vw;
     grid-template-columns: repeat(1, 1fr);
   }
-  .form_img_wrapper{
+  .form_img_wrapper, .signup_form_img_wrapper{
     height: 50vh;
   }
   .form_action_box{
@@ -116,5 +116,15 @@
 @media (max-width: 500px) {
   .from_content_wrapper{
     width: 90vw;
+  }
+  .form_img_wrapper, .signup_form_img_wrapper{
+    height: 40vh;
+  }
+}
+
+
+@media (max-width: 370px) {
+  .form_img_wrapper, .signup_form_img_wrapper{
+    height: 37vh;
   }
 }

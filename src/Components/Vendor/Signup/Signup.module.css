@@ -117,4 +117,15 @@
   .from_content_wrapper{
     width: 90vw;
   }
+  .form_img_wrapper{
+    height: 40vh;
+  }
+}
+
+
+
+@media (max-width: 370px) {
+  .form_img_wrapper{
+    height: 37vh;
+  }
 }
