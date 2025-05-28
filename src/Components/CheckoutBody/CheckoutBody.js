@@ -8,7 +8,7 @@ const CheckoutBody = () => {
         <h2>Checkout Items</h2>
 
         <div className={classes.empty_cart_notice}>
-            <p>Your Cart is Empty, select products to checkout</p>
+            <p>Your Cart is Empty, select products to checkout.</p>
             <button>Shop Now</button>
         </div>
       </div>
