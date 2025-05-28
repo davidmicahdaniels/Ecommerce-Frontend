@@ -1,0 +1,28 @@
+.checkout_body{
+    padding: 5rem 0;
+}
+
+
+.checkout_content_wrapper{
+    margin: auto;
+    background-color: rgb(245, 246, 247);
+    width: 50vw;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+.checkout_content_wrapper h2{
+    text-align: center;
+}
+
+
+.empty_cart_notice{
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
