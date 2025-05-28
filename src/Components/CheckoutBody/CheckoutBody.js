@@ -1,7 +1,13 @@
 import React from 'react'
 import classes from "./CheckoutBody.module.css"
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutBody = () => {
+    const navigate =  useNavigate();
+
+    const visitShop = () => {
+        navigate("/shop");
+    }
   return (
     <div className={classes.checkout_body}>
       <div className={classes.checkout_content_wrapper}>
@@ -9,7 +15,7 @@ const CheckoutBody = () => {
 
         <div className={classes.empty_cart_notice}>
             <p>Your Cart is Empty, select products to checkout.</p>
-            <button>Shop Now</button>
+            <button onClick={visitShop}>Shop Now</button>
         </div>
       </div>
     </div>
