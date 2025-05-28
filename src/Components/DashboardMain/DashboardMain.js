@@ -16,6 +16,18 @@ const DashboardMain = () => {
 
         <input type="text" placeholder="Filter Products" />
       </div>
+
+        <ul className={classes.tags_display}>
+          <li>Food</li>
+          <li>Fashion</li>
+          <li>Laundry</li>
+          <li>Stationeries</li>
+          <li>Electronics</li>
+          <li>Cosmetics</li>
+          <li>Self care</li>
+          <li>IT services</li>
+        </ul> 
+
       <div className={classes.dashboard_cards_wrapper}>
         <ProductCard />
         <ProductCard />
