@@ -11,6 +11,7 @@ import VendorDashboard from "./VendorsDashboard/VendorDashboard";
 import VendoFeedbackRoute from "./VendorsDashboard/Routes/VendoFeedbackRoute";
 import VendorProfileRoute from "./VendorsDashboard/Routes/VendorProfileRoute";
 import ManageProductRoute from "./VendorsDashboard/Routes/ManageProductRoute";
+import OrderCheckout from "./Pages/OrderCheckout/OrderCheckout";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/vendorlogin" element={<Login />} />
           <Route exact path="/vendorsignup" element={<Signup />} />
           <Route exact path="/shop" element={<UserDashboard />} />
+          <Route exact path="/OrderCheckout" element={<OrderCheckout />} />
           <Route exact path="/ProductDetails" element={<ProductDetails />} />
           <Route exact path="/VendorDashboard" element={<VendorDashboard />} />
           <Route exact path="/VendorReviews" element={<VendoFeedbackRoute />} />
