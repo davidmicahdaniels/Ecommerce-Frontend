@@ -2,21 +2,52 @@ import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import classes from "./DashboardMain.module.css";
 import { getAppLocalStorage } from "../../App";
-
 import { ProductData } from "../../Data/ProductData";
+import { useState, useEffect } from 'react';
+
 
 const DashboardMain = () => {
   
-  const localData = getAppLocalStorage(); 
+  // const localData = getAppLocalStorage(); 
 
-  // console.log(localData);
-  
-  let category = localData.currentProductCategory
+  const [category, setCategory] = useState(getAppLocalStorage().currentProductCategory);
+
+  useEffect(() => {
+    // Listen for localStorage changes (even in same tab)
+    const checkCategoryChange = () => {
+      const updatedCategory = localStorage.getItem('currentProductCategory');
+      setCategory(updatedCategory);
+    };
+
+    // Check whenever localStorage might change
+    window.addEventListener('storage', checkCategoryChange);
+    const interval = setInterval(checkCategoryChange, 200); // also catch same-tab changes
+
+    return () => {
+      window.removeEventListener('storage', checkCategoryChange);
+      clearInterval(interval);
+    };
+  }, []);
+
 
   const currentcategorydata = ProductData[category];
 
-  console.log(currentcategorydata[0]);  
+  // console.log(currentcategorydata[0]);  
   
+
+  
+  const setLocalStorageFromText = (text) => {
+    try {
+      const parsed = JSON.parse(text);
+      Object.entries(parsed).forEach(([key, value]) => {
+        localStorage.setItem(key, typeof value === 'object' ? JSON.stringify(value) : String(value));
+      });
+      console.log("Local storage updated successfully.");
+    } catch (error) {
+      console.error("Invalid input. Please pass a valid JSON string.", error);
+    }
+
+  }
 
   return (
     <div className={classes.page_container}>
@@ -33,14 +64,14 @@ const DashboardMain = () => {
       </div>
 
         <ul className={classes.tags_display}>
-          <li>Food</li>
-          <li>Fashion</li>
-          <li>Laundry</li>
-          <li>Stationeries</li>
-          <li>Electronics</li>
-          <li>Cosmetics</li>
-          <li>Self care</li>
-          <li>IT services</li>
+          <li onClick={() => setLocalStorageFromText(`{ "currentProductCategory": "food" }`)}>Food</li>
+          <li onClick={() => setLocalStorageFromText(`{ "currentProductCategory": "fashion" }`)}>Fashion</li>
+          <li onClick={() => setLocalStorageFromText(`{ "currentProductCategory": "laundry" }`)}>Laundry</li>
+          <li onClick={() => setLocalStorageFromText(`{ "currentProductCategory": "stationeries" }`)}>Stationeries</li>
+          <li onClick={() => setLocalStorageFromText(`{ "currentProductCategory": "electronics" }`)}>Electronics</li>
+          <li onClick={() => setLocalStorageFromText(`{ "currentProductCategory": "cosmetics" }`)}>Cosmetics</li>
+          <li onClick={() => setLocalStorageFromText(`{ "currentProductCategory": "self_care" }`)}>Self care</li>
+          <li onClick={() => setLocalStorageFromText(`{ "currentProductCategory": "it_services" }`)}>IT services</li>
         </ul> 
 
       <div className={classes.dashboard_cards_wrapper}>
