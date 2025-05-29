@@ -77,10 +77,10 @@ export const ProductData = {
     },
     {
       "product_name": "Moi Moi",
-      "image1": "https://example.com/images/food_6.jpg",
-      "image2": "https://example.com/images/food_6.jpg",
-      "image3": "https://example.com/images/food_6.jpg",
-      "image4": "https://example.com/images/food_6.jpg",
+      "image1": "https://images.squarespace-cdn.com/content/v1/5f61fdbf6089cf5861823eb9/1611349931599-3T2LJVRJ0VGDTV6SH1SV/DSC_0797.jpg",
+      "image2": "https://drumstix.com.ng/wp-content/uploads/2020/04/moin-moi.jpg",
+      "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ431jVLAGC4L4XGHe8cn8ful99taFR7uNzQQ&s",
+      "image4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxeB1zzopvJncrZXXSD9_BuhGqVlzO-9IuuDj6Z2asiPbVWsXbJyviKojNpLu9bFJmR2U&usqp=CAU",
       "product_description": {
         "short": "Top quality moi moi.",
         "p1": "Our moi moi is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -92,10 +92,10 @@ export const ProductData = {
     },
     {
       "product_name": "Egusi Soup",
-      "image1": "https://example.com/images/food_7.jpg",
-      "image2": "https://example.com/images/food_7.jpg",
-      "image3": "https://example.com/images/food_7.jpg",
-      "image4": "https://example.com/images/food_7.jpg",
+      "image1": "https://lowcarbafrica.com/wp-content/uploads/2018/06/Egusi-Soup-IG-1.jpg",
+      "image2": "https://foodsturvs.ca/wp-content/uploads/2024/01/78_file.png",
+      "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9I_mBXKB4qB0MoOPT_szKWLky7zo2tDI9qiaR8JODnX-_34G4CLLopIP4qaSOz8-t1so&usqp=CAU",
+      "image4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsdl-Yp86By078LwUhdu1xBD9QMh1H5LFyFg&s",
       "product_description": {
         "short": "Top quality egusi soup.",
         "p1": "Our egusi soup is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -107,10 +107,10 @@ export const ProductData = {
     },
     {
       "product_name": "Beef Suya",
-      "image1": "https://example.com/images/food_8.jpg",
-      "image2": "https://example.com/images/food_8.jpg",
-      "image3": "https://example.com/images/food_8.jpg",
-      "image4": "https://example.com/images/food_8.jpg",
+      "image1": "https://cheflolaskitchen.com/wp-content/uploads/2023/01/nigerian-suya-32.jpg",
+      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZZyB54om5oVSfvLemg8QHdMTsRjR5briD_4cHeHfNIeoMexST4qOPW8q90fQENpjC8n0&usqp=CAU",
+      "image3": "https://images.ctfassets.net/7t85a6f8wt2m/4OpaYIpUwQ8LPZW7pyc3HE/ee57d2a13812512d36d9d363625d5769/Nigerian_Beef_Suya_2.jpg?fm=webp&q=75&w=800&h=600&fit=fill",
+      "image4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3jZHf-L0AT1e1O2zCo8KamxQMW6QRysTgMg&s",
       "product_description": {
         "short": "Top quality beef suya.",
         "p1": "Our beef suya is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -122,10 +122,10 @@ export const ProductData = {
     },
     {
       "product_name": "Plantain Chips",
-      "image1": "https://example.com/images/food_9.jpg",
-      "image2": "https://example.com/images/food_9.jpg",
-      "image3": "https://example.com/images/food_9.jpg",
-      "image4": "https://example.com/images/food_9.jpg",
+      "image1": "https://foreignfork.com/wp-content/uploads/2022/02/SweetPlantainChipsFEATURE.jpg",
+      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc0Q-D8wcZOp5BW38h5gyMxeWZgh9DPdcxgQ&s",
+      "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS40BwE8irEgs-Ju1N5TlQ6niyZL9vh6cisVA&s",
+      "image4": "https://biscuitsandladles.com/wp-content/uploads/2018/03/crispy-ripe-plantain-chips-500x500.jpg",
       "product_description": {
         "short": "Top quality plantain chips.",
         "p1": "Our plantain chips is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -137,10 +137,10 @@ export const ProductData = {
     },
     {
       "product_name": "Yam Porridge",
-      "image1": "https://example.com/images/food_10.jpg",
-      "image2": "https://example.com/images/food_10.jpg",
-      "image3": "https://example.com/images/food_10.jpg",
-      "image4": "https://example.com/images/food_10.jpg",
+      "image1": "https://cdn.guardian.ng/wp-content/uploads/2020/05/Vegetable-Yam-Porridge.-Photo-My-diaspora-kitchen.jpeg",
+      "image2": "https://i.ytimg.com/vi/Ia2qyjt1qes/maxresdefault.jpg",
+      "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8ng4dmASTLxfPvpO29x3TMGCaRi5pkuYXw&s",
+      "image4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTux5qWFFWbWNdsLEvXQ0R0kzy7iAVq9rarIym4M1fhua5BoxfC0ifh4tlldRSmkgpOcIY&usqp=CAU",
       "product_description": {
         "short": "Top quality yam porridge.",
         "p1": "Our yam porridge is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -152,10 +152,10 @@ export const ProductData = {
     },
     {
       "product_name": "Grilled Fish",
-      "image1": "https://example.com/images/food_11.jpg",
-      "image2": "https://example.com/images/food_11.jpg",
-      "image3": "https://example.com/images/food_11.jpg",
-      "image4": "https://example.com/images/food_11.jpg",
+      "image1": "https://thesecretsuppersociety.com/wp-content/uploads/2022/06/Greek-Style-Grilled-Fish-1.jpg",
+      "image2": "https://www.lanascooking.com/wp-content/uploads/2021/07/simple-seasoned-grilled-fish-feature-1200.jpg",
+      "image3": "https://www.saveur.com/uploads/2019/09/16-220816-PAMU-PESCADO_EMBARAZADO-018_3.jpg?auto=webp",
+      "image4": "https://cookingwithclaudy.com/wp-content/uploads/2023/03/281826381_169157275475312_3621065089579710930_n.jpg",
       "product_description": {
         "short": "Top quality grilled fish.",
         "p1": "Our grilled fish is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -167,10 +167,10 @@ export const ProductData = {
     },
     {
       "product_name": "Meat Pie",
-      "image1": "https://example.com/images/food_12.jpg",
-      "image2": "https://example.com/images/food_12.jpg",
-      "image3": "https://example.com/images/food_12.jpg",
-      "image4": "https://example.com/images/food_12.jpg",
+      "image1": "https://thecookingfoodie.com/wp-content/uploads/2019/11/4.jpg",
+      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfZbJf_YdKO98oGfkujx754xZBKzjTv2xEjQ&s",
+      "image3": "https://kikifoodies.com/wp-content/uploads/2024/12/3A8364CE-2F40-4ABD-BD01-72AF8BF5CDEC.jpeg",
+      "image4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkL7ZmCLt-iuf4GrfMvQJg15-p3Puy213DjkqjTi6qdhsTDGmB0bQrhKWAs8-xCgPG4bM&usqp=CAU",
       "product_description": {
         "short": "Top quality meat pie.",
         "p1": "Our meat pie is crafted from premium materials to ensure durability and optimal performance for everyday use.",

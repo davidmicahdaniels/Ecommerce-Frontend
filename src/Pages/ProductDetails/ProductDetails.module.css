@@ -104,6 +104,7 @@
     align-items: center;
     gap: 0.5rem;
     padding-bottom: 0.8rem;
+    cursor: pointer;
 }
 
 .details_body{
