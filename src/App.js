@@ -12,9 +12,39 @@ import VendoFeedbackRoute from "./VendorsDashboard/Routes/VendoFeedbackRoute";
 import VendorProfileRoute from "./VendorsDashboard/Routes/VendorProfileRoute";
 import ManageProductRoute from "./VendorsDashboard/Routes/ManageProductRoute";
 import OrderCheckout from "./Pages/OrderCheckout/OrderCheckout";
+import { useEffect } from "react";
 
+
+export function getAppLocalStorage() {
+  return {
+    isUserLoggedIn: localStorage.getItem('isUserLoggedIn') === 'true',
+    currentProductCategory: localStorage.getItem('currentProductCategory'),
+    selectedProductDetails: JSON.parse(localStorage.getItem('selectedProductDetails') || '{}'),
+    cartProducts: JSON.parse(localStorage.getItem('cartProducts') || '[]')
+  };
+}
 
 function App() {
+  useEffect(() => {
+    // Set default values if they are not already in localStorage
+    if (localStorage.getItem('isUserLoggedIn') === null) {
+      localStorage.setItem('isUserLoggedIn', 'false');
+    }
+
+    if (localStorage.getItem('currentProductCategory') === null) {
+      localStorage.setItem('currentProductCategory', 'food'); 
+    }
+
+    if (localStorage.getItem('selectedProductDetails') === null) {
+      localStorage.setItem('selectedProductDetails', JSON.stringify({}));
+    }
+
+    if (localStorage.getItem('cartProducts') === null) {
+      localStorage.setItem('cartProducts', JSON.stringify([]));
+    }
+  }, []);
+
+
   return (
     <div className="App">
       <BrowserRouter>

@@ -1,4 +1,4 @@
-{
+export const ProductData = {
   "food": [
     {
       "product_name": "Jollof Rice",

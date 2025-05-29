@@ -9,6 +9,7 @@ const DashboardNavbar = () => {
   const visitLandingPage = () => {
     navigate("/")
   }
+  
 
   return (
     <nav className={classes.dashboard_nav}>
