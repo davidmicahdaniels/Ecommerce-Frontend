@@ -2,10 +2,10 @@ export const ProductData = {
   "food": [
     {
       "product_name": "Jollof Rice",
-      "image1": "https://example.com/images/food_1.jpg",
-      "image2": "https://example.com/images/food_1.jpg",
-      "image3": "https://example.com/images/food_1.jpg",
-      "image4": "https://example.com/images/food_1.jpg",
+      "image1": "https://nigeriancookbooks.com/wp-content/uploads/2021/08/jollof-rice-1.jpg",
+      "image2": "https://nigeriancookbooks.com/wp-content/uploads/2021/08/jollof-rice-1.jpg",
+      "image3": "https://kikifoodies.com/wp-content/uploads/2024/11/ET5B6272-2-1024x1024.jpg",
+      "image4": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRzKBr2jnGMxsne1yUjosqjRmTJSs3diDbCaZzmWuZ56YIjJrkd10T_OyS9dCczqhabIrzpIGwc0AqQgOF-2B0YYzVbYZGkRlegpnt3U7Y",
       "product_description": {
         "short": "Top quality jollof rice.",
         "p1": "Our jollof rice is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -17,10 +17,10 @@ export const ProductData = {
     },
     {
       "product_name": "Fried Rice",
-      "image1": "https://example.com/images/food_2.jpg",
-      "image2": "https://example.com/images/food_2.jpg",
-      "image3": "https://example.com/images/food_2.jpg",
-      "image4": "https://example.com/images/food_2.jpg",
+      "image1": "https://fullofplants.com/wp-content/uploads/2020/05/sweet-and-sour-spicy-thai-fried-rice-easy-vegan-meal-with-vegetables-thumb.jpg",
+      "image2": "https://www.australianeggs.org.au/assets/Uploads/Egg-fried-rice-2.jpg",
+      "image3": "https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/C907FB56-A48F-452B-8649-E0530F4E7FE1/Derivates/2d963bfb-a7c0-4743-b352-719a69875f11.jpg",
+      "image4": "https://lifeloveandgoodfood.com/wp-content/uploads/2023/03/chicken_fried_rice00032a-1200x1200-1.jpg",
       "product_description": {
         "short": "Top quality fried rice.",
         "p1": "Our fried rice is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -32,10 +32,10 @@ export const ProductData = {
     },
     {
       "product_name": "Chicken Pie",
-      "image1": "https://example.com/images/food_3.jpg",
-      "image2": "https://example.com/images/food_3.jpg",
-      "image3": "https://example.com/images/food_3.jpg",
-      "image4": "https://example.com/images/food_3.jpg",
+      "image1": "https://thecozycook.com/wp-content/uploads/2024/04/Chicken-Pot-Pie-f.jpg",
+      "image2": "https://www.yourhomebasedmom.com/wp-content/uploads/2021/08/chicken-pot-pie-for-two-0016-500x500.jpg",
+      "image3": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/02/16/0/FNM_030122-Mix-and-Match-Chicken-Pot-Pie_s4x3.jpg.rend.hgtvcom.616.462.suffix/1645023408005.webp",
+      "image4": "https://img.bestrecipes.com.au/652BUg32/w720-h480-cfill-q90/br/2021/04/old-fashioned_chicken_pot_pie-962495-2.jpg",
       "product_description": {
         "short": "Top quality chicken pie.",
         "p1": "Our chicken pie is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -47,10 +47,10 @@ export const ProductData = {
     },
     {
       "product_name": "Pounded Yam",
-      "image1": "https://example.com/images/food_4.jpg",
-      "image2": "https://example.com/images/food_4.jpg",
-      "image3": "https://example.com/images/food_4.jpg",
-      "image4": "https://example.com/images/food_4.jpg",
+      "image1": "https://meoclock.com.ng/wp-content/uploads/2024/08/unnamed-1.jpg",
+      "image2": "https://diahcuisineonline.co.uk/wp-content/uploads/2021/02/Pounded-Yam-450x450.jpg",
+      "image3": "https://i0.wp.com/travelandmunchies.com/wp-content/uploads/2025/03/IMG_9666-scaled.jpg?fit=420%2C300&ssl=1",
+      "image4": "https://diahcuisineonline.co.uk/wp-content/uploads/2021/02/Pounded-Yam-450x450.jpg",
       "product_description": {
         "short": "Top quality pounded yam.",
         "p1": "Our pounded yam is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -62,10 +62,10 @@ export const ProductData = {
     },
     {
       "product_name": "Efo Riro",
-      "image1": "https://example.com/images/food_5.jpg",
-      "image2": "https://example.com/images/food_5.jpg",
-      "image3": "https://example.com/images/food_5.jpg",
-      "image4": "https://example.com/images/food_5.jpg",
+      "image1": "https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/64817907f0ce88001df2063b.jpg",
+      "image2": "https://thumbs.dreamstime.com/b/efo-riro-case-made-goat-meat-cubes-famous-nutritious-food-nigeria-particularly-yoruba-south-west-208295382.jpg",
+      "image3": "https://www.tastycubes.com/wp-content/uploads/2016/03/30-1080x771.jpg",
+      "image4": "https://cookingwithclaudy.com/wp-content/uploads/2023/03/20230304124505_IMG_3773-1.jpg",
       "product_description": {
         "short": "Top quality efo riro.",
         "p1": "Our efo riro is crafted from premium materials to ensure durability and optimal performance for everyday use.",
