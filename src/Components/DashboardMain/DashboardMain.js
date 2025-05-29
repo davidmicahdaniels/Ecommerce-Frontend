@@ -42,7 +42,7 @@ const DashboardMain = () => {
       Object.entries(parsed).forEach(([key, value]) => {
         localStorage.setItem(key, typeof value === 'object' ? JSON.stringify(value) : String(value));
       });
-      console.log("Local storage updated successfully.");
+      // console.log("Local storage updated successfully.");
     } catch (error) {
       console.error("Invalid input. Please pass a valid JSON string.", error);
     }
