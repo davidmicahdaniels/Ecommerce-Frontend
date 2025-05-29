@@ -1,19 +1,26 @@
 import classes from "./ProductCard.module.css"
 import img from "../../Assets/Images/prod2.png"
 import { useNavigate } from "react-router-dom";
+import { getAppLocalStorage } from "../../App";
 
 const ProductCard = (props) => {
   const navigate = useNavigate();
 
+  
+  const localData = getAppLocalStorage(); 
   const viewProductDetails = () => {
+
     navigate("/ProductDetails")
+    
+    localStorage.setItem('selectedProductDetails', JSON.stringify(props));
   }
+  
 
   return (
     <div className={classes.product_card} onClick={viewProductDetails}>
       <div className={classes.product_card_img_wrapper}>
         <img
-          src={img}
+          src={props.img1}
           alt=""
           className={classes.product_img}
         />

@@ -15,6 +15,7 @@ import { FaStar } from "react-icons/fa6";
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import SimilarProducts from '../../Components/SimilarProducts/SimilarProducts';
 import { useNavigate } from 'react-router-dom';
+import { getAppLocalStorage } from '../../App';
 
 const ProductDetailsArea = () => {
   const navigate =  useNavigate();
@@ -22,6 +23,12 @@ const ProductDetailsArea = () => {
   const visitShop = () =>{
     navigate("/shop")
   }
+  
+  
+  const localData = getAppLocalStorage(); 
+
+  console.log(localData.selectedProductDetails);
+
     return(
         <div className={classes.product_details_area}>
             <div className={classes.product_details_top}>
@@ -31,21 +38,18 @@ const ProductDetailsArea = () => {
 
             <div className={classes.details_body}>
                 <div className={classes.images_diaplay}>
-                    <img className={classes.main_img} src={product_img} alt='img'/>
+                    <img className={classes.main_img} src={localData.selectedProductDetails.img1} alt='img'/>
                     <div className={classes.bottom_images}>
-                        <img className={classes.bottom_img} src={product_img2} alt='img'/>
-                        <img className={classes.bottom_img} src={product_img3} alt='img'/>
-                        <img className={classes.bottom_img} src={product_img4} alt='img'/>
+                        <img className={classes.bottom_img} src={localData.selectedProductDetails.img2} alt='img'/>
+                        <img className={classes.bottom_img} src={localData.selectedProductDetails.img3} alt='img'/>
+                        <img className={classes.bottom_img} src={localData.selectedProductDetails.img4} alt='img'/>
                     </div>
                 </div>
                 <div className={classes.description_area}>
-                    <h3>Crochet Yarn and Hooks</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation commodo consequat.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation commodo consequat.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation commodo consequat.</p>
+                    <h3>{localData.selectedProductDetails.product_name}</h3>
+                    <p>{localData.selectedProductDetails.p1}</p>
+                    <p>{localData.selectedProductDetails.p2}</p>
+                    <p>{localData.selectedProductDetails.p3}</p>
 
                     <div>
                         <FaStar />
