@@ -1,0 +1,690 @@
+{
+  "food": [
+    {
+      "product_name": "Jollof Rice",
+      "product_image": "https://example.com/images/food_1.jpg",
+      "product_description": "Top quality jollof rice.",
+      "product_price": "\u20a62517",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Fried Rice",
+      "product_image": "https://example.com/images/food_2.jpg",
+      "product_description": "Top quality fried rice.",
+      "product_price": "\u20a61976",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Chicken Pie",
+      "product_image": "https://example.com/images/food_3.jpg",
+      "product_description": "Top quality chicken pie.",
+      "product_price": "\u20a61343",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Pounded Yam",
+      "product_image": "https://example.com/images/food_4.jpg",
+      "product_description": "Top quality pounded yam.",
+      "product_price": "\u20a62575",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Efo Riro",
+      "product_image": "https://example.com/images/food_5.jpg",
+      "product_description": "Top quality efo riro.",
+      "product_price": "\u20a62608",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Moi Moi",
+      "product_image": "https://example.com/images/food_6.jpg",
+      "product_description": "Top quality moi moi.",
+      "product_price": "\u20a62473",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Egusi Soup",
+      "product_image": "https://example.com/images/food_7.jpg",
+      "product_description": "Top quality egusi soup.",
+      "product_price": "\u20a61493",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Beef Suya",
+      "product_image": "https://example.com/images/food_8.jpg",
+      "product_description": "Top quality beef suya.",
+      "product_price": "\u20a62584",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Plantain Chips",
+      "product_image": "https://example.com/images/food_9.jpg",
+      "product_description": "Top quality plantain chips.",
+      "product_price": "\u20a62718",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Yam Porridge",
+      "product_image": "https://example.com/images/food_10.jpg",
+      "product_description": "Top quality yam porridge.",
+      "product_price": "\u20a61686",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Grilled Fish",
+      "product_image": "https://example.com/images/food_11.jpg",
+      "product_description": "Top quality grilled fish.",
+      "product_price": "\u20a61236",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Meat Pie",
+      "product_image": "https://example.com/images/food_12.jpg",
+      "product_description": "Top quality meat pie.",
+      "product_price": "\u20a61753",
+      "product_rating": "5 star"
+    }
+  ],
+  "fashion": [
+    {
+      "product_name": "Ankara Shirt",
+      "product_image": "https://example.com/images/fashion_1.jpg",
+      "product_description": "Top quality ankara shirt.",
+      "product_price": "\u20a62016",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Jeans Jacket",
+      "product_image": "https://example.com/images/fashion_2.jpg",
+      "product_description": "Top quality jeans jacket.",
+      "product_price": "\u20a62346",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Leather Belt",
+      "product_image": "https://example.com/images/fashion_3.jpg",
+      "product_description": "Top quality leather belt.",
+      "product_price": "\u20a62836",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Canvas Shoes",
+      "product_image": "https://example.com/images/fashion_4.jpg",
+      "product_description": "Top quality canvas shoes.",
+      "product_price": "\u20a62358",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Wool Sweater",
+      "product_image": "https://example.com/images/fashion_5.jpg",
+      "product_description": "Top quality wool sweater.",
+      "product_price": "\u20a61433",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Polo Shirt",
+      "product_image": "https://example.com/images/fashion_6.jpg",
+      "product_description": "Top quality polo shirt.",
+      "product_price": "\u20a62562",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Dress Pants",
+      "product_image": "https://example.com/images/fashion_7.jpg",
+      "product_description": "Top quality dress pants.",
+      "product_price": "\u20a61526",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Tote Bag",
+      "product_image": "https://example.com/images/fashion_8.jpg",
+      "product_description": "Top quality tote bag.",
+      "product_price": "\u20a62572",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Cotton Scarf",
+      "product_image": "https://example.com/images/fashion_9.jpg",
+      "product_description": "Top quality cotton scarf.",
+      "product_price": "\u20a62282",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Linen Skirt",
+      "product_image": "https://example.com/images/fashion_10.jpg",
+      "product_description": "Top quality linen skirt.",
+      "product_price": "\u20a62633",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Crop Top",
+      "product_image": "https://example.com/images/fashion_11.jpg",
+      "product_description": "Top quality crop top.",
+      "product_price": "\u20a62492",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Sneaker Boots",
+      "product_image": "https://example.com/images/fashion_12.jpg",
+      "product_description": "Top quality sneaker boots.",
+      "product_price": "\u20a61300",
+      "product_rating": "5 star"
+    }
+  ],
+  "laundry": [
+    {
+      "product_name": "Washing Soap",
+      "product_image": "https://example.com/images/laundry_1.jpg",
+      "product_description": "Top quality washing soap.",
+      "product_price": "\u20a62667",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Bleach Liquid",
+      "product_image": "https://example.com/images/laundry_2.jpg",
+      "product_description": "Top quality bleach liquid.",
+      "product_price": "\u20a62893",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Laundry Basket",
+      "product_image": "https://example.com/images/laundry_3.jpg",
+      "product_description": "Top quality laundry basket.",
+      "product_price": "\u20a61603",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Stain Remover",
+      "product_image": "https://example.com/images/laundry_4.jpg",
+      "product_description": "Top quality stain remover.",
+      "product_price": "\u20a62347",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Ironing Spray",
+      "product_image": "https://example.com/images/laundry_5.jpg",
+      "product_description": "Top quality ironing spray.",
+      "product_price": "\u20a61623",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Fabric Softener",
+      "product_image": "https://example.com/images/laundry_6.jpg",
+      "product_description": "Top quality fabric softener.",
+      "product_price": "\u20a62642",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Dryer Sheets",
+      "product_image": "https://example.com/images/laundry_7.jpg",
+      "product_description": "Top quality dryer sheets.",
+      "product_price": "\u20a62755",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Ironing Board",
+      "product_image": "https://example.com/images/laundry_8.jpg",
+      "product_description": "Top quality ironing board.",
+      "product_price": "\u20a62915",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Cloth Pegs",
+      "product_image": "https://example.com/images/laundry_9.jpg",
+      "product_description": "Top quality cloth pegs.",
+      "product_price": "\u20a62628",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Lint Roller",
+      "product_image": "https://example.com/images/laundry_10.jpg",
+      "product_description": "Top quality lint roller.",
+      "product_price": "\u20a61522",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Scent Booster",
+      "product_image": "https://example.com/images/laundry_11.jpg",
+      "product_description": "Top quality scent booster.",
+      "product_price": "\u20a62113",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Laundry Bag",
+      "product_image": "https://example.com/images/laundry_12.jpg",
+      "product_description": "Top quality laundry bag.",
+      "product_price": "\u20a61528",
+      "product_rating": "5 star"
+    }
+  ],
+  "stationeries": [
+    {
+      "product_name": "Ball Pen",
+      "product_image": "https://example.com/images/stationeries_1.jpg",
+      "product_description": "Top quality ball pen.",
+      "product_price": "\u20a62609",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Note Pad",
+      "product_image": "https://example.com/images/stationeries_2.jpg",
+      "product_description": "Top quality note pad.",
+      "product_price": "\u20a61663",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Glue Stick",
+      "product_image": "https://example.com/images/stationeries_3.jpg",
+      "product_description": "Top quality glue stick.",
+      "product_price": "\u20a61549",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Ruler Set",
+      "product_image": "https://example.com/images/stationeries_4.jpg",
+      "product_description": "Top quality ruler set.",
+      "product_price": "\u20a61865",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Binder Clips",
+      "product_image": "https://example.com/images/stationeries_5.jpg",
+      "product_description": "Top quality binder clips.",
+      "product_price": "\u20a61577",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Staple Gun",
+      "product_image": "https://example.com/images/stationeries_6.jpg",
+      "product_description": "Top quality staple gun.",
+      "product_price": "\u20a62438",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Eraser Pack",
+      "product_image": "https://example.com/images/stationeries_7.jpg",
+      "product_description": "Top quality eraser pack.",
+      "product_price": "\u20a61776",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Sketch Book",
+      "product_image": "https://example.com/images/stationeries_8.jpg",
+      "product_description": "Top quality sketch book.",
+      "product_price": "\u20a61679",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Ink Bottle",
+      "product_image": "https://example.com/images/stationeries_9.jpg",
+      "product_description": "Top quality ink bottle.",
+      "product_price": "\u20a62364",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Paper Clips",
+      "product_image": "https://example.com/images/stationeries_10.jpg",
+      "product_description": "Top quality paper clips.",
+      "product_price": "\u20a61670",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Drawing Pen",
+      "product_image": "https://example.com/images/stationeries_11.jpg",
+      "product_description": "Top quality drawing pen.",
+      "product_price": "\u20a61388",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Desk Pad",
+      "product_image": "https://example.com/images/stationeries_12.jpg",
+      "product_description": "Top quality desk pad.",
+      "product_price": "\u20a62009",
+      "product_rating": "5 star"
+    }
+  ],
+  "electronics": [
+    {
+      "product_name": "Phone Charger",
+      "product_image": "https://example.com/images/electronics_1.jpg",
+      "product_description": "Top quality phone charger.",
+      "product_price": "\u20a61313",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "USB Cable",
+      "product_image": "https://example.com/images/electronics_2.jpg",
+      "product_description": "Top quality usb cable.",
+      "product_price": "\u20a62459",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Smart Watch",
+      "product_image": "https://example.com/images/electronics_3.jpg",
+      "product_description": "Top quality smart watch.",
+      "product_price": "\u20a61384",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Bluetooth Speaker",
+      "product_image": "https://example.com/images/electronics_4.jpg",
+      "product_description": "Top quality bluetooth speaker.",
+      "product_price": "\u20a62596",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Laptop Stand",
+      "product_image": "https://example.com/images/electronics_5.jpg",
+      "product_description": "Top quality laptop stand.",
+      "product_price": "\u20a61672",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Gaming Mouse",
+      "product_image": "https://example.com/images/electronics_6.jpg",
+      "product_description": "Top quality gaming mouse.",
+      "product_price": "\u20a61566",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "HDMI Cable",
+      "product_image": "https://example.com/images/electronics_7.jpg",
+      "product_description": "Top quality hdmi cable.",
+      "product_price": "\u20a62307",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "WiFi Router",
+      "product_image": "https://example.com/images/electronics_8.jpg",
+      "product_description": "Top quality wifi router.",
+      "product_price": "\u20a62811",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "LED Bulb",
+      "product_image": "https://example.com/images/electronics_9.jpg",
+      "product_description": "Top quality led bulb.",
+      "product_price": "\u20a62889",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Power Bank",
+      "product_image": "https://example.com/images/electronics_10.jpg",
+      "product_description": "Top quality power bank.",
+      "product_price": "\u20a62462",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Memory Card",
+      "product_image": "https://example.com/images/electronics_11.jpg",
+      "product_description": "Top quality memory card.",
+      "product_price": "\u20a61735",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Flash Drive",
+      "product_image": "https://example.com/images/electronics_12.jpg",
+      "product_description": "Top quality flash drive.",
+      "product_price": "\u20a61486",
+      "product_rating": "5 star"
+    }
+  ],
+  "cosmetics": [
+    {
+      "product_name": "Face Cream",
+      "product_image": "https://example.com/images/cosmetics_1.jpg",
+      "product_description": "Top quality face cream.",
+      "product_price": "\u20a61333",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Lip Gloss",
+      "product_image": "https://example.com/images/cosmetics_2.jpg",
+      "product_description": "Top quality lip gloss.",
+      "product_price": "\u20a62011",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Nail Polish",
+      "product_image": "https://example.com/images/cosmetics_3.jpg",
+      "product_description": "Top quality nail polish.",
+      "product_price": "\u20a61570",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Body Lotion",
+      "product_image": "https://example.com/images/cosmetics_4.jpg",
+      "product_description": "Top quality body lotion.",
+      "product_price": "\u20a62120",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Hair Gel",
+      "product_image": "https://example.com/images/cosmetics_5.jpg",
+      "product_description": "Top quality hair gel.",
+      "product_price": "\u20a62335",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Makeup Kit",
+      "product_image": "https://example.com/images/cosmetics_6.jpg",
+      "product_description": "Top quality makeup kit.",
+      "product_price": "\u20a61982",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Eye Shadow",
+      "product_image": "https://example.com/images/cosmetics_7.jpg",
+      "product_description": "Top quality eye shadow.",
+      "product_price": "\u20a62314",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Facial Mask",
+      "product_image": "https://example.com/images/cosmetics_8.jpg",
+      "product_description": "Top quality facial mask.",
+      "product_price": "\u20a61685",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Skin Serum",
+      "product_image": "https://example.com/images/cosmetics_9.jpg",
+      "product_description": "Top quality skin serum.",
+      "product_price": "\u20a62212",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Blush Powder",
+      "product_image": "https://example.com/images/cosmetics_10.jpg",
+      "product_description": "Top quality blush powder.",
+      "product_price": "\u20a61668",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Brow Pencil",
+      "product_image": "https://example.com/images/cosmetics_11.jpg",
+      "product_description": "Top quality brow pencil.",
+      "product_price": "\u20a61748",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Shaving Foam",
+      "product_image": "https://example.com/images/cosmetics_12.jpg",
+      "product_description": "Top quality shaving foam.",
+      "product_price": "\u20a61849",
+      "product_rating": "5 star"
+    }
+  ],
+  "self_care": [
+    {
+      "product_name": "Bath Salt",
+      "product_image": "https://example.com/images/self_care_1.jpg",
+      "product_description": "Top quality bath salt.",
+      "product_price": "\u20a61796",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Hand Sanitizer",
+      "product_image": "https://example.com/images/self_care_2.jpg",
+      "product_description": "Top quality hand sanitizer.",
+      "product_price": "\u20a62259",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Body Scrub",
+      "product_image": "https://example.com/images/self_care_3.jpg",
+      "product_description": "Top quality body scrub.",
+      "product_price": "\u20a62691",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Massage Oil",
+      "product_image": "https://example.com/images/self_care_4.jpg",
+      "product_description": "Top quality massage oil.",
+      "product_price": "\u20a62111",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Foot Cream",
+      "product_image": "https://example.com/images/self_care_5.jpg",
+      "product_description": "Top quality foot cream.",
+      "product_price": "\u20a61801",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Hair Oil",
+      "product_image": "https://example.com/images/self_care_6.jpg",
+      "product_description": "Top quality hair oil.",
+      "product_price": "\u20a62723",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Face Mask",
+      "product_image": "https://example.com/images/self_care_7.jpg",
+      "product_description": "Top quality face mask.",
+      "product_price": "\u20a61826",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Tooth Paste",
+      "product_image": "https://example.com/images/self_care_8.jpg",
+      "product_description": "Top quality tooth paste.",
+      "product_price": "\u20a61747",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Eye Drops",
+      "product_image": "https://example.com/images/self_care_9.jpg",
+      "product_description": "Top quality eye drops.",
+      "product_price": "\u20a62409",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Beard Oil",
+      "product_image": "https://example.com/images/self_care_10.jpg",
+      "product_description": "Top quality beard oil.",
+      "product_price": "\u20a62851",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Sleep Aid",
+      "product_image": "https://example.com/images/self_care_11.jpg",
+      "product_description": "Top quality sleep aid.",
+      "product_price": "\u20a62659",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Pain Balm",
+      "product_image": "https://example.com/images/self_care_12.jpg",
+      "product_description": "Top quality pain balm.",
+      "product_price": "\u20a61771",
+      "product_rating": "5 star"
+    }
+  ],
+  "it_services": [
+    {
+      "product_name": "Web Design",
+      "product_image": "https://example.com/images/it_services_1.jpg",
+      "product_description": "Top quality web design.",
+      "product_price": "\u20a62706",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "App Dev",
+      "product_image": "https://example.com/images/it_services_2.jpg",
+      "product_description": "Top quality app dev.",
+      "product_price": "\u20a62238",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "SEO Audit",
+      "product_image": "https://example.com/images/it_services_3.jpg",
+      "product_description": "Top quality seo audit.",
+      "product_price": "\u20a62861",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "UI Design",
+      "product_image": "https://example.com/images/it_services_4.jpg",
+      "product_description": "Top quality ui design.",
+      "product_price": "\u20a62858",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Tech Support",
+      "product_image": "https://example.com/images/it_services_5.jpg",
+      "product_description": "Top quality tech support.",
+      "product_price": "\u20a62151",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Code Review",
+      "product_image": "https://example.com/images/it_services_6.jpg",
+      "product_description": "Top quality code review.",
+      "product_price": "\u20a62570",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Cloud Setup",
+      "product_image": "https://example.com/images/it_services_7.jpg",
+      "product_description": "Top quality cloud setup.",
+      "product_price": "\u20a62370",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "IT Training",
+      "product_image": "https://example.com/images/it_services_8.jpg",
+      "product_description": "Top quality it training.",
+      "product_price": "\u20a61207",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Cyber Check",
+      "product_image": "https://example.com/images/it_services_9.jpg",
+      "product_description": "Top quality cyber check.",
+      "product_price": "\u20a61917",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Server Admin",
+      "product_image": "https://example.com/images/it_services_10.jpg",
+      "product_description": "Top quality server admin.",
+      "product_price": "\u20a61915",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "DevOps Help",
+      "product_image": "https://example.com/images/it_services_11.jpg",
+      "product_description": "Top quality devops help.",
+      "product_price": "\u20a62868",
+      "product_rating": "5 star"
+    },
+    {
+      "product_name": "Bug Fix",
+      "product_image": "https://example.com/images/it_services_12.jpg",
+      "product_description": "Top quality bug fix.",
+      "product_price": "\u20a61524",
+      "product_rating": "5 star"
+    }
+  ]
+}
