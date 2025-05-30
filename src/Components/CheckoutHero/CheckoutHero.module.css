@@ -13,3 +13,24 @@
     color: white;
     font-size: 1.3rem;
 }
+
+
+@media (max-width: 830px) {
+    .checkout_hero{
+        height: 40vh;
+    }
+}
+
+@media (max-width: 540px) {
+    .checkout_hero{
+        height: 35vh;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .checkout_hero{
+        height: 32vh;
+        font-size: 1.1rem;
+    }
+}
