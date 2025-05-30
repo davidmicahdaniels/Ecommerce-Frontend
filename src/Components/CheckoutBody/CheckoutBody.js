@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from "./CheckoutBody.module.css"
 import { useNavigate } from 'react-router-dom';
 import img from "../../Assets/Images/prod3.png"
 import { useCartCount } from '../../App';
+
+
 
 const CheckoutBody = () => {
     const navigate =  useNavigate();
@@ -15,10 +17,18 @@ const CheckoutBody = () => {
 
     console.log(cartCount);
     
-    useEffect(() => {
-        // localStorage.setItem('cartProducts', JSON.stringify([]));
-    }, []);
+    const [isModalOpen, SetisModalOpen] = useState(false);
+    
+    const checkoutCart = () => {
+        SetisModalOpen(true)
+    }
 
+    const closeCheckoutModal = () => {
+        SetisModalOpen(false)
+        localStorage.setItem('cartProducts', JSON.stringify([]));
+        console.log(isModalOpen);
+        
+    }
 
     console.log(cartCount === 0, typeof cartCount);
     
@@ -42,6 +52,19 @@ const CheckoutBody = () => {
                 <div>
                     <h2>Checkout Items</h2>
 
+                    {
+                        isModalOpen === true ?
+                            <div className={classes.checkout_modal}>
+                                <div className={classes.modal_content_wrapper}>
+                                    <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                                    <h2>Checkout Successful</h2>
+                                    <p>Your order has been processed and would be delivered to you within 3 days.</p>
+                                    <button onClick={closeCheckoutModal}>Done</button>
+                                </div>
+                            </div>
+                        : ""
+                    }
+
 
                     <div className={classes.items_list}>
                         {
@@ -55,7 +78,7 @@ const CheckoutBody = () => {
                                         <p>{item.p1}</p>
                                     </div>
                                     <div className={classes.action_area}>
-                                        <ion-icon name="trash-outline" onClick={() => removeFromCartByName(item.product_name)}>></ion-icon>
+                                        <ion-icon name="trash-outline" onClick={() => removeFromCartByName(item.product_name)}></ion-icon>
                                     </div>
                                 </div>
                             })
@@ -77,7 +100,7 @@ const CheckoutBody = () => {
                     </div>
 
                     <div className={classes.checkout_btn_wrapper}>
-                        <button>Checkout Products</button>
+                        <button onClick={checkoutCart}>Checkout Products</button>
                     </div>
                 </div>
             : 
