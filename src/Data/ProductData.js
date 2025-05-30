@@ -1169,10 +1169,10 @@ export const ProductData = {
     },
     {
       "product_name": "Hair Oil",
-      "image1": "https://example.com/images/self_care_6.jpg",
-      "image2": "https://example.com/images/self_care_6.jpg",
-      "image3": "https://example.com/images/self_care_6.jpg",
-      "image4": "https://example.com/images/self_care_6.jpg",
+      "image1": "https://m.media-amazon.com/images/I/51Hs2vajwDL._SL1000_.jpg",
+      "image2": "https://media.ulta.com/i/ulta/2601408?w=1600&h=1600&fmt=auto",
+      "image3": "https://conaturalintl.com/cdn/shop/files/14_d7727854-6d54-44dc-91bb-6f4508bcbcee.jpg?v=1729664917",
+      "image4": "https://cdn2.prose.com/_next/static/media/prose-custom-hair-oil.91be4990.jpg",
       "product_description": {
         "short": "Top quality hair oil.",
         "p1": "Our hair oil is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1184,10 +1184,10 @@ export const ProductData = {
     },
     {
       "product_name": "Face Mask",
-      "image1": "https://example.com/images/self_care_7.jpg",
-      "image2": "https://example.com/images/self_care_7.jpg",
-      "image3": "https://example.com/images/self_care_7.jpg",
-      "image4": "https://example.com/images/self_care_7.jpg",
+      "image1": "https://www.maskness.com/wp-content/uploads/2020/09/data-20.jpg",
+      "image2": "https://msw-ltd.com/wp-content/uploads/2024/08/s-l1600-4-1.webp",
+      "image3": "https://www.maskness.com/wp-content/uploads/2020/09/data-20.jpg",
+      "image4": "https://m.media-amazon.com/images/I/61AUtYTvltL._AC_UF1000,1000_QL80_.jpg",
       "product_description": {
         "short": "Top quality face mask.",
         "p1": "Our face mask is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1199,10 +1199,10 @@ export const ProductData = {
     },
     {
       "product_name": "Tooth Paste",
-      "image1": "https://example.com/images/self_care_8.jpg",
-      "image2": "https://example.com/images/self_care_8.jpg",
-      "image3": "https://example.com/images/self_care_8.jpg",
-      "image4": "https://example.com/images/self_care_8.jpg",
+      "image1": "https://www.123dental.com.au/wp-content/uploads/2023/12/toothpaste-guide-teeth.jpg",
+      "image2": "https://helvident.ch/wp-content/uploads/2020/03/choisir-un-dentifrice-HELVIDENT-1024x683.jpg",
+      "image3": "https://cdn.hswstatic.com/gif/toothpaste.jpg",
+      "image4": "https://as2.ftcdn.net/v2/jpg/01/63/21/43/1000_F_163214384_2y7oMiIhHKxm70pU3dYOFzgKfZ4WO0PG.jpg",
       "product_description": {
         "short": "Top quality tooth paste.",
         "p1": "Our tooth paste is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1214,10 +1214,10 @@ export const ProductData = {
     },
     {
       "product_name": "Eye Drops",
-      "image1": "https://example.com/images/self_care_9.jpg",
-      "image2": "https://example.com/images/self_care_9.jpg",
-      "image3": "https://example.com/images/self_care_9.jpg",
-      "image4": "https://example.com/images/self_care_9.jpg",
+      "image1": "https://www.alicantodrugs.com/wp-content/uploads/2019/09/Cantomox-D.jpg",
+      "image2": "https://www.veeremedies.com/wp-content/uploads/2019/02/Rotomox-D.jpg",
+      "image3": "https://himalayawellness.in/cdn/shop/products/OPHTHACARE-DROPS-10ML.jpg?v=1659002377",
+      "image4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbP3HhSsz599rMPnxFCKjEXhm95NWfZIfURjtIbgJZGlhsfUZDTeGFMkPZjOMcw0eEUvM&usqp=CAU",
       "product_description": {
         "short": "Top quality eye drops.",
         "p1": "Our eye drops is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1229,10 +1229,10 @@ export const ProductData = {
     },
     {
       "product_name": "Beard Oil",
-      "image1": "https://example.com/images/self_care_10.jpg",
-      "image2": "https://example.com/images/self_care_10.jpg",
-      "image3": "https://example.com/images/self_care_10.jpg",
-      "image4": "https://example.com/images/self_care_10.jpg",
+      "image1": "https://www.orikigroup.com/cdn/shop/products/EmptyName_5.jpg?v=1556214882",
+      "image2": "https://www.orikigroup.com/cdn/shop/products/GentleFoamCitrusCleanserwithGreenTea_1200x.jpg?v=1623355167",
+      "image3": "https://www.orikigroup.com/cdn/shop/products/HerbalSkinClearingToner_1200x.jpg?v=1623339308",
+      "image4": "https://lockitinproducts.com/cdn/shop/files/lock-it-in-beard-oil-unruley-beard-no-more-50ml.png?v=1722917296",
       "product_description": {
         "short": "Top quality beard oil.",
         "p1": "Our beard oil is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1244,10 +1244,10 @@ export const ProductData = {
     },
     {
       "product_name": "Sleep Aid",
-      "image1": "https://example.com/images/self_care_11.jpg",
-      "image2": "https://example.com/images/self_care_11.jpg",
-      "image3": "https://example.com/images/self_care_11.jpg",
-      "image4": "https://example.com/images/self_care_11.jpg",
+      "image1": "https://images.ctfassets.net/34zny1xcpyrz/2OOBBTMnmyolqtXKlfv31S/a05557c3cf771be4adb2a0249a601611/PDP_desk_PureZzzs_Muscle_Relaxation_Bottle_HERO_130.jpg?fm=webp",
+      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGFsxg9xbGw8kdfnP8r06EH6P4XObzte9svg&s",
+      "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA3Sy8cLGYPysPbfRZll6yAldUq0clkqr6vg&s",
+      "image4": "https://m.media-amazon.com/images/I/71JYy7FrF8L.jpg",
       "product_description": {
         "short": "Top quality sleep aid.",
         "p1": "Our sleep aid is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1259,10 +1259,10 @@ export const ProductData = {
     },
     {
       "product_name": "Pain Balm",
-      "image1": "https://example.com/images/self_care_12.jpg",
-      "image2": "https://example.com/images/self_care_12.jpg",
-      "image3": "https://example.com/images/self_care_12.jpg",
-      "image4": "https://example.com/images/self_care_12.jpg",
+      "image1": "https://cdn01.pharmeasy.in/dam/products_otc/D07856/amrutanjan-new-maha-strong-pain-balm-50ml-2-1697103351.jpg",
+      "image2": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/zubfqxisrjdtu2hr5bma",
+      "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2K7sIr-RyQD3UOWxI8zohKPIowoBQp59q6hPmuctn-C7GNWURPjovywyL0tnWTHBAEPI&usqp=CAU",
+      "image4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlnYw5IOSaiyjw5L0P4NIRbAioyTWORtQ1dg&s",
       "product_description": {
         "short": "Top quality pain balm.",
         "p1": "Our pain balm is crafted from premium materials to ensure durability and optimal performance for everyday use.",
