@@ -28,7 +28,7 @@
     align-items: center;
     gap: 0.7rem;
 
-    display: none;
+    /* display: none; */
 }
 
 .empty_cart_notice button{

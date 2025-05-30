@@ -11,6 +11,10 @@ const DashboardNavbar = () => {
     navigate("/")
   }
 
+  const viewCart = () => {
+    navigate("/orderCheckout")
+  }
+
   
   const cartCount = useCartCount(); 
 
@@ -21,8 +25,8 @@ const DashboardNavbar = () => {
             <ion-icon name="cart-outline"></ion-icon>
             <h2>EduMart</h2>
         </div>
-        <div className={classes.cart}>
-          <BsCartPlusFill  size={25} />
+        <div className={classes.cart} onClick={viewCart}>
+          <BsCartPlusFill  size={20} />
           {/* <h3 className="">Cart: {cartCount} item{cartCount !== 1 ? 's' : ''}</h3> */}
           <h3 className="">Cart: {cartCount}</h3>
         </div>

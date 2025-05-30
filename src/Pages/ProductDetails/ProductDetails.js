@@ -28,6 +28,7 @@ const ProductDetailsArea = () => {
   const localData = getAppLocalStorage(); 
 
     console.log(localData);
+
     const addToCart = () => {
       // Re-read latest selected product and cart from localStorage
       const { selectedProductDetails } = getAppLocalStorage();
