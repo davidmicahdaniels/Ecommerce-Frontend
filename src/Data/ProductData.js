@@ -1276,10 +1276,10 @@ export const ProductData = {
   "it_services": [
     {
       "product_name": "Web Design",
-      "image1": "https://example.com/images/it_services_1.jpg",
-      "image2": "https://example.com/images/it_services_1.jpg",
-      "image3": "https://example.com/images/it_services_1.jpg",
-      "image4": "https://example.com/images/it_services_1.jpg",
+      "image1": "https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Web_Designing.jpg",
+      "image2": "https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Web_Designing.jpg",
+      "image3": "https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Web_Designing.jpg",
+      "image4": "https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Web_Designing.jpg",
       "product_description": {
         "short": "Top quality web design.",
         "p1": "Our web design is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1291,10 +1291,10 @@ export const ProductData = {
     },
     {
       "product_name": "App Dev",
-      "image1": "https://example.com/images/it_services_2.jpg",
-      "image2": "https://example.com/images/it_services_2.jpg",
-      "image3": "https://example.com/images/it_services_2.jpg",
-      "image4": "https://example.com/images/it_services_2.jpg",
+      "image1": "https://ideausher.com/wp-content/uploads/2022/07/covr-image-50_result.webp",
+      "image2": "https://ideausher.com/wp-content/uploads/2022/07/covr-image-50_result.webp",
+      "image3": "https://ideausher.com/wp-content/uploads/2022/07/covr-image-50_result.webp",
+      "image4": "https://ideausher.com/wp-content/uploads/2022/07/covr-image-50_result.webp",
       "product_description": {
         "short": "Top quality app dev.",
         "p1": "Our app dev is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1306,10 +1306,10 @@ export const ProductData = {
     },
     {
       "product_name": "SEO Audit",
-      "image1": "https://example.com/images/it_services_3.jpg",
-      "image2": "https://example.com/images/it_services_3.jpg",
-      "image3": "https://example.com/images/it_services_3.jpg",
-      "image4": "https://example.com/images/it_services_3.jpg",
+      "image1": "https://f2h4k4f7.delivery.rocketcdn.me/wp-content/uploads/2022/09/1457875_BlogGraphicsHowtoPerformAnSEOaudit_01_100312.png",
+      "image2": "https://f2h4k4f7.delivery.rocketcdn.me/wp-content/uploads/2022/09/1457875_BlogGraphicsHowtoPerformAnSEOaudit_01_100312.png",
+      "image3": "https://f2h4k4f7.delivery.rocketcdn.me/wp-content/uploads/2022/09/1457875_BlogGraphicsHowtoPerformAnSEOaudit_01_100312.png",
+      "image4": "https://f2h4k4f7.delivery.rocketcdn.me/wp-content/uploads/2022/09/1457875_BlogGraphicsHowtoPerformAnSEOaudit_01_100312.png",
       "product_description": {
         "short": "Top quality seo audit.",
         "p1": "Our seo audit is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1321,10 +1321,10 @@ export const ProductData = {
     },
     {
       "product_name": "UI Design",
-      "image1": "https://example.com/images/it_services_4.jpg",
-      "image2": "https://example.com/images/it_services_4.jpg",
-      "image3": "https://example.com/images/it_services_4.jpg",
-      "image4": "https://example.com/images/it_services_4.jpg",
+      "image1": "https://cdn.sanity.io/images/599r6htc/regionalized/121b95a7cd65588fe63417d7b87a474035f0ec83-1080x541.png?w=1200&q=70&fit=max&auto=format",
+      "image2": "https://cdn.sanity.io/images/599r6htc/regionalized/121b95a7cd65588fe63417d7b87a474035f0ec83-1080x541.png?w=1200&q=70&fit=max&auto=format",
+      "image3": "https://cdn.sanity.io/images/599r6htc/regionalized/121b95a7cd65588fe63417d7b87a474035f0ec83-1080x541.png?w=1200&q=70&fit=max&auto=format",
+      "image4": "https://cdn.sanity.io/images/599r6htc/regionalized/121b95a7cd65588fe63417d7b87a474035f0ec83-1080x541.png?w=1200&q=70&fit=max&auto=format",
       "product_description": {
         "short": "Top quality ui design.",
         "p1": "Our ui design is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1336,10 +1336,10 @@ export const ProductData = {
     },
     {
       "product_name": "Tech Support",
-      "image1": "https://example.com/images/it_services_5.jpg",
-      "image2": "https://example.com/images/it_services_5.jpg",
-      "image3": "https://example.com/images/it_services_5.jpg",
-      "image4": "https://example.com/images/it_services_5.jpg",
+      "image1": "https://www.sait.com.np/wp-content/uploads/2024/12/Tech-Support-img.png",
+      "image2": "https://www.sait.com.np/wp-content/uploads/2024/12/Tech-Support-img.png",
+      "image3": "https://www.sait.com.np/wp-content/uploads/2024/12/Tech-Support-img.png",
+      "image4": "https://www.sait.com.np/wp-content/uploads/2024/12/Tech-Support-img.png",
       "product_description": {
         "short": "Top quality tech support.",
         "p1": "Our tech support is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1351,10 +1351,10 @@ export const ProductData = {
     },
     {
       "product_name": "Code Review",
-      "image1": "https://example.com/images/it_services_6.jpg",
-      "image2": "https://example.com/images/it_services_6.jpg",
-      "image3": "https://example.com/images/it_services_6.jpg",
-      "image4": "https://example.com/images/it_services_6.jpg",
+      "image1": "https://www.bounteous.com/sites/default/files/insights/2019-06/previews/20190606_blog_code_review_limbo-_how_low_should_you_go_website.png",
+      "image2": "https://www.bounteous.com/sites/default/files/insights/2019-06/previews/20190606_blog_code_review_limbo-_how_low_should_you_go_website.png",
+      "image3": "https://www.bounteous.com/sites/default/files/insights/2019-06/previews/20190606_blog_code_review_limbo-_how_low_should_you_go_website.png",
+      "image4": "https://www.bounteous.com/sites/default/files/insights/2019-06/previews/20190606_blog_code_review_limbo-_how_low_should_you_go_website.png",
       "product_description": {
         "short": "Top quality code review.",
         "p1": "Our code review is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1366,10 +1366,10 @@ export const ProductData = {
     },
     {
       "product_name": "Cloud Setup",
-      "image1": "https://example.com/images/it_services_7.jpg",
-      "image2": "https://example.com/images/it_services_7.jpg",
-      "image3": "https://example.com/images/it_services_7.jpg",
-      "image4": "https://example.com/images/it_services_7.jpg",
+      "image1": "https://www.fabasoft.com/sites/fabasoft/files/2023-10/Cloud-vs-on-premises-the-comparison.jpg",
+      "image2": "https://www.fabasoft.com/sites/fabasoft/files/2023-10/Cloud-vs-on-premises-the-comparison.jpg",
+      "image3": "https://www.fabasoft.com/sites/fabasoft/files/2023-10/Cloud-vs-on-premises-the-comparison.jpg",
+      "image4": "https://www.fabasoft.com/sites/fabasoft/files/2023-10/Cloud-vs-on-premises-the-comparison.jpg",
       "product_description": {
         "short": "Top quality cloud setup.",
         "p1": "Our cloud setup is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1381,10 +1381,10 @@ export const ProductData = {
     },
     {
       "product_name": "IT Training",
-      "image1": "https://example.com/images/it_services_8.jpg",
-      "image2": "https://example.com/images/it_services_8.jpg",
-      "image3": "https://example.com/images/it_services_8.jpg",
-      "image4": "https://example.com/images/it_services_8.jpg",
+      "image1": "https://classtraining.com.au/wp-content/uploads/2021/04/it-courses.jpg",
+      "image2": "https://classtraining.com.au/wp-content/uploads/2021/04/it-courses.jpg",
+      "image3": "https://classtraining.com.au/wp-content/uploads/2021/04/it-courses.jpg",
+      "image4": "https://classtraining.com.au/wp-content/uploads/2021/04/it-courses.jpg",
       "product_description": {
         "short": "Top quality it training.",
         "p1": "Our it training is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1396,10 +1396,10 @@ export const ProductData = {
     },
     {
       "product_name": "Cyber Check",
-      "image1": "https://example.com/images/it_services_9.jpg",
-      "image2": "https://example.com/images/it_services_9.jpg",
-      "image3": "https://example.com/images/it_services_9.jpg",
-      "image4": "https://example.com/images/it_services_9.jpg",
+      "image1": "https://swgfl.org.uk/assets/articles/cyber-secure-large.jpg",
+      "image2": "https://swgfl.org.uk/assets/articles/cyber-secure-large.jpg",
+      "image3": "https://swgfl.org.uk/assets/articles/cyber-secure-large.jpg",
+      "image4": "https://swgfl.org.uk/assets/articles/cyber-secure-large.jpg",
       "product_description": {
         "short": "Top quality cyber check.",
         "p1": "Our cyber check is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1411,10 +1411,10 @@ export const ProductData = {
     },
     {
       "product_name": "Server Admin",
-      "image1": "https://example.com/images/it_services_10.jpg",
-      "image2": "https://example.com/images/it_services_10.jpg",
-      "image3": "https://example.com/images/it_services_10.jpg",
-      "image4": "https://example.com/images/it_services_10.jpg",
+      "image1": "https://community.alteryx.com/t5/image/serverpage/image-id/178556i50566E281B7C7D64?v=v2",
+      "image2": "https://community.alteryx.com/t5/image/serverpage/image-id/178556i50566E281B7C7D64?v=v2",
+      "image3": "https://community.alteryx.com/t5/image/serverpage/image-id/178556i50566E281B7C7D64?v=v2",
+      "image4": "https://community.alteryx.com/t5/image/serverpage/image-id/178556i50566E281B7C7D64?v=v2",
       "product_description": {
         "short": "Top quality server admin.",
         "p1": "Our server admin is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1426,10 +1426,10 @@ export const ProductData = {
     },
     {
       "product_name": "DevOps Help",
-      "image1": "https://example.com/images/it_services_11.jpg",
-      "image2": "https://example.com/images/it_services_11.jpg",
-      "image3": "https://example.com/images/it_services_11.jpg",
-      "image4": "https://example.com/images/it_services_11.jpg",
+      "image1": "https://media.licdn.com/dms/image/v2/D4E12AQFy9E86GktPag/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1676030733626?e=2147483647&v=beta&t=7jSxjC-TSBZbzYSUDWY6dlYWs1N41EtdQyYedeLUiMw",
+      "image2": "https://media.licdn.com/dms/image/v2/D4E12AQFy9E86GktPag/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1676030733626?e=2147483647&v=beta&t=7jSxjC-TSBZbzYSUDWY6dlYWs1N41EtdQyYedeLUiMw",
+      "image3": "https://media.licdn.com/dms/image/v2/D4E12AQFy9E86GktPag/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1676030733626?e=2147483647&v=beta&t=7jSxjC-TSBZbzYSUDWY6dlYWs1N41EtdQyYedeLUiMw",
+      "image4": "https://media.licdn.com/dms/image/v2/D4E12AQFy9E86GktPag/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1676030733626?e=2147483647&v=beta&t=7jSxjC-TSBZbzYSUDWY6dlYWs1N41EtdQyYedeLUiMw",
       "product_description": {
         "short": "Top quality devops help.",
         "p1": "Our devops help is crafted from premium materials to ensure durability and optimal performance for everyday use.",
@@ -1441,10 +1441,10 @@ export const ProductData = {
     },
     {
       "product_name": "Bug Fix",
-      "image1": "https://example.com/images/it_services_12.jpg",
-      "image2": "https://example.com/images/it_services_12.jpg",
-      "image3": "https://example.com/images/it_services_12.jpg",
-      "image4": "https://example.com/images/it_services_12.jpg",
+      "image1": "https://multigenesys.com/wp-content/uploads/2024/07/ES-20.webp",
+      "image2": "https://multigenesys.com/wp-content/uploads/2024/07/ES-20.webp",
+      "image3": "https://multigenesys.com/wp-content/uploads/2024/07/ES-20.webp",
+      "image4": "https://multigenesys.com/wp-content/uploads/2024/07/ES-20.webp",
       "product_description": {
         "short": "Top quality bug fix.",
         "p1": "Our bug fix is crafted from premium materials to ensure durability and optimal performance for everyday use.",
