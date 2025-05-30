@@ -126,8 +126,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
-    height: 17vh;
-    overflow: hidden;
 }
 .bottom_images img{
     width: 100%;
@@ -239,9 +237,6 @@
 @media (max-width: 450px) {
   .main_img{
     height: 32vh;
-  }
-  .bottom_images {
-    height: 14vh;
   }
 }
 

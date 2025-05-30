@@ -2,8 +2,11 @@ import React from "react";
 import classes from "./Sidebar.module.css";
 import { getAppLocalStorage } from "../../App";
 import { ProductData } from "../../Data/ProductData";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+
+  const navigate = useNavigate();
 
   const setLocalStorageFromText = (text) => {
     try {
@@ -12,6 +15,7 @@ const Sidebar = () => {
         localStorage.setItem(key, typeof value === 'object' ? JSON.stringify(value) : String(value));
       });
       // console.log("Local storage updated successfully.");
+      navigate("/shop")
     } catch (error) {
       console.error("Invalid input. Please pass a valid JSON string.", error);
     }
