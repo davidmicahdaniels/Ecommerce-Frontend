@@ -75,6 +75,10 @@ const CheckoutBody = () => {
                             </div>
                         </div> */}
                     </div>
+
+                    <div className={classes.checkout_btn_wrapper}>
+                        <button>Checkout Products</button>
+                    </div>
                 </div>
             : 
                 <div className={classes.empty_cart_notice}>

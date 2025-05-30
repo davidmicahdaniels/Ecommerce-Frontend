@@ -78,3 +78,19 @@
 .item_text_wrapper h3{
     font-weight: bold;
 }
+
+
+.checkout_btn_wrapper{
+    margin: 1rem auto;
+
+    display: flex;
+    justify-content: center;
+}
+.checkout_btn_wrapper button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    margin: auto;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+}
