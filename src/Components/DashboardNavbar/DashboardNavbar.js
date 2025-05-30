@@ -2,6 +2,7 @@ import React from 'react'
 import classes from "./DashboardNavbar.module.css"
 import { BsCartPlusFill    } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
+import { useCartCount } from '../../App';
 
 const DashboardNavbar = () => {
   const navigate = useNavigate();
@@ -9,7 +10,9 @@ const DashboardNavbar = () => {
   const visitLandingPage = () => {
     navigate("/")
   }
+
   
+  const cartCount = useCartCount(); 
 
   return (
     <nav className={classes.dashboard_nav}>
@@ -20,7 +23,8 @@ const DashboardNavbar = () => {
         </div>
         <div className={classes.cart}>
           <BsCartPlusFill  size={25} />
-          <h3 className="">Cart</h3>
+          {/* <h3 className="">Cart: {cartCount} item{cartCount !== 1 ? 's' : ''}</h3> */}
+          <h3 className="">Cart: {cartCount}</h3>
         </div>
       </div>
     </nav>

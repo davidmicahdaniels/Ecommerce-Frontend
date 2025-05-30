@@ -12,7 +12,35 @@ import VendoFeedbackRoute from "./VendorsDashboard/Routes/VendoFeedbackRoute";
 import VendorProfileRoute from "./VendorsDashboard/Routes/VendorProfileRoute";
 import ManageProductRoute from "./VendorsDashboard/Routes/ManageProductRoute";
 import OrderCheckout from "./Pages/OrderCheckout/OrderCheckout";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+
+export function useCartCount() {
+  const [cartCount, setCartCount] = useState(() => {
+    const items = JSON.parse(localStorage.getItem('cartProducts') || '[]');
+    return items.length;
+  });
+
+  useEffect(() => {
+    const checkCart = () => {
+      const items = JSON.parse(localStorage.getItem('cartProducts') || '[]');
+      setCartCount(items.length);
+    };
+
+    // Update regularly in same tab
+    const interval = setInterval(checkCart, 300);
+
+    // Optional: respond to cross-tab storage events
+    window.addEventListener('storage', checkCart);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('storage', checkCart);
+    };
+  }, []);
+
+  return cartCount;
+}
 
 
 export function getAppLocalStorage() {
