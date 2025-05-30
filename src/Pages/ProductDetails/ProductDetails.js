@@ -27,7 +27,29 @@ const ProductDetailsArea = () => {
   
   const localData = getAppLocalStorage(); 
 
-  console.log(localData.selectedProductDetails);
+    console.log(localData);
+    const addToCart = () => {
+      // Re-read latest selected product and cart from localStorage
+      const { selectedProductDetails } = getAppLocalStorage();
+      const existingCart = JSON.parse(localStorage.getItem('cartProducts') || '[]');
+
+      // Check for a duplicate by product_name
+      const alreadyInCart = existingCart.some(
+        item => item.product_name === selectedProductDetails.product_name
+      );
+
+      if (alreadyInCart) {
+        console.log('Product is already in the cart.');
+        return;
+      }
+
+      // Append and save
+      const updatedCart = [...existingCart, selectedProductDetails];
+      localStorage.setItem('cartProducts', JSON.stringify(updatedCart));
+
+      console.log('Added to cart:', selectedProductDetails);
+    };
+
 
     return(
         <div className={classes.product_details_area}>
@@ -62,7 +84,7 @@ const ProductDetailsArea = () => {
                     </div>
 
                     <div className={classes.btn_wrapper}>
-                        <button className={classes.cart_btn}>Add to Cart</button>
+                        <button className={classes.cart_btn} onClick={addToCart}>Add to Cart</button>
                         <button className={classes.purchase_btn}>Purchase Now</button>
                     </div>
                 </div>
