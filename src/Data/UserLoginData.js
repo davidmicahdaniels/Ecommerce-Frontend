@@ -6,7 +6,7 @@ export const UserLoginData = [
   },
   {
     "fullname": "James Okoro",
-    "email": "james.okoro@example.com",
+    "email": "james.okoro@gmail.com",
     "password": "Jo@Unique725"
   },
   {

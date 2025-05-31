@@ -16,6 +16,7 @@ import ProductCard from '../../Components/ProductCard/ProductCard';
 import SimilarProducts from '../../Components/SimilarProducts/SimilarProducts';
 import { useNavigate } from 'react-router-dom';
 import { getAppLocalStorage } from '../../App';
+import { ProductData } from '../../Data/ProductData';
 
 const ProductDetailsArea = () => {
   const navigate =  useNavigate();
@@ -94,9 +95,11 @@ const ProductDetailsArea = () => {
     )
 }
 
+
+
 const ProductDetails = () => {
     useEffect(() => {
-        // Set overflow hidden when the component mounts
+        // Set overflow hidden when the component mounts 
         document.body.style.overflow = "hidden";
     
         return () => {
@@ -105,6 +108,18 @@ const ProductDetails = () => {
         };
       }, []);
     
+      const selectedProduct = JSON.parse(localStorage.getItem('selectedProductDetails') || '{}');
+      const category = localStorage.getItem('currentProductCategory');
+
+      const productsInSameCategory = ProductData[category] || [];
+
+      const similarProducts = productsInSameCategory
+        .filter(product => product.product_name !== selectedProduct.product_name)
+        .slice(0, 2);
+
+
+      console.log(similarProducts);
+  
       return (
         <div className={classes.dashboard_body}>
           <DashboardNavbar />
@@ -116,10 +131,19 @@ const ProductDetails = () => {
 
             
             <div className={classes.similar_prodcut_area}>
-                <p className={classes.similar_header}>Similar prodducts</p>
+                <p className={classes.similar_header}>Similar products</p>
                 
-                <SimilarProducts />
-                <SimilarProducts />
+                {
+                  similarProducts.map((product) => {
+                    return <SimilarProducts 
+                              product_image={product.image1} 
+                              product_name={product.product_name} 
+                              product_price={product.product_price} 
+                            />
+                  })
+                }
+                
+                {/* <SimilarProducts /> */}
             </div>
 
             {/* <div className={classes.dashboard_end}>
