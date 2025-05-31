@@ -1,4 +1,4 @@
-const UserLoginData = [
+export const UserLoginData = [
   {
     "fullname": "Alice Morgan",
     "email": "alice.morgan@example.com",

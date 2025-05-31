@@ -43,14 +43,40 @@ export function useCartCount() {
 }
 
 
+// export function getAppLocalStorage() {
+//   return {
+//     isUserLoggedIn: localStorage.getItem('isUserLoggedIn') === 'true',
+//     currentProductCategory: localStorage.getItem('currentProductCategory'),
+//     selectedProductDetails: JSON.parse(localStorage.getItem('selectedProductDetails') || '{}'),
+//     cartProducts: JSON.parse(localStorage.getItem('cartProducts') || '[]')
+//   };
+// }
+
 export function getAppLocalStorage() {
-  return {
+  const data = {
     isUserLoggedIn: localStorage.getItem('isUserLoggedIn') === 'true',
     currentProductCategory: localStorage.getItem('currentProductCategory'),
     selectedProductDetails: JSON.parse(localStorage.getItem('selectedProductDetails') || '{}'),
-    cartProducts: JSON.parse(localStorage.getItem('cartProducts') || '[]')
+    cartProducts: JSON.parse(localStorage.getItem('cartProducts') || '[]'),
+    loggedinUserData: JSON.parse(localStorage.getItem('loggedinUserData') || '{}')
   };
+
+  // Log the full current state of local storage (parsed where possible)
+  const fullStorage = {};
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    try {
+      fullStorage[key] = JSON.parse(localStorage.getItem(key));
+    } catch {
+      fullStorage[key] = localStorage.getItem(key);
+    }
+  }
+
+  console.log("📦 Current Local Storage State:", fullStorage);
+
+  return data;
 }
+
 
 function App() {
   useEffect(() => {
