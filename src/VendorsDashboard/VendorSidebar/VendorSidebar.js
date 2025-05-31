@@ -29,9 +29,9 @@ const VendorSidebar = () => {
             </div>
             <ul className="">
                 <li onClick={viewOvervire}>Overview</li>
-                <li>Manage Orders</li>
+                {/* <li>Manage Orders</li> */}
                 <li onClick={manageProduct}>Mamage Products</li>
-                <li>Earnings</li>
+                {/* <li>Earnings</li> */}
                 <li onClick={viewReviews}>Reviews</li>
             </ul>
         </div>

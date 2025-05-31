@@ -7,10 +7,13 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { IoAnalyticsSharp } from "react-icons/io5";
 import { SiSimpleanalytics } from "react-icons/si";
 import img from "../../Assets/Images/prod2.png"
+import { ProductData } from '../../Data/ProductData';
 
 
 
 const VendorOverview = () => {
+  console.log(ProductData.electronics);
+  
   return (
     <div className={classes.overview_area}>
 
@@ -43,7 +46,40 @@ const VendorOverview = () => {
       <h2 className={classes.header}>Top Selling Porducts</h2>
 
       <div className={classes.top_products_wrapper}>
-        <div className={classes.product_card}>
+      {
+        ProductData.electronics.slice(0, 4).map((item) => {
+          return <div className={classes.product_card}>
+          <div className={classes.product_card_img_wrapper}>
+            <img
+              src={item.image1}
+              alt=""
+              className={classes.product_img}
+            />
+          </div>
+          <div className={classes.product_body}>
+            <div className={classes.product_nmae_wrapper}>
+              <h3>{item.product_name}</h3>
+
+              <div className={classes.star_wrapper}>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+            </div>
+            {/* <p>Perfume</p> */}
+            <p>{item.product_description.short}</p>
+
+            <div className={classes.card_bottom}>
+              <p className={classes.price}>{item.product_price}</p>
+              <button className={classes.card_btn}>View Product</button>
+            </div>
+          </div>
+        </div>
+        })
+      }
+        {/* <div className={classes.product_card}>
           <div className={classes.product_card_img_wrapper}>
             <img
               src={img}
@@ -129,36 +165,7 @@ const VendorOverview = () => {
               <button className={classes.card_btn}>View Product</button>
             </div>
           </div>
-        </div>
-        <div className={classes.product_card}>
-          <div className={classes.product_card_img_wrapper}>
-            <img
-              src={img}
-              alt=""
-              className={classes.product_img}
-            />
-          </div>
-          <div className={classes.product_body}>
-            <div className={classes.product_nmae_wrapper}>
-              <h3>BG Collections</h3>
-
-              <div className={classes.star_wrapper}>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-            </div>
-            <p>Perfume</p>
-            <p>25ml Mousuf Perfume</p>
-
-            <div className={classes.card_bottom}>
-              <p className={classes.price}>#2,500</p>
-              <button className={classes.card_btn}>View Product</button>
-            </div>
-          </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import classes from "./ManageProducts.module.css"
 import VendorProductCard from '../VendorProductCard/VendorProductCard';
 import { CiImageOn } from "react-icons/ci";
+import { ProductData } from '../../Data/ProductData';
 
 const ManageProducts = () => {
   return (
@@ -9,14 +10,18 @@ const ManageProducts = () => {
       <div className={classes.manage_prod_main_area}>
         <h2>Manage Products</h2>
 
-        <h3>Fashion:</h3>
+        {/* <h3>Fashion:</h3> */}
         <div className={classes.product_card_wrapper}>
-            <VendorProductCard />
-            <VendorProductCard />
-            <VendorProductCard />
+              {
+                ProductData.electronics.map((item) => {
+                    return <VendorProductCard {...item} />
+                })}
+
+            {/* <VendorProductCard />
+            <VendorProductCard /> */}
         </div>
 
-        <h3>Self Care:</h3>
+        {/* <h3>Self Care:</h3>
         <div className={classes.product_card_wrapper}>
             <VendorProductCard />
             <VendorProductCard />
@@ -28,7 +33,7 @@ const ManageProducts = () => {
             <VendorProductCard />
             <VendorProductCard />
             <VendorProductCard />
-        </div>
+        </div> */}
       </div>
 
      <div className={classes.add_product_area}>

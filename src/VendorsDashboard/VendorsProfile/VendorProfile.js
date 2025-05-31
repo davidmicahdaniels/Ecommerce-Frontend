@@ -5,8 +5,16 @@ import prod1 from "../../Assets/Images/prod4.png"
 import prod2 from "../../Assets/Images/prod2.png"
 import { FaStar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { ProductData } from '../../Data/ProductData';
+import { useNavigate } from 'react-router-dom'
 
 const VendorProfile = () => {
+  const navigate = useNavigate();
+
+  const viewProducts = () => {
+    navigate("/ManageProductRoute")
+  }
+  
   return (
     <div className={classes.vendors_profile}>
       <div className={classes.profile_main}>
@@ -44,18 +52,23 @@ const VendorProfile = () => {
         <h3>Your Products</h3>
 
         <div className={classes.profile_product_list}>
-          <div className={classes.product_card}>
-            <div className={classes.prod_img_wrapper}>
-                <img src={prod} alt="" />
-            </div>
-            <div className={classes.card_content}>
-              <h4>Crochet Hooks</h4>
-              <p><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
-              <small>5 star of 30 reviews</small>
-              <button>Manage Product</button>
-            </div>
-          </div>
-          <div className={classes.product_card}>
+                {
+                  ProductData.electronics.slice(0, 3).map((item) => {
+                    return <div className={classes.product_card}>
+                    
+                      <div className={classes.prod_img_wrapper}>
+                          <img src={item.image1} alt="" />
+                      </div>
+                      <div className={classes.card_content}>
+                        <h4>{item.product_name}</h4>
+                        <p><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
+                        <small>5 star of 30 reviews</small>
+                        <button onClick={viewProducts}>Manage Product</button>
+                      </div>
+                    </div>
+                  })}
+          
+          {/* <div className={classes.product_card}>
             <div className={classes.prod_img_wrapper}>
                 <img src={prod2} alt="" />
             </div>
@@ -76,11 +89,11 @@ const VendorProfile = () => {
               <small>5 star of 30 reviews</small>
               <button>Manage Product</button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className={classes.action_btn_wrapper}>
-          <button>View All Products</button>
+          <button onClick={viewProducts}>View All Products</button>
         </div>
       </div>
     </div>

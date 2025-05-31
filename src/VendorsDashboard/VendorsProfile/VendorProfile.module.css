@@ -107,6 +107,7 @@
     border-radius: 0.3rem;
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 
@@ -124,4 +125,6 @@
     border: none;
     outline: none;
     border-radius: 0.4rem;
+
+    cursor: pointer;
 }
