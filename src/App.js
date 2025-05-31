@@ -72,7 +72,7 @@ export function getAppLocalStorage() {
     }
   }
 
-  console.log("📦 Current Local Storage State:", fullStorage);
+  // console.log("📦 Current Local Storage State:", fullStorage);
 
   return data;
 }

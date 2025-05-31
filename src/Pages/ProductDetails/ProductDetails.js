@@ -52,6 +52,8 @@ const ProductDetailsArea = () => {
       console.log('Added to cart:', selectedProductDetails);
     };
 
+    console.log(localData.selectedProductDetails);
+    
 
     return(
         <div className={classes.product_details_area}>
