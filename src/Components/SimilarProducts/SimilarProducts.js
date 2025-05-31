@@ -1,10 +1,35 @@
 import React from 'react'
 import classes from "../ProductCard/ProductCard.module.css"
 import img from "../../Assets/Images/prod2.png"
+import { ProductData } from '../../Data/ProductData'
 
 const SimilarProducts = (props) => {
+  const updateSelectedProductDetails = (productName) => {
+    const category = localStorage.getItem('currentProductCategory');
+
+    if (!category || !productName || !ProductData[category]) {
+      console.error("Missing or invalid category or product name.");
+      return;
+    }
+
+    const fullProduct = ProductData[category].find(
+      item => item.product_name === productName
+    );
+
+    if (!fullProduct) {
+      console.error(`Product "${productName}" not found in category "${category}".`);
+      return;
+    }
+
+    localStorage.setItem('selectedProductDetails', JSON.stringify(fullProduct));
+
+    console.log(fullProduct);
+    
+  };
+
+
   return (
-    <div className={classes.product_card}>
+    <div className={classes.product_card} onClick={() => updateSelectedProductDetails(props.product_name)}>
       <div className={classes.product_card_img_wrapper}>
         <img
           src={props.product_image}
