@@ -72,7 +72,7 @@
     font-weight: bold;
     padding: 0.5rem 0;
     font-size: 1.3rem;
-    /* text-align: center; */
+    text-align: center;
 }
 .profile_product_list{
     display: flex;
