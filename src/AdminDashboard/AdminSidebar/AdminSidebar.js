@@ -8,6 +8,10 @@ const AdminSidebar = () => {
     const manageVendors = () => {
         navigate("/ManageVendors")
     }
+
+    const ManageUsers = () => {
+        navigate("/ManageUsers")
+    }
   return (
     <div className={classes.sidebar}>
         <div>
@@ -19,7 +23,7 @@ const AdminSidebar = () => {
             <ul className="">
                 <li>Overview</li>
                 <li>Analysis</li>
-                <li>Mamage Users</li>
+                <li onClick={ManageUsers}>Mamage Users</li>
                 <li onClick={manageVendors}>Mamage Vendors</li>
                 <li>Track Orders</li>
             </ul>
