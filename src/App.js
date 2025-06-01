@@ -13,6 +13,7 @@ import VendorProfileRoute from "./VendorsDashboard/Routes/VendorProfileRoute";
 import ManageProductRoute from "./VendorsDashboard/Routes/ManageProductRoute";
 import OrderCheckout from "./Pages/OrderCheckout/OrderCheckout";
 import { useEffect, useState } from "react";
+import ManageVendors from "./AdminDashboard/ManageVendors/ManageVendors";
 
 
 export function useCartCount() {
@@ -116,6 +117,7 @@ function App() {
           <Route exact path="/VendorProfile" element={<VendorProfileRoute />} />
           <Route exact path="/ManageProductRoute" element={<ManageProductRoute />} />
           <Route exact path="/AdminDashboard" element={<AdminDashboard />} />
+          <Route exact path="/ManageVendors" element={<ManageVendors />} />
         </Routes>
       </BrowserRouter>
     </div>

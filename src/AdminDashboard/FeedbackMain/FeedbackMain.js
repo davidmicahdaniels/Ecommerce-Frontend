@@ -15,7 +15,7 @@ const FeedbackMain = () => {
               return <div className={classes.feedback_box}>
                 <h3>{review.title}</h3> 
                 <p>{review.description}</p>
-                <div className="">
+                <div className={classes.stars_wrapper}>
                   <FaStar />
                   <FaStar />
                   <FaStar />

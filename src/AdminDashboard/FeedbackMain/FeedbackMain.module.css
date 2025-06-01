@@ -36,9 +36,12 @@
 .review_btn{
     padding: 0.7rem 0;
     border-radius: 0.5rem;
-    background-color: black;
+    background-color: #4caf50;
     color: white;
     border: none;
     outline: none;
     cursor: pointer;
+}
+.stars_wrapper{
+    color: #4caf50;
 }

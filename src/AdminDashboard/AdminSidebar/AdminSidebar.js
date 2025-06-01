@@ -1,7 +1,13 @@
 import React from 'react'
 import classes from "./AdminSidebar.module.css"
+import { useNavigate } from 'react-router-dom'
 
 const AdminSidebar = () => {
+    const navigate =  useNavigate();
+
+    const manageVendors = () => {
+        navigate("/ManageVendors")
+    }
   return (
     <div className={classes.sidebar}>
         <div>
@@ -14,7 +20,7 @@ const AdminSidebar = () => {
                 <li>Overview</li>
                 <li>Analysis</li>
                 <li>Mamage Users</li>
-                <li>Mamage Vendors</li>
+                <li onClick={manageVendors}>Mamage Vendors</li>
                 <li>Track Orders</li>
             </ul>
         </div>
