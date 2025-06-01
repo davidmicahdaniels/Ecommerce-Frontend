@@ -1,0 +1,139 @@
+.dashboard{
+    display: flex;
+    /* overflow: hidden; */
+}
+
+.overview_area{
+    padding: 1.5rem 2rem;
+    flex: 1;
+
+    height: 99vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.quick_overview{
+    background-color: aliceblue;
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+.overview_box{
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+.box_header{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+/* .box_header  */
+
+
+
+
+.header{
+    margin-top: 2rem;
+}
+.top_products_wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+
+.product_card {
+  border: 1px solid #efefef;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.product_card_img_wrapper {
+  width: 100%;
+  height: 25vh;
+}
+.product_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product_nmae_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product_nmae_wrapper h3{ 
+  font-size: 1.1rem;
+}
+.star_wrapper {
+  font-size: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  color: #ffcd0f;
+}
+
+.card_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product_body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.7rem 0;
+}
+.product_body p{
+  font-size: 0.9rem;
+}
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.card_btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+.categories_items_wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.catrgory_item {
+  border: 1px solid #4caf50;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+.catrgory_item h3{
+  font-weight: 600;
+}
+
+.catrgory_item ion-icon {
+  font-size: 5rem;
+  margin-bottom: 0.4rem;
+  color: #4caf50;
+}
