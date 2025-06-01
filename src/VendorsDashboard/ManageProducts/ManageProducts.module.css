@@ -71,7 +71,7 @@
 }
 
 .submit_btn{
-    background-color: black;
+    background-color: #4caf50;
     color: white;
 
     border: none;
@@ -80,4 +80,5 @@
     padding: 0.8rem;
     border-radius: 0.5rem;
     margin-top: 1rem;
+    cursor: pointer;
 }
