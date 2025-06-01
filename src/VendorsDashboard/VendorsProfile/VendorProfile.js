@@ -7,6 +7,8 @@ import { FaStar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { ProductData } from '../../Data/ProductData';
 import { useNavigate } from 'react-router-dom'
+import { VendorsData } from '../../Data/VendorsData'
+
 
 const VendorProfile = () => {
   const navigate = useNavigate();
@@ -29,20 +31,20 @@ const VendorProfile = () => {
               <img src={prod} alt='brand logo' />
             </div>
             <div className={classes.brand_details}>
-              <h2>Premium Class Store</h2>
-              <p>Clothing and food store</p>
-              <p className={classes.location}><FaLocationDot /> <p>Abuja, Nigeria</p></p>
+              <h2>{VendorsData[0].vendor_name}</h2>
+              <p>{VendorsData[0].vendor_category}</p>
+              <p className={classes.location}><FaLocationDot /> <p>{VendorsData[0].city_state}</p></p>
               <p><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
               <p>5 star of 45 reviews</p>
             </div>
           </div>
 
           <p className={classes.profile_header}>Description:</p>
-          <p className={classes.profile_txt}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          <p className={classes.profile_txt}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          <p className={classes.profile_txt}>{VendorsData[0].vendor_description.p1}</p>
+          <p className={classes.profile_txt}>{VendorsData[0].vendor_description.p2}</p>
 
           <p className={classes.profile_header}>Address:</p>
-          <p className={classes.profile_txt}>Plot 7 Jakande street, afebabalola avenue, Abuja</p>
+          <p className={classes.profile_txt}>{VendorsData[0].address}</p>
         </div>
 
 
