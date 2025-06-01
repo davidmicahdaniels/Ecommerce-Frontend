@@ -12,6 +12,16 @@ const AdminSidebar = () => {
     const ManageUsers = () => {
         navigate("/ManageUsers")
     }
+
+    const viewFeedback = () => {
+        navigate("/Feedback")
+    }
+
+    const viewOverview = () => {
+        navigate("/AdminDashboard")
+    }
+
+
   return (
     <div className={classes.sidebar}>
         <div>
@@ -21,15 +31,15 @@ const AdminSidebar = () => {
                 <ion-icon name="cart-outline"></ion-icon> <h2>EduMart</h2>
             </div>
             <ul className="">
-                <li>Overview</li>
+                <li onClick={viewOverview}>Overview</li>
                 <li>Analysis</li>
                 <li onClick={ManageUsers}>Mamage Users</li>
                 <li onClick={manageVendors}>Mamage Vendors</li>
-                <li>Track Orders</li>
+                {/* <li>Track Orders</li> */}
             </ul>
         </div>
         <ul className="">
-            <li>Feedbacks</li>
+            <li onClick={viewFeedback}>Feedbacks</li>
             <li>Signout</li>
         </ul>
     </div>

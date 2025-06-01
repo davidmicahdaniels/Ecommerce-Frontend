@@ -15,6 +15,7 @@ import OrderCheckout from "./Pages/OrderCheckout/OrderCheckout";
 import { useEffect, useState } from "react";
 import ManageVendors from "./AdminDashboard/ManageVendors/ManageVendors";
 import ManageUsers from "./AdminDashboard/ManageUsers/ManageUsers";
+import AdminOerview from "./AdminDashboard/AdminOerview/AdminOerview";
 
 
 export function useCartCount() {
@@ -117,7 +118,8 @@ function App() {
           <Route exact path="/VendorReviews" element={<VendoFeedbackRoute />} />
           <Route exact path="/VendorProfile" element={<VendorProfileRoute />} />
           <Route exact path="/ManageProductRoute" element={<ManageProductRoute />} />
-          <Route exact path="/AdminDashboard" element={<AdminDashboard />} />
+          <Route exact path="/Feedback" element={<AdminDashboard />} />
+          <Route exact path="/AdminDashboard" element={<AdminOerview />} />
           <Route exact path="/ManageVendors" element={<ManageVendors />} />
           <Route exact path="/ManageUsers" element={<ManageUsers />} />
         </Routes>
