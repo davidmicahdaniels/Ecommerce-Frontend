@@ -21,6 +21,10 @@ const AdminSidebar = () => {
         navigate("/AdminDashboard")
     }
 
+    const viewAdminAnalysis = () => {
+        navigate("/AdminAnalysis")
+    }
+
 
   return (
     <div className={classes.sidebar}>
@@ -32,7 +36,7 @@ const AdminSidebar = () => {
             </div>
             <ul className="">
                 <li onClick={viewOverview}>Overview</li>
-                <li>Analysis</li>
+                <li onClick={viewAdminAnalysis}>Analysis</li>
                 <li onClick={ManageUsers}>Mamage Users</li>
                 <li onClick={manageVendors}>Mamage Vendors</li>
                 {/* <li>Track Orders</li> */}

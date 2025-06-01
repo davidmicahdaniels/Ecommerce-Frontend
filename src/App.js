@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import ManageVendors from "./AdminDashboard/ManageVendors/ManageVendors";
 import ManageUsers from "./AdminDashboard/ManageUsers/ManageUsers";
 import AdminOerview from "./AdminDashboard/AdminOerview/AdminOerview";
+import AdminAnalysis from "./AdminDashboard/AdminAnalysis/AdminAnalysis";
 
 
 export function useCartCount() {
@@ -122,6 +123,7 @@ function App() {
           <Route exact path="/AdminDashboard" element={<AdminOerview />} />
           <Route exact path="/ManageVendors" element={<ManageVendors />} />
           <Route exact path="/ManageUsers" element={<ManageUsers />} />
+          <Route exact path="/AdminAnalysis" element={<AdminAnalysis />} />
         </Routes>
       </BrowserRouter>
     </div>
