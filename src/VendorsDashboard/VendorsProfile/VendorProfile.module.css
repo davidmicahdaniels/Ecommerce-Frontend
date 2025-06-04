@@ -131,3 +131,53 @@
 
     cursor: pointer;
 }
+
+
+@media (max-width: 1200px) {
+    .vendors_profile{
+        width: 80vw;
+        margin: auto;
+        flex: 0;
+    }
+    .vendor_product_display{
+        display: none;
+    }
+    .profile_main{
+        width: 80vw;
+        border-right: none;
+    }
+}
+
+
+@media (max-width: 610px) {
+    .vendors_profile{
+        width: 90vw;
+    }
+    .profile_main{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .vendors_profile{
+        width: 95vw;
+    }
+    .profile_main{
+        width: 95vw;
+    }
+    .brand_essentials{
+        flex-direction: column;
+        text-align: center;
+    }
+    .location{
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .brand_img_Wrapper{
+        width: 8rem;
+        height: 8rem;
+    }
+}
