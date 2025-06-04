@@ -142,6 +142,9 @@
   .header{
     text-align: center;
   }
+  .overview_area > h2{
+    text-align: center;
+  }
   .top_products_wrapper{
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
@@ -194,5 +197,24 @@
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     align-items: center;
+  }
+  .overview_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .top_products_wrapper{
+    width: 80%;
+  }
+}
+
+@media (max-width: 380px) {
+  .top_products_wrapper{
+    width: 90%;
   }
 }
