@@ -98,3 +98,53 @@
   cursor: pointer;
 }
 
+
+
+@media (max-width: 1200px) {
+  .overview_area{
+    flex: 0;
+    width: 85vw;
+    margin: auto;
+    padding: 1.5rem 0;
+  }
+  .quick_overview{
+    gap: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 85vw;
+  }
+  .top_products_wrapper{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 1050px) {
+  .quick_overview{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 950px) {
+  .overview_area, .quick_overview{
+    width: 90vw;
+  }
+}
+
+@media (max-width: 850px) {
+  .overview_area{
+    width: 80vw;
+  }  
+  .quick_overview{
+    width: 80vw;
+  }
+  .header{
+    text-align: center;
+  }
+  .top_products_wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: auto;
+  }
+}
