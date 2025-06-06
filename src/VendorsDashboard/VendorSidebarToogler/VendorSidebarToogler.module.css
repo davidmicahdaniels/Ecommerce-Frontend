@@ -5,4 +5,8 @@
 
     padding: 1rem;
     border-radius: 50%;
+    background-color: aliceblue;
+}
+.sidebar_toogle ion-icon{
+    font-size: 1.3rem;
 }
