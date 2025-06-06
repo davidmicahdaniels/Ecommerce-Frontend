@@ -84,19 +84,15 @@ const CheckoutBody = () => {
                             })
                         }
 
-                        {/* 
-                        <div className={classes.item}>
-                            <div className={classes.item_img_wrapper}>
-                                <img src={img} alt="cart item" />
-                            </div>
-                            <div className={classes.item_text_wrapper}>
-                                <h3>2 ball of crochet wools</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt et dolore magna aliqua....</p>
-                            </div>
-                            <div className={classes.action_area}>
-                                <ion-icon name="trash-outline"></ion-icon>
-                            </div>
-                        </div> */}
+                        
+                        <div className={classes.checkout_details}>
+                            <label>Customer's Fullname</label>
+                            <input type='text' placeholder='Fullname'/>
+                            <label>Delivery Address</label>
+                            <input type='text' placeholder='Delivery Address'/>
+                            <label>Reciever's Phone NO.</label>
+                            <input type='text' placeholder='Phone number'/>
+                        </div>
                     </div>
 
                     <div className={classes.checkout_btn_wrapper}>
