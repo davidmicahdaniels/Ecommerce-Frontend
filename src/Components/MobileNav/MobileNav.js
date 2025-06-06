@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./MobileNav.module.css";
 import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const MobileNav = (props) => {
   const navigate =  useNavigate();
@@ -26,10 +27,19 @@ const MobileNav = (props) => {
         <h1 onClick={visitHome} className={classes.edumart_mobilenav_logo}>EduMart</h1>
 
         <ul className={classes.nav_links_wrapper}>
-          <li>Home</li>
-          <li>Category</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          
+          <li>
+            <HashLink smooth to="#navbar">Home</HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="#category">Category</HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="#products">Products</HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="#newsletter">Contact Us</HashLink>
+          </li>
         </ul>
 
         <div className={classes.nav_buttons_wrapper}>
