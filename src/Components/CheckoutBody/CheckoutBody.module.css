@@ -107,6 +107,12 @@
     border: 1px solid gray;
     border-radius: 0.3rem;
 }
+.error {
+  color: red;
+  font-size: 0.875rem; /* Optional: slightly smaller text */
+  margin: 4px 0;
+}
+
 
 
 

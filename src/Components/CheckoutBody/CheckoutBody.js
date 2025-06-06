@@ -19,9 +19,49 @@ const CheckoutBody = () => {
     
     const [isModalOpen, SetisModalOpen] = useState(false);
     
-    const checkoutCart = () => {
-        SetisModalOpen(true)
+    // const checkoutCart = () => {
+    //     SetisModalOpen(true)
+    // }
+
+    const [fullname, setFullname] = useState('');
+  const [address, setAddress] = useState('');
+  const [phone, setPhone] = useState('');
+
+  const [errors, setErrors] = useState({
+    fullname: '',
+    address: '',
+    phone: '',
+  });
+
+  const checkoutCart = () => {
+    let hasError = false;
+    const newErrors = {
+      fullname: '',
+      address: '',
+      phone: '',
+    };
+
+    if (!fullname.trim()) {
+      newErrors.fullname = 'Fullname is required';
+      hasError = true;
     }
+
+    if (!address.trim()) {
+      newErrors.address = 'Delivery address is required';
+      hasError = true;
+    }
+
+    if (!phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+      hasError = true;
+    }
+
+    setErrors(newErrors);
+
+    if (!hasError) {
+      SetisModalOpen(true);
+    }
+  };
 
     const closeCheckoutModal = () => {
         SetisModalOpen(false)
@@ -85,14 +125,43 @@ const CheckoutBody = () => {
                         }
 
                         
-                        <div className={classes.checkout_details}>
+                        {/* <div className={classes.checkout_details}>
                             <label>Customer's Fullname</label>
                             <input type='text' placeholder='Fullname'/>
                             <label>Delivery Address</label>
                             <input type='text' placeholder='Delivery Address'/>
                             <label>Reciever's Phone NO.</label>
                             <input type='text' placeholder='Phone number'/>
-                        </div>
+                        </div> */}
+
+                        <div className={classes.checkout_details}>
+                        <label>Customer's Fullname:</label>
+                        {errors.fullname && <p className={classes.error}>{errors.fullname}</p>}
+                        <input
+                        type='text'
+                        placeholder='Fullname'
+                        value={fullname}
+                        onChange={(e) => setFullname(e.target.value)}
+                        />
+
+                        <label>Delivery Address:</label>
+                        {errors.address && <p className={classes.error}>{errors.address}</p>}
+                        <input
+                        type='text'
+                        placeholder='Delivery Address'
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                        />
+
+                        <label>Receiver's Phone No.:</label>
+                        {errors.phone && <p className={classes.error}>{errors.phone}</p>}
+                        <input
+                        type='text'
+                        placeholder='Phone number'
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        />
+                    </div>
                     </div>
 
                     <div className={classes.checkout_btn_wrapper}>
