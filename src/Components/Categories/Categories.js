@@ -24,7 +24,7 @@ const Categories = () => {
   }
 
   return (
-    <section>
+    <section id="category">
       <div className={classes.categories_content_wrapper}>
         <div className={classes.categories_top}>
           <h2>Browse by Category</h2>

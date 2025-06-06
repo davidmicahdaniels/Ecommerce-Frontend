@@ -9,10 +9,10 @@ import product6 from "../../Assets/Images/prod6.png"
 
 const ProductsDisplay = () => {
   return (
-    <section>
+    <section id="products">
       <div className={classes.product_content_wrapper}>
         <div className={classes.product_display_top}>
-          <h2>Trending Ads</h2>
+          <h2>Products</h2>
           <button>
             <p>View All Products</p>
             <ion-icon name="arrow-forward-outline"></ion-icon>

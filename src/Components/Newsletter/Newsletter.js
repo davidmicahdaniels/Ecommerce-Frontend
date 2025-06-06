@@ -3,7 +3,7 @@ import classes from "./Newsletter.module.css";
 
 const Newsletter = () => {
   return (
-    <section className={classes.newsletter_section}>
+    <section className={classes.newsletter_section} id="newsletter">
       <div className={classes.newsletter_content_wrapper}>
         <input
           type="text"

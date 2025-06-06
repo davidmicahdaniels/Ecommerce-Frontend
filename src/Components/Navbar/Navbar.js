@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "./Navbar.module.css";
 import MobileNav from "../MobileNav/MobileNav";
 import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const visitHome = () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={classes.navbar}>
+    <nav className={classes.navbar} id="navbar">
       {isNavVisible && <MobileNav close={closeNav} />}
 
       <div className={classes.nav_content_wrapper}>
@@ -38,10 +39,10 @@ const Navbar = () => {
         </h1>
 
         <ul className={classes.nav_links_wrapper}>
-          <li>Home</li>
+          <HashLink smooth to="#navbar">Home</HashLink>
           <HashLink smooth to="#category">Category</HashLink>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          <HashLink smooth to="#products">Products</HashLink>
+          <HashLink smooth to="#newsletter">Contact Us</HashLink>
         </ul>
 
         <div className={classes.flexed}>
