@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from "./VendorSidebarToogler.module.css"
+import { useNavigate } from 'react-router-dom';
 
 const VendorMobileSidebar = () => {
     const navigate = useNavigate();
@@ -42,13 +43,24 @@ const VendorMobileSidebar = () => {
   )
 }
 
+const VendorSidebarToggler = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-const VendorSidebarToogler = () => {
+  const toggleSidebar = () => {
+    setIsSidebarOpen(prev => !prev);
+  };
+
   return (
-    <div className={classes.sidebar_toogle}>
+    <>
+    <div className={classes.sidebar_toggle} onClick={toggleSidebar}>
       <ion-icon name="menu-outline"></ion-icon>
+      {/* Optional: Debug or visual indicator */}
     </div>
-  )
-}
+    <div  onClick={toggleSidebar}>
+      {isSidebarOpen ? <VendorMobileSidebar/> : ''}
+    </div>
+    </>
+  );
+};
 
-export default VendorSidebarToogler;
+export default VendorSidebarToggler;
