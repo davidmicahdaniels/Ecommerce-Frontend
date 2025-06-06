@@ -39,7 +39,7 @@ const Navbar = () => {
 
         <ul className={classes.nav_links_wrapper}>
           <li>Home</li>
-          <li>Category</li>
+          <HashLink smooth to="#category">Category</HashLink>
           <li>About Us</li>
           <li>Contact Us</li>
         </ul>
