@@ -177,7 +177,7 @@
 
 @media (max-width: 450px) {
     .brand_img_Wrapper{
-        width: 8rem;
-        height: 8rem;
+        width: 8rem !important;
+        height: 8rem !important;
     }
 }
