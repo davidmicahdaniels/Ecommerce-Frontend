@@ -87,6 +87,11 @@
   font-size: 1.8rem;
 }
 
+.nav_links_wrapper a{
+  text-decoration: none;
+  color: black;
+}
+
 @media (max-width: 1000px) {
   .nav_links_wrapper,
   .searchbar_wrapper,
