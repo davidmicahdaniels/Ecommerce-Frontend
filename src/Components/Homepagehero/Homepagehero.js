@@ -11,7 +11,7 @@ const Homepagehero = () => {
   
 
   const shopAction = () => {
-    navigate("/shop")
+    navigate("/usersignup")
   }
   
   return (

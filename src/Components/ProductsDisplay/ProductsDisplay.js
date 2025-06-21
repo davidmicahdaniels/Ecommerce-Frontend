@@ -6,14 +6,22 @@ import product3 from "../../Assets/Images/prod3.png"
 import product4 from "../../Assets/Images/prod4.png"
 import product5 from "../../Assets/Images/prod5.png"
 import product6 from "../../Assets/Images/prod6.png"
+import { useNavigate } from "react-router-dom";
 
 const ProductsDisplay = () => {
+  
+  const navigate = useNavigate();
+
+  const visitShop = () => {
+    navigate("/shop")
+  }
+
   return (
     <section id="products">
       <div className={classes.product_content_wrapper}>
         <div className={classes.product_display_top}>
           <h2>Products</h2>
-          <button>
+          <button onClick={visitShop}>
             <p>View All Products</p>
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </button>
