@@ -8,23 +8,48 @@ const ProductCard = (props) => {
 
   
   const localData = getAppLocalStorage(); 
+
   const viewProductDetails = (e) => {
   
-  const button = e.target.closest('button');
+    const button = e.target.closest('button');
 
-  if (button && button.classList.value.includes('card_btn')) {
-    console.log('Button with class containing "card_btn" was clicked or inside target.');
-    // Add your logic here
-    // navigate("/ProductDetails")
-    
-    localStorage.setItem('selectedProductDetails', JSON.stringify(props));
-  }else{
-    navigate("/ProductDetails")
-    
-    localStorage.setItem('selectedProductDetails', JSON.stringify(props));
+    if (button && button.classList.value.includes('card_btn')) {
+      console.log('Button with class containing "card_btn" was clicked or inside target.');
+      // Add your logic here
+      // navigate("/ProductDetails")
+      
+      localStorage.setItem('selectedProductDetails', JSON.stringify(props));
+      addToCart()
+    }else{
+      navigate("/ProductDetails")
+      
+      localStorage.setItem('selectedProductDetails', JSON.stringify(props));
+    }
+
   }
 
-  }
+  const addToCart = () => {
+    // Re-read latest selected product and cart from localStorage
+    const { selectedProductDetails } = getAppLocalStorage();
+    const existingCart = JSON.parse(localStorage.getItem('cartProducts') || '[]');
+
+    // Check for a duplicate by product_name
+    const alreadyInCart = existingCart.some(
+      item => item.product_name === selectedProductDetails.product_name
+    );
+
+    if (alreadyInCart) {
+      console.log('Product is already in the cart.');
+      return;
+    }
+
+    // Append and save
+    const updatedCart = [...existingCart, selectedProductDetails];
+    localStorage.setItem('cartProducts', JSON.stringify(updatedCart));
+
+    console.log('Added to cart:', selectedProductDetails);
+  };
+
   
 
   return (
