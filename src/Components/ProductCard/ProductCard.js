@@ -8,11 +8,22 @@ const ProductCard = (props) => {
 
   
   const localData = getAppLocalStorage(); 
-  const viewProductDetails = () => {
+  const viewProductDetails = (e) => {
+  
+  const button = e.target.closest('button');
 
+  if (button && button.classList.value.includes('card_btn')) {
+    console.log('Button with class containing "card_btn" was clicked or inside target.');
+    // Add your logic here
+    // navigate("/ProductDetails")
+    
+    localStorage.setItem('selectedProductDetails', JSON.stringify(props));
+  }else{
     navigate("/ProductDetails")
     
     localStorage.setItem('selectedProductDetails', JSON.stringify(props));
+  }
+
   }
   
 
