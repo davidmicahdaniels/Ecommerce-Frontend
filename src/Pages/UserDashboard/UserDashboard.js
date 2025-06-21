@@ -7,6 +7,7 @@ import DashboardNavbar from "../../Components/DashboardNavbar/DashboardNavbar";
 import { BsTelephoneOutboundFill  } from "react-icons/bs";
 import { BsCartCheckFill   } from "react-icons/bs";
 import deco_img from "../../Assets/Images/vendor.jpg"
+import { useNavigate } from "react-router-dom";
 
 
 const UserDashboard = () => {
@@ -19,6 +20,12 @@ const UserDashboard = () => {
       document.body.style.overflow = "";
     };
   }, []);
+  
+  const navigate =  useNavigate();
+
+  const visitVendorSignup = () => {
+    navigate("/vendorsignup")
+  }
 
   return (
     <div className={classes.dashboard_body}>
@@ -37,21 +44,21 @@ const UserDashboard = () => {
                 <p>0700-600-0000</p>
               </div>
             </div>
-            <div className={classes.details_box}>
+            {/* <div className={classes.details_box}>
               <BsCartCheckFill size={20} color="#4caf50" />
               <p>Sell on EduMart</p>
             </div>
             <div className={classes.details_box}>
               <BsCartCheckFill size={20} color="#4caf50" />
               <p>Send your package</p>
-            </div>
+            </div> */}
           </div>
 
           <div className={classes.decor_img_wrapper}>
             <img src={deco_img} alt="img"  className=""/>
           </div>
 
-          <button className={classes.vendor_btn}><p>Become a Vendor</p><ion-icon name="arrow-forward-outline"></ion-icon></button>
+          <button className={classes.vendor_btn} onClick={visitVendorSignup}><p>Become a Vendor</p><ion-icon name="arrow-forward-outline"></ion-icon></button>
         </div>
       </div>
     </div>

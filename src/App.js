@@ -47,15 +47,6 @@ export function useCartCount() {
 }
 
 
-// export function getAppLocalStorage() {
-//   return {
-//     isUserLoggedIn: localStorage.getItem('isUserLoggedIn') === 'true',
-//     currentProductCategory: localStorage.getItem('currentProductCategory'),
-//     selectedProductDetails: JSON.parse(localStorage.getItem('selectedProductDetails') || '{}'),
-//     cartProducts: JSON.parse(localStorage.getItem('cartProducts') || '[]')
-//   };
-// }
-
 export function getAppLocalStorage() {
   const data = {
     isUserLoggedIn: localStorage.getItem('isUserLoggedIn') === 'true',
