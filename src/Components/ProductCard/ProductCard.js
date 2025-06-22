@@ -22,7 +22,7 @@ const ProductCard = (props) => {
       addToCart()
     }else{
       navigate("/ProductDetails")
-      
+       
       localStorage.setItem('selectedProductDetails', JSON.stringify(props));
     }
 
