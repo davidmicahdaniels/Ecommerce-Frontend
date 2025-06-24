@@ -53,7 +53,13 @@ const ProductDetailsArea = () => {
     };
 
     console.log(localData.selectedProductDetails);
+
     
+    const purchaseNow = () => {
+      addToCart();
+
+      navigate("/orderCheckout")
+    }
 
     return(
         <div className={classes.product_details_area}>
@@ -89,7 +95,7 @@ const ProductDetailsArea = () => {
 
                     <div className={classes.btn_wrapper}>
                         <button className={classes.cart_btn} onClick={addToCart}>Add to Cart</button>
-                        <button className={classes.purchase_btn}>Purchase Now</button>
+                        <button className={classes.purchase_btn} onClick={purchaseNow}>Purchase Now</button>
                     </div>
                 </div>
             </div>
