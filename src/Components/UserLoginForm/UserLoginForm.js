@@ -74,6 +74,7 @@ const UserLoginForm = () => {
     return emailRegex.test(value);
   };
 
+  
   // const handleLogin = (e) => {
   //   e.preventDefault();
   //   let valid = true;
@@ -108,9 +109,21 @@ const UserLoginForm = () => {
   //     setLoginSuccess("Login successful");
   //     console.log("Login successful");
 
+  //     // Store login status and user data in localStorage
+  //     localStorage.setItem("isUserLoggedIn", "true");
+  //     localStorage.setItem("loggedinUserData", JSON.stringify({
+  //       fullname: matchingUser.fullname,
+  //       email: matchingUser.email,
+  //       password: matchingUser.password
+  //     }));
+
+  //     console.log(getAppLocalStorage());
+
   //     setTimeout(() => {
   //       navigate("/shop")
   //     }, 2000);
+      
+
   //   } else {
   //     setGeneralError("Invalid email or password");
   //   }
@@ -140,17 +153,29 @@ const UserLoginForm = () => {
 
     if (!valid) return;
 
-    const matchingUser = UserLoginData.find(
+    const trimmedEmail = email.trim().toLowerCase();
+
+    // Check from hardcoded UserLoginData
+    let matchingUser = UserLoginData.find(
       (user) =>
-        user.email.toLowerCase() === email.trim().toLowerCase() &&
+        user.email.toLowerCase() === trimmedEmail &&
         user.password === password
     );
+
+    // If not found, check localStorage UserSignupData
+    if (!matchingUser) {
+      const localUsers = JSON.parse(localStorage.getItem("UserSignupData")) || [];
+      matchingUser = localUsers.find(
+        (user) =>
+          user.email.toLowerCase() === trimmedEmail &&
+          user.password === password
+      );
+    }
 
     if (matchingUser) {
       setLoginSuccess("Login successful");
       console.log("Login successful");
 
-      // Store login status and user data in localStorage
       localStorage.setItem("isUserLoggedIn", "true");
       localStorage.setItem("loggedinUserData", JSON.stringify({
         fullname: matchingUser.fullname,
@@ -161,10 +186,8 @@ const UserLoginForm = () => {
       console.log(getAppLocalStorage());
 
       setTimeout(() => {
-        navigate("/shop")
+        navigate("/shop");
       }, 2000);
-      
-
     } else {
       setGeneralError("Invalid email or password");
     }
