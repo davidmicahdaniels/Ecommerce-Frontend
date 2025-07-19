@@ -14,6 +14,10 @@ const SignupNext1 = () => {
     navigate("/vendorlogin");
   };
 
+  const handleNext = () => {
+    navigate("/SignupNext2");
+  };
+
   return (
     <>
       <Navbar />
@@ -58,7 +62,7 @@ const SignupNext1 = () => {
               </select>
             </div>
 
-            <button>Next</button>
+            <button onClick={handleNext}>Next</button>
 
             <small className={classes.login_action}>
               Already have an account?{" "}

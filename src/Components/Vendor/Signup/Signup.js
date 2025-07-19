@@ -12,6 +12,10 @@ const Signup = () => {
     navigate("/vendorlogin");
   };
 
+  const handleNext = () => {
+    navigate("/SignupNext1");
+  }
+
   return (
     <>
       <Navbar />
@@ -48,7 +52,7 @@ const Signup = () => {
               <input type="text" placeholder="Confirm your password" />
             </div>
 
-            <button>Next</button>
+            <button onClick={handleNext}>Next</button>
 
             <small className={classes.login_action}>
               Already have an account?{" "}
