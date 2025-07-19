@@ -44,6 +44,8 @@ const SignupNext2 = () => {
 
     setMessage({ type: "success", text: "Signup successful! Redirecting to login..." });
 
+    alert("Admin is reviewing application or will be notified when accepted");
+
     setTimeout(() => navigate("/vendorlogin"), 3000);
     };
     
