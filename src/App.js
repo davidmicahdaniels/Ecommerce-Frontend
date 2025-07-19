@@ -18,6 +18,7 @@ import ManageUsers from "./AdminDashboard/ManageUsers/ManageUsers";
 import AdminOerview from "./AdminDashboard/AdminOerview/AdminOerview";
 import AdminAnalysis from "./AdminDashboard/AdminAnalysis/AdminAnalysis";
 import SignupNext1 from "./Components/Vendor/Signup/SignupNext1";
+import SignupNext2 from "./Components/Vendor/Signup/SignupNext2";
 
 
 export function useCartCount() {
@@ -105,6 +106,7 @@ function App() {
           <Route exact path="/vendorlogin" element={<Login />} />
           <Route exact path="/vendorsignup" element={<Signup />} />
           <Route exact path="/SignupNext1" element={<SignupNext1 />} />
+          <Route exact path="/SignupNext2" element={<SignupNext2 />} />
           <Route exact path="/shop" element={<UserDashboard />} />
           <Route exact path="/OrderCheckout" element={<OrderCheckout />} />
           <Route exact path="/ProductDetails" element={<ProductDetails />} />

@@ -12,7 +12,7 @@ const SignupNext2 = () => {
   const handleLogin = () => {
     navigate("/vendorlogin");
   };
-  
+
   return (
     <>
       <Navbar />
@@ -22,24 +22,26 @@ const SignupNext2 = () => {
             <img src={vendor} alt="" className={classes.form_img} />
           </div>
           <div className={classes.form_action_box}>
-            <h2>Vendor SignUp</h2>
+            <h2>Verification/Compliance</h2>
 
             <div className={classes.input_box}>
-              <p>Full Name:</p>
-              <input type="text" placeholder="Enter your Fullname" />
+              <p>Upload Valid ID (Student ID card):</p>
+              <div className={classes.id_upload_area}>
+                <ion-icon name="cloud-upload-outline"></ion-icon>
+              </div>
             </div>
 
             <div className={classes.input_box}>
-              <p>Phone number:</p>
-              <input type="text" placeholder="Enter your phone number" />
+              <p>Instagram or Social Handle:</p>
+              <input type="text" placeholder="Instagram or Social Handle" />
             </div>
 
             <div className={classes.input_box}>
-              <p>Email:</p>
-              <input type="text" placeholder="Enter your email" />
+              <p>WhatsApp Number:</p>
+              <input type="text" placeholder="WhatsApp Number" />
             </div>
 
-            <div className={classes.input_box}>
+            {/* <div className={classes.input_box}>
               <p>Password:</p>
               <input type="text" placeholder="Enter your password" />
             </div>
@@ -47,7 +49,7 @@ const SignupNext2 = () => {
             <div className={classes.input_box}>
               <p>Confirm Password:</p>
               <input type="text" placeholder="Confirm your password" />
-            </div>
+            </div> */}
 
             <button>Sign Up</button>
 
