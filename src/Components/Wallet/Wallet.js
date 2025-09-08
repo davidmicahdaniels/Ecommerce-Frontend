@@ -1,10 +1,11 @@
 import React from 'react'
+import classes from "./Wallet.module.css"
 
 const Wallet = () => {
   return (
     <div>
-      <div className="wallet_top">
-        <div className="wallet_top_main">
+      <div className={classes.wallet_top}>
+        <div className={classes.wallet_top_main}>
             back
             <h3>Wallet</h3>
         </div>
@@ -14,13 +15,15 @@ const Wallet = () => {
         </div>
       </div>
 
-      <div className="wallet_body">
-        <div className="wallet_card">
-            <div className="wallet_card_top">
-
+      <div className={classes.wallet_body}>
+        <div className={classes.wallet_card}>
+            <div className={classes.wallet_card_top}>
+                <small>Your balance</small>
+                <h1>#20,000</h1>
+                <button className={classes.fund_wallet_btn}>icon Fund wallet</button>
             </div>
-            <div className="wallet_card_bottom">
-                <div className="account_dieplay">
+            <div className={classes.wallet_card_bottom}>
+                <div className={classes.account_dieplay}>
                     <p>Paystact-Titan - 9860346267</p>
                     <button>
                         icon
