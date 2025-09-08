@@ -34,7 +34,7 @@ const Wallet = () => {
             </div>
         </div>
 
-        <div>
+        <div className={classes.action_box}>
             <div>
                 icon
                 <p>Add new card</p>
@@ -42,10 +42,10 @@ const Wallet = () => {
             icon
         </div>
 
-        <div>
+        <div className={classes.gift_card_area}>
             <h3>Gift Cards</h3>
 
-            <div>
+            <div className={classes.action_box}>
                 <div>
                     icon
                     <p>Buy or redeem a gift card</p>

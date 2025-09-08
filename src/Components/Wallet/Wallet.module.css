@@ -69,3 +69,24 @@
     outline: none;
     padding: 0.3rem 0.7rem;
 }
+
+
+.action_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.action_box div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.gift_card_area{
+    margin-top: 2.5rem;
+}
+.gift_card_area h3{
+    font-weight: 600;
+}
