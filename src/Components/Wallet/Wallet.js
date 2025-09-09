@@ -6,7 +6,7 @@ const Wallet = () => {
     <div>
       <div className={classes.wallet_top}>
         <div className={classes.wallet_top_main}>
-            back
+            <ion-icon name="arrow-back-outline"></ion-icon>
             <h3>Wallet</h3>
         </div>
 
@@ -20,13 +20,16 @@ const Wallet = () => {
             <div className={classes.wallet_card_top}>
                 <small>Your balance</small>
                 <h1>#20,000</h1>
-                <button className={classes.fund_wallet_btn}>icon Fund wallet</button>
+                <button className={classes.fund_wallet_btn}>
+                    <ion-icon name="add-outline"></ion-icon>
+                    <p>Fund wallet</p>
+                </button>
             </div>
             <div className={classes.wallet_card_bottom}>
                 <div className={classes.account_dieplay}>
                     <p>Paystact-Titan - 9860346267</p>
                     <button>
-                        icon
+                        <ion-icon name="copy-outline"></ion-icon>
                         <p>Copy</p>
                     </button>
                 </div>
@@ -36,10 +39,10 @@ const Wallet = () => {
 
         <div className={classes.action_box}>
             <div>
-                icon
+                <ion-icon name="add-outline"></ion-icon>
                 <p>Add new card</p>
             </div>
-            icon
+            <ion-icon name="chevron-forward-outline"></ion-icon>
         </div>
 
         <div className={classes.gift_card_area}>
@@ -47,10 +50,10 @@ const Wallet = () => {
 
             <div className={classes.action_box}>
                 <div>
-                    icon
+                    <ion-icon name="gift-outline"></ion-icon>
                     <p>Buy or redeem a gift card</p>
                 </div>
-                icon
+                <ion-icon name="chevron-forward-outline"></ion-icon>
             </div>
         </div>
       </div>
