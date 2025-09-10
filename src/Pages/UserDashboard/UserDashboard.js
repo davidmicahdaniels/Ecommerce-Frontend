@@ -8,6 +8,8 @@ import { BsTelephoneOutboundFill  } from "react-icons/bs";
 import { BsCartCheckFill   } from "react-icons/bs";
 import deco_img from "../../Assets/Images/vendor.jpg"
 import { useNavigate } from "react-router-dom";
+import { FaWallet } from "react-icons/fa6";
+
 
 
 const UserDashboard = () => {
@@ -50,7 +52,7 @@ const UserDashboard = () => {
             </div>
             <div className={`${classes.details_box} ${classes.wallet_cta}`} onClick={viewWallet}>
             {/* change icon */}
-              <BsTelephoneOutboundFill size={20} color="#4caf50" />
+              <FaWallet size={20} color="#4caf50" />
               <div className="">
                 <p>View Wallet</p>
                 <small>click to view wallet</small>
