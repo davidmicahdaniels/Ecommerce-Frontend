@@ -9,17 +9,126 @@ import { baseUrl, useCartCount } from '../../App';
 // import React, { useState } from "react";
 // import styles from "./DeliveryOptionModal.module.css";
 
+// const DeliveryOptionModal = ({ onClose, onComplete }) => {
+//   const [option, setOption] = useState("");
+//   const [location, setLocation] = useState("");
+
+//   const handleCheckout = () => {
+//     if (!option || !location) {
+//       alert("Please select a delivery type and enter location.");
+//       return;
+//     }
+//     onComplete({ type: option, location });
+//     onClose();
+//   };
+
+//   return (
+//     <div className={classes.overlay}>
+//       <div className={classes.modal}>
+//         <h2>Select Order Delivery Type</h2>
+
+//         <div className={classes.options}>
+//           <div
+//             className={`${classes.optionBox} ${
+//               option === "pickup" ? classes.active : ""
+//             }`}
+//             onClick={() => setOption("pickup")}
+//           >
+//             <h3>Order Pickup</h3>
+//           </div>
+
+//           <div
+//             className={`${classes.optionBox} ${
+//               option === "delivery" ? classes.active : ""
+//             }`}
+//             onClick={() => setOption("delivery")}
+//           >
+//             <h3>Delivery</h3>
+//           </div>
+//         </div>
+
+//         {option && (
+//           <div className={classes.inputSection}>
+//             <label>
+//               {option === "pickup" ? "Pickup Location:" : "Delivery Location:"}
+//             </label>
+//             <input
+//               type="text"
+//               value={location}
+//               onChange={(e) => setLocation(e.target.value)}
+//               placeholder={
+//                 option === "pickup"
+//                   ? "Enter pickup location"
+//                   : "Enter delivery address"
+//               }
+//             />
+//           </div>
+//         )}
+
+//         <div className={classes.actions}>
+//           <button className={classes.cancelBtn} onClick={onClose}>
+//             Cancel
+//           </button>
+//           <button className={classes.checkoutBtn} onClick={handleCheckout}>
+//             Checkout
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }; 
+
+
 const DeliveryOptionModal = ({ onClose, onComplete }) => {
   const [option, setOption] = useState("");
   const [location, setLocation] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     if (!option || !location) {
       alert("Please select a delivery type and enter location.");
       return;
     }
-    onComplete({ type: option, location });
-    onClose();
+
+    setLoading(true);
+
+    try {
+      const token = localStorage.getItem("token"); // get token if needed
+      const body =
+        option === "delivery"
+          ? {
+              delivery_type: "delivery",
+              delivery_address: location,
+            }
+          : {
+              delivery_type: "pickup",
+              delivery_address: location, // vendor address or user pickup location
+            };
+
+      const res = await fetch(`${baseUrl}/checkout`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(body),
+      });
+
+      if (!res.ok) {
+        const errText = await res.text();
+        throw new Error(`Checkout failed: ${errText}`);
+      }
+
+      const data = await res.json();
+
+      onComplete({ type: option, location, response: data });
+      onClose();
+    } catch (err) {
+      console.error("Checkout error:", err);
+      alert("Failed to complete checkout. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -66,18 +175,25 @@ const DeliveryOptionModal = ({ onClose, onComplete }) => {
         )}
 
         <div className={classes.actions}>
-          <button className={classes.cancelBtn} onClick={onClose}>
+          <button
+            className={classes.cancelBtn}
+            onClick={!loading ? onClose : undefined}
+            disabled={loading}
+          >
             Cancel
           </button>
-          <button className={classes.checkoutBtn} onClick={handleCheckout}>
-            Checkout
+          <button
+            className={classes.checkoutBtn}
+            onClick={handleCheckout}
+            disabled={loading}
+          >
+            {loading ? "Processing..." : "Checkout"}
           </button>
         </div>
       </div>
     </div>
   );
 };
-
 // export default DeliveryOptionModal;
 
 
@@ -299,21 +415,32 @@ const CheckoutBody = () => {
       setLoading(true);
       const token = localStorage.getItem("edumart_authToken");
 
+      console.log("the struggle");
+
+      console.log(cartItems);
+      
       // Send POST /user/cart for each cart item
-      await Promise.all(
-        cartItems.map((item) =>
-          fetch(`${baseUrl}/user/cart`, {
-            method: "POST",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-            body: JSON.stringify({
-              productId: item.id,
-              quantity: 1,
-            }),
-          })
-        )
-      );
+await Promise.all(
+  cartItems.map((item) =>
+    fetch(`${baseUrl}/user/cart`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        productId: item.id,
+        quantity: 1,
+      }),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to add product ${item.id}: ${res.status}`);
+        }
+        return res.json();
+      })
+  )
+);
 
       setLoading(false);
       // Show delivery modal after all cart items are added
@@ -338,6 +465,7 @@ const CheckoutBody = () => {
           <div>
             <h2>Checkout Items</h2>
 
+              <DeliveryOptionModal/>
             {isModalOpen && (
               <DeliveryOptionModal
                 fullname={fullname}
