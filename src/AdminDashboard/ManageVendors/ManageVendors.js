@@ -1,27 +1,61 @@
-import React, { useEffect, useState } from 'react'
-import classes from "./ManageVendors.module.css"
-import AdminSidebar from '../AdminSidebar/AdminSidebar';
-import img from "../../Assets/Images/prod3.png"
-import { VendorsData } from '../../Data/VendorsData';
+import React, { useEffect, useState } from "react";
+import classes from "./ManageVendors.module.css";
+import AdminSidebar from "../AdminSidebar/AdminSidebar";
+import img from "../../Assets/Images/prod3.png";
+import { VendorsData } from "../../Data/VendorsData";
 import { baseUrl } from "../../App";
 
-
 const ManageVendors = () => {
-
-   const [vendors, setVendors] = useState([]);
+  const [vendors, setVendors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
 
-
   // All vendors list state
-const [allVendors, setAllVendors] = useState([]);
+  const [allVendors, setAllVendors] = useState([]);
 
-// Loading state for the "All Vendors" fetch (separate from pending-vendors loader)
-const [loadingVendors, setLoadingVendors] = useState(false);
+  // Loading state for the "All Vendors" fetch (separate from pending-vendors loader)
+  const [loadingVendors, setLoadingVendors] = useState(false);
 
-// Message / error state for the "All Vendors" section (optional but helpful)
-const [vendorsMessage, setVendorsMessage] = useState("");
+  // Message / error state for the "All Vendors" section (optional but helpful)
+  const [vendorsMessage, setVendorsMessage] = useState("");
 
+  const [approvingId, setApprovingId] = useState(null);
+
+  // Approve Vendor Handler
+  const handleApprove = async (vendorId) => {
+    console.log(vendorId);
+    
+    setApprovingId(vendorId);
+    setMessage("");
+
+    try {
+      const token = localStorage.getItem("edumart_admin_token");
+
+      const res = await fetch(`${baseUrl}/auth/admins/approve-vendor`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ vendor_id: vendorId }),
+      });
+
+      const data = await res.json();
+      console.log("Approve response:", data);
+
+      if (res.ok) {
+        setMessage("Vendor approved successfully!");
+        setTimeout(() => window.location.reload(), 3000);
+      } else {
+        setMessage(data.message || "Failed to approve vendor");
+      }
+    } catch (err) {
+      console.error(err);
+      setMessage("Something went wrong. Try again.");
+    } finally {
+      setApprovingId(null);
+    }
+  };
 
   useEffect(() => {
     const fetchPendingVendors = async () => {
@@ -62,37 +96,34 @@ const [vendorsMessage, setVendorsMessage] = useState("");
 
     fetchPendingVendors();
 
-    
-  const fetchVendors = async () => {
-    setLoadingVendors(true);
-    const token = localStorage.getItem("edumart_admin_token");
+    const fetchVendors = async () => {
+      setLoadingVendors(true);
+      const token = localStorage.getItem("edumart_admin_token");
 
-    try {
-      const res = await fetch(`${baseUrl}/admin/vendors`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      });
+      try {
+        const res = await fetch(`${baseUrl}/admin/vendors`, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
 
-      if (!res.ok) {
-        throw new Error("Failed to fetch vendors");
+        if (!res.ok) {
+          throw new Error("Failed to fetch vendors");
+        }
+
+        const data = await res.json();
+        setAllVendors(data.vendors || []); // adjust key if needed
+      } catch (err) {
+        console.error("Error fetching vendors:", err);
+      } finally {
+        setLoadingVendors(false);
       }
+    };
 
-      const data = await res.json();
-      setAllVendors(data.vendors || []); // adjust key if needed
-    } catch (err) {
-      console.error("Error fetching vendors:", err);
-    } finally {
-      setLoadingVendors(false);
-    }
-  };
-
-  fetchVendors();
+    fetchVendors();
   }, []);
-
-
 
   return (
     <div className={classes.dashboard}>
@@ -102,57 +133,54 @@ const [vendorsMessage, setVendorsMessage] = useState("");
         <h2>Manage Vendors</h2>
 
         {/* All Vendors Section */}
-<section className="vendors-section">
-  <h2>All Vendors</h2>
+        <section className="">
+          <h2>All Vendors</h2>
 
-{loadingVendors ? (
-          <div className={classes.loaderWrapper}>
-            <div className={classes.loader}></div>
-            <p>Loading All vendors...</p>
-          </div>
-        ) : allVendors.length === 0 ? (
-          <p className={classes.message}>No pending vendors found.</p>
-        ) : (
-          <div className={classes.tableWrapper}>
-            <table className={classes.vendorTable}>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Business Name</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                  <th>Contact Person</th>
-                  <th>Date Registered</th>
-                  {/* <th>Action</th> */}
-                </tr>
-              </thead>
-              <tbody>
-                {allVendors.map((vendor, index) => (
-                  <tr key={vendor.id || index}>
-                    <td>{index + 1}</td>
-                    <td>{vendor.business_name}</td>
-                    <td>{vendor.email}</td>
-                    <td>{vendor.business_phone}</td>
-                    <td>{vendor.contact_person}</td>
-                    <td>
-                      {new Date(vendor.created_at).toLocaleString("en-GB", {
-                        dateStyle: "medium",
-                        timeStyle: "short",
-                      })}
-                    </td>
-                    {/* <td>
+          {loadingVendors ? (
+            <div className={classes.loaderWrapper}>
+              <div className={classes.loader}></div>
+              <p>Loading All vendors...</p>
+            </div>
+          ) : allVendors.length === 0 ? (
+            <p className={classes.message}>No pending vendors found.</p>
+          ) : (
+            <div className={classes.tableWrapper}>
+              <table className={classes.vendorTable}>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Business Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Contact Person</th>
+                    <th>Date Registered</th>
+                    {/* <th>Action</th> */}
+                  </tr>
+                </thead>
+                <tbody>
+                  {allVendors.map((vendor, index) => (
+                    <tr key={vendor.id || index}>
+                      <td>{index + 1}</td>
+                      <td>{vendor.business_name}</td>
+                      <td>{vendor.email}</td>
+                      <td>{vendor.business_phone}</td>
+                      <td>{vendor.contact_person}</td>
+                      <td>
+                        {new Date(vendor.created_at).toLocaleString("en-GB", {
+                          dateStyle: "medium",
+                          timeStyle: "short",
+                        })}
+                      </td>
+                      {/* <td>
                       <button>Approve</button>
                     </td> */}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-
-  
-</section>
-
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
 
         {/* <div className={classes.vendor_cards_wrapper}>
             {
@@ -173,59 +201,77 @@ const [vendorsMessage, setVendorsMessage] = useState("");
             }
         </div> */}
 
-        <div className={classes.wrapper}>
-        <h2>Pending Vendor Approvals</h2>
+        <div className="">
+          <h2>Pending Vendor Approvals</h2>
 
-        {loading ? (
-          <div className={classes.loaderWrapper}>
-            <div className={classes.loader}></div>
-            <p>Loading pending vendors...</p>
-          </div>
-        ) : message ? (
-          <p className={classes.message}>{message}</p>
-        ) : vendors.length === 0 ? (
-          <p className={classes.message}>No pending vendors found.</p>
-        ) : (
-          <div className={classes.tableWrapper}>
-            <table className={classes.vendorTable}>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Business Name</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                  <th>Contact Person</th>
-                  <th>Date Registered</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {vendors.map((vendor, index) => (
-                  <tr key={vendor.id || index}>
-                    <td>{index + 1}</td>
-                    <td>{vendor.business_name}</td>
-                    <td>{vendor.email}</td>
-                    <td>{vendor.business_phone}</td>
-                    <td>{vendor.contact_person}</td>
-                    <td>
-                      {new Date(vendor.created_at).toLocaleString("en-GB", {
-                        dateStyle: "medium",
-                        timeStyle: "short",
-                      })}
-                    </td>
-                    <td>
-                      <button>Approve</button>
-                    </td>
+          {message && (
+            <p
+              style={{
+                color: message.includes("success") ? "green" : "red",
+                fontWeight: 500,
+              }}
+            >
+              {message}
+            </p>
+          )}
+
+          {loading ? (
+            <div className={classes.loaderWrapper}>
+              <div className={classes.loader}></div>
+              <p>Loading pending vendors...</p>
+            </div>
+          ) : message ? (
+            <p className={classes.message}>{message}</p>
+          ) : vendors.length === 0 ? (
+            <p className={classes.message}>No pending vendors found.</p>
+          ) : (
+            <div className={classes.tableWrapper}>
+              <table className={classes.vendorTable}>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Business Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Contact Person</th>
+                    <th>Date Registered</th>
+                    <th>Action</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
+                </thead>
+                <tbody>
+                  {vendors.map((vendor, index) => (
+                    <tr key={vendor.id || index}>
+                      <td>{index + 1}</td>
+                      <td>{vendor.business_name}</td>
+                      <td>{vendor.email}</td>
+                      <td>{vendor.business_phone}</td>
+                      <td>{vendor.contact_person}</td>
+                      <td>
+                        {new Date(vendor.created_at).toLocaleString("en-GB", {
+                          dateStyle: "medium",
+                          timeStyle: "short",
+                        })}
+                      </td>
+                      <td>
+                        <button
+                          onClick={() => handleApprove(vendor.id)}
+                          disabled={approvingId === vendor.id}
+                        >
+                          {approvingId === vendor.id
+                            ? "Approving..."
+                            : "Approve"}
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ManageVendors;

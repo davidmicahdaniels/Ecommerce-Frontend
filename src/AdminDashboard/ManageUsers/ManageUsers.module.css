@@ -14,7 +14,7 @@
 }
 
 
-
+/* 
 .user_cards_wrapper{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -50,4 +50,112 @@
 }
 .user_details h3{
     font-weight: bold;
+} */
+
+
+/* extra */
+.users_section {
+  padding: 3rem 7%;
+  background-color: #f8f9fb;
+  min-height: 100vh;
+}
+
+.users_section h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.loading_text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+.error_text {
+  text-align: center;
+  color: red;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+.empty_text {
+  text-align: center;
+  color: #777;
+  margin-top: 2rem;
+}
+
+.users_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.user_card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user_header {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+}
+
+.user_header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.3rem;
+}
+
+.user_header small {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.user_details p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.user_details strong {
+  color: #000;
+}
+
+
+
+.loaderWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.9s linear infinite;
+  margin-bottom: 1rem;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

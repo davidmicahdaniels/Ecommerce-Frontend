@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from "./AdminOerview.module.css"
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
 import { SiSimpleanalytics } from 'react-icons/si';
@@ -7,8 +7,48 @@ import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 import { MdOutlineCancel } from 'react-icons/md';
 import { FaNairaSign } from 'react-icons/fa6';
 import { ProductData } from '../../Data/ProductData';
+import { baseUrl } from '../../App';
 
 const AdminOerview = () => {
+
+     const [analytics, setAnalytics] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const fetchAnalytics = async () => {
+      setLoading(true);
+      setMessage("");
+
+      try {
+        const token = localStorage.getItem("edumart_admin_token");
+
+        const response = await fetch(`${baseUrl}/admin/dashboard`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch dashboard analytics");
+        }
+
+        const data = await response.json();
+        setAnalytics(data.analytics);
+      } catch (error) {
+        console.error(error);
+        setMessage(error.message || "Something went wrong while loading analytics");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAnalytics();
+  }, []);
+
+
   return (
     <div className={classes.dashboard}>
       <AdminSidebar />
@@ -18,7 +58,102 @@ const AdminOerview = () => {
         <div className={classes.overview_area}>
 
             <h2>Welcome back Admin!</h2>
-        <div className={classes.quick_overview}>
+
+
+             {loading && 
+                    <div className={classes.loaderWrapper}>
+                      <div className={classes.loader}></div>
+                      <p>Loading dashboard data...</p>
+                    </div>
+                    }
+
+        {message && !loading && (
+          <p className={classes.error_text}>{message}</p>
+        )}
+
+        {!loading && analytics && (
+          <div className={classes.overview_grid}>
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                <FaNairaSign /> <small>Total Earnings</small>
+              </div>
+              <h1>#{analytics.total_revenue?.toLocaleString()}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                👥 <small>Total Users</small>
+              </div>
+              <h1>{analytics.total_users}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                🏪 <small>Total Vendors</small>
+              </div>
+              <h1>{analytics.total_vendors}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                📦 <small>Total Products</small>
+              </div>
+              <h1>{analytics.total_products}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                🛒 <small>Total Orders</small>
+              </div>
+              <h1>{analytics.total_orders}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                ⏳ <small>Pending Vendors</small>
+              </div>
+              <h1>{analytics.pending_vendors}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                🕒 <small>Recent Orders (7 days)</small>
+              </div>
+              <h1>{analytics.recent_orders_7d}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                💖 <small>Total Wishlisted Items</small>
+              </div>
+              <h1>{analytics.wishlist_stats.total_wishlisted}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                🙋‍♂️ <small>Unique Wishlist Users</small>
+              </div>
+              <h1>{analytics.wishlist_stats.unique_wishlist_users}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                🛍️ <small>Total Items Purchased</small>
+              </div>
+              <h1>{analytics.purchase_stats.total_items_purchased}</h1>
+            </div>
+
+            <div className={classes.overview_box}>
+              <div className={classes.box_header}>
+                👤 <small>Unique Buyers</small>
+              </div>
+              <h1>{analytics.purchase_stats.unique_buyers}</h1>
+            </div>
+          </div>
+        )}
+
+
+        {/* <div className={classes.quick_overview}>
             <div className={classes.overview_box}>
                 <div className={classes.box_header}><SiSimpleanalytics /> <small>Total Customers</small></div>
                 <h1>535</h1>
@@ -39,7 +174,7 @@ const AdminOerview = () => {
                 <div className={classes.box_header}><FaNairaSign /> <small>Total Earnings</small></div>
                 <h1>#450,500</h1>
             </div>
-        </div>
+        </div> */}
 
 
         <h2 className={classes.header}>Top Selling Porducts</h2>
