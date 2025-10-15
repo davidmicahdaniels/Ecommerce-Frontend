@@ -20,7 +20,9 @@ import AdminAnalysis from "./AdminDashboard/AdminAnalysis/AdminAnalysis";
 import SignupNext1 from "./Components/Vendor/Signup/SignupNext1";
 import SignupNext2 from "./Components/Vendor/Signup/SignupNext2";
 import Wallet from "./Components/Wallet/Wallet";
+import AdminLogin from "./AdminDashboard/AdminLogin/AdminLogin";
 
+export const baseUrl = "https://maryam-edu.onrender.com/api";
 
 export function useCartCount() {
   const [cartCount, setCartCount] = useState(() => {
@@ -121,6 +123,7 @@ function App() {
           <Route exact path="/ManageUsers" element={<ManageUsers />} />
           <Route exact path="/AdminAnalysis" element={<AdminAnalysis />} />
           <Route exact path="/Wallet" element={<Wallet />} />
+          <Route exact path="/AdminLogin" element={<AdminLogin />} />
         </Routes>
       </BrowserRouter>
     </div>

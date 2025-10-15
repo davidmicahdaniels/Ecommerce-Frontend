@@ -5,8 +5,9 @@
     padding: 1rem 2rem;
     border-bottom: 1px solid #c1bfbf;
 }
-.wallet_top ion-icon{
+.wallet_top ion-icon{ 
     font-size: 1.5rem;
+    cursor: pointer;
 }
 .wallet_top div{
     display: flex;

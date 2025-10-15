@@ -1,58 +1,8 @@
-// import React from 'react'
-// import classes from "../UserSignupForm/UserSignupForm.module.css"
-// import { useNavigate } from 'react-router-dom';
-// import img from "../../Assets/Images/signup.jpg"
-// import { UserLoginData } from '../../Data/UserLoginData'; 
-
-// const UserLoginForm = () => {
-//   const navigate = useNavigate();
-
-//   const handleSignup = () => {
-//     navigate("/usersignup");
-//   };
-
-
-//   return (
-//     <section className={classes.signup_form_section}>
-//       <div className={`${classes.from_content_wrapper} ${classes.alinged}`}>
-//         <div className={classes.signup_form_img_wrapper}>
-//           <img src={img} alt="" className={classes.form_img} />
-//         </div>
-//         <div className={classes.form_action_box}>
-//           <h2>Login</h2>
-
-//           <div className={classes.input_box}>
-//             <p>Email:</p>
-//             <input type="text" placeholder="Enter your email" />
-//           </div>
-
-//           <div className={classes.input_box}>
-//             <p>Password:</p>
-//             <input type="text" placeholder="Enter your password" />
-//           </div>
-
-//           <button>Login</button>
-
-//           <small className={classes.login_action}>
-//             Don't have an account yet?{" "}
-//             <a href="#" onClick={handleSignup}>
-//               Signup
-//             </a>
-//           </small>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default UserLoginForm;
-
 import React, { useState } from 'react';
 import classes from "../UserSignupForm/UserSignupForm.module.css";
 import { useNavigate } from 'react-router-dom';
 import img from "../../Assets/Images/signup.jpg";
-import { UserLoginData } from '../../Data/UserLoginData';
-import { getAppLocalStorage } from '../../App';
+import { baseUrl, getAppLocalStorage } from '../../App';
 
 const UserLoginForm = () => {
   const navigate = useNavigate();
@@ -74,62 +24,7 @@ const UserLoginForm = () => {
     return emailRegex.test(value);
   };
 
-  
-  // const handleLogin = (e) => {
-  //   e.preventDefault();
-  //   let valid = true;
-
-  //   setEmailError("");
-  //   setPasswordError("");
-  //   setGeneralError("");
-  //   setLoginSuccess("");
-
-  //   if (!email.trim()) {
-  //     setEmailError("Email is required");
-  //     valid = false;
-  //   } else if (!validateEmailFormat(email.trim())) {
-  //     setEmailError("Enter a valid email address");
-  //     valid = false;
-  //   }
-
-  //   if (!password) {
-  //     setPasswordError("Password is required");
-  //     valid = false;
-  //   }
-
-  //   if (!valid) return;
-
-  //   const matchingUser = UserLoginData.find(
-  //     (user) =>
-  //       user.email.toLowerCase() === email.trim().toLowerCase() &&
-  //       user.password === password
-  //   );
-
-  //   if (matchingUser) {
-  //     setLoginSuccess("Login successful");
-  //     console.log("Login successful");
-
-  //     // Store login status and user data in localStorage
-  //     localStorage.setItem("isUserLoggedIn", "true");
-  //     localStorage.setItem("loggedinUserData", JSON.stringify({
-  //       fullname: matchingUser.fullname,
-  //       email: matchingUser.email,
-  //       password: matchingUser.password
-  //     }));
-
-  //     console.log(getAppLocalStorage());
-
-  //     setTimeout(() => {
-  //       navigate("/shop")
-  //     }, 2000);
-      
-
-  //   } else {
-  //     setGeneralError("Invalid email or password");
-  //   }
-  // };
-
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     let valid = true;
 
@@ -153,46 +48,50 @@ const UserLoginForm = () => {
 
     if (!valid) return;
 
-    const trimmedEmail = email.trim().toLowerCase();
+    try {
+      const res = await fetch(`${baseUrl}/auth/users/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          password: password,
+        }),
+      });
 
-    // Check from hardcoded UserLoginData
-    let matchingUser = UserLoginData.find(
-      (user) =>
-        user.email.toLowerCase() === trimmedEmail &&
-        user.password === password
-    );
+      const data = await res.json();
+      console.log("Login Response:", data);
 
-    // If not found, check localStorage UserSignupData
-    if (!matchingUser) {
-      const localUsers = JSON.parse(localStorage.getItem("UserSignupData")) || [];
-      matchingUser = localUsers.find(
-        (user) =>
-          user.email.toLowerCase() === trimmedEmail &&
-          user.password === password
-      );
-    }
+      if (!res.ok) {
+        // Handle API error response
+        setGeneralError(data?.message || "Invalid email or password");
+        return;
+      }
 
-    if (matchingUser) {
-      setLoginSuccess("Login successful");
-      console.log("Login successful");
+      // Save user info and token if returned
+      if (data?.token) {
+        localStorage.setItem("isUserLoggedIn", "true");
+        localStorage.setItem("authToken", data.token);
+      }
 
-      localStorage.setItem("isUserLoggedIn", "true");
       localStorage.setItem("loggedinUserData", JSON.stringify({
-        fullname: matchingUser.fullname,
-        email: matchingUser.email,
-        password: matchingUser.password
+        email: email.trim(),
+        password: password,
       }));
 
-      console.log(getAppLocalStorage());
+      console.log("LocalStorage Snapshot:", getAppLocalStorage());
 
+      setLoginSuccess("Login successful! Redirecting...");
       setTimeout(() => {
         navigate("/shop");
       }, 2000);
-    } else {
-      setGeneralError("Invalid email or password");
+
+    } catch (error) {
+      console.error("Login Error:", error);
+      setGeneralError("Something went wrong. Please check your connection.");
     }
   };
-
 
   return (
     <section className={classes.signup_form_section}>
@@ -205,9 +104,9 @@ const UserLoginForm = () => {
 
           {/* Message Centered Block */}
           {(generalError || loginSuccess) && (
-            <p style={{ 
-              color: generalError ? "red" : "green", 
-              textAlign: "center", 
+            <p style={{
+              color: generalError ? "red" : "green",
+              textAlign: "center",
               marginBottom: "1rem",
               fontWeight: "500"
             }}>

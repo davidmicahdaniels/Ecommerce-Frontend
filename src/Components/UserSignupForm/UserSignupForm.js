@@ -1,82 +1,18 @@
-// import React from 'react'
-// import classes from "./UserSignupForm.module.css"
-// import { Link, useNavigate } from 'react-router-dom';
-// import img from "../../Assets/Images/signup.jpg"
-
-// const UserSignupForm = () => {
-//   const navigate = useNavigate();
-
-//   const handleLogin = () => {
-//     navigate("/userlogin");
-//   };
-  
-//   return (
-//     <section className={classes.signup_form_section}>
-//       <div className={classes.from_content_wrapper}>
-//         <div className={classes.form_img_wrapper}>
-//           <img
-//             src={img}
-//             alt=""
-//             className={classes.form_img}
-//           />
-//         </div>
-//         <div className={classes.form_action_box}>
-//           <h2>Sign Up</h2>
-
-//           <div className={classes.input_box}>
-//             <p>Full Name:</p>
-//             <input type="text" placeholder="Enter your Fullname" />
-//           </div>
-
-//           <div className={classes.input_box}>
-//             <p>Phone number:</p>
-//             <input type="text" placeholder="Enter your phone number" />
-//           </div>
-
-//           <div className={classes.input_box}>
-//             <p>Email:</p>
-//             <input type="text" placeholder="Enter your email" />
-//           </div>
-
-//           <div className={classes.input_box}>
-//             <p>Password:</p>
-//             <input type="text" placeholder="Enter your password" />
-//           </div>
-
-//           <div className={classes.input_box}>
-//             <p>Confirm Password:</p>
-//             <input type="text" placeholder="Confirm your password" />
-//           </div>
-
-//           <button>Sign Up</button>
-
-//           <small className={classes.login_action}>
-//             Already have an account?{" "}
-//             <a href="#" onClick={handleLogin}>
-//               Login
-//             </a>
-//           </small>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default UserSignupForm;
-
-
 import React, { useState } from 'react';
 import classes from "./UserSignupForm.module.css";
 import { useNavigate } from 'react-router-dom';
 import img from "../../Assets/Images/signup.jpg";
+import { baseUrl } from '../../App';
 
 const UserSignupForm = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    fullname: '',
+    firstname: '',
+    lastname: '',
     phone_number: '',
     email: '',
+    address: '',
     password: '',
     confirmPassword: '',
   });
@@ -90,11 +26,11 @@ const UserSignupForm = () => {
     }));
   };
 
-  const handleSignUp = () => {
-    const { fullname, phone_number, email, password, confirmPassword } = formData;
+  const handleSignUp = async () => {
+    const { firstname, lastname, phone_number, email, address, password, confirmPassword } = formData;
 
     // Basic validation
-    if (!fullname || !phone_number || !email || !password || !confirmPassword) {
+    if (!firstname || !lastname || !phone_number || !email || !address || !password || !confirmPassword) {
       setMessage({ text: 'All fields are required.', type: 'error' });
       return;
     }
@@ -104,27 +40,62 @@ const UserSignupForm = () => {
       return;
     }
 
-    const newUser = { fullname, phone_number, email, password };
+    try {
+      const res = await fetch(`${baseUrl}/auth/users/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+          first_name: firstname,
+          last_name: lastname,
+          phone: phone_number,
+          address: address,
+        }),
+      });
 
-    const existingData = JSON.parse(localStorage.getItem('UserSignupData')) || [];
-    existingData.push(newUser);
-    localStorage.setItem('UserSignupData', JSON.stringify(existingData));
+      const data = await res.json();
+      console.log("Signup Response:", data);
 
-    setMessage({ text: 'Signup successful!', type: 'success' });
+      if (!res.ok) {
+        // API returned an error
+        setMessage({
+          text: data?.message || "Signup failed. Please try again.",
+          type: "error",
+        });
+        return;
+      }
 
-    
+      // Success
+      setMessage({
+        text: "Signup successful! Redirecting to login...",
+        type: "success",
+      });
+
       setTimeout(() => {
         navigate("/userlogin");
       }, 3000);
 
-    // Optional: Reset form after signup
-    setFormData({
-      fullname: '',
-      phone_number: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-    });
+      // Reset form
+      setFormData({
+        firstname: '',
+        lastname: '',
+        phone_number: '',
+        email: '',
+        address: '',
+        password: '',
+        confirmPassword: '',
+      });
+
+    } catch (error) {
+      console.error("Signup Error:", error);
+      setMessage({
+        text: "Something went wrong. Please check your connection.",
+        type: "error",
+      });
+    }
   };
 
   const handleLogin = (e) => {
@@ -138,6 +109,7 @@ const UserSignupForm = () => {
         <div className={classes.form_img_wrapper}>
           <img src={img} alt="" className={classes.form_img} />
         </div>
+
         <div className={classes.form_action_box}>
           <h2>Sign Up</h2>
 
@@ -156,13 +128,24 @@ const UserSignupForm = () => {
           )}
 
           <div className={classes.input_box}>
-            <p>Full Name:</p>
+            <p>First Name:</p>
             <input
               type="text"
-              name="fullname"
-              value={formData.fullname}
+              name="firstname"
+              value={formData.firstname}
               onChange={handleChange}
-              placeholder="Enter your Fullname"
+              placeholder="Enter your First Name"
+            />
+          </div>
+
+          <div className={classes.input_box}>
+            <p>Last Name:</p>
+            <input
+              type="text"
+              name="lastname"
+              value={formData.lastname}
+              onChange={handleChange}
+              placeholder="Enter your Last Name"
             />
           </div>
 
@@ -174,6 +157,17 @@ const UserSignupForm = () => {
               value={formData.phone_number}
               onChange={handleChange}
               placeholder="Enter your phone number"
+            />
+          </div>
+
+          <div className={classes.input_box}>
+            <p>Address:</p>
+            <input
+              type="text"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              placeholder="Enter your address"
             />
           </div>
 
@@ -218,7 +212,7 @@ const UserSignupForm = () => {
               Login
             </a>
           </small>
-        </div> 
+        </div>
       </div>
     </section>
   );
