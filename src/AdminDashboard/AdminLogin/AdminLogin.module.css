@@ -49,7 +49,7 @@
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
-button {
+.loginContainer button {
   width: 100%;
   padding: 0.8rem;
   border: none;
@@ -62,11 +62,11 @@ button {
   transition: background 0.3s ease;
 }
 
-button:hover {
+.loginContainer button:hover {
   background: #1d4ed8;
 }
 
-button:disabled {
+.loginContainer button:disabled {
   background: #93c5fd;
   cursor: not-allowed;
 }
