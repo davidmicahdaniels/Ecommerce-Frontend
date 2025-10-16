@@ -163,6 +163,7 @@ console.log(currentcategorydata);
                         description={product.description}
                         name={product.name}
                         review_count={product.review_count}
+                        id={product.id}
                         // p1={product.product_description.p1}
                         // p2={product.product_description.p2}
                         // p3={product.product_description.p3}
