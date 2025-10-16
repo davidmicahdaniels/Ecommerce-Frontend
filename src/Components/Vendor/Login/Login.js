@@ -140,7 +140,6 @@ const Login = () => {
 
         // Save vendor token or info
         localStorage.setItem("vendorToken", data.token);
-        localStorage.setItem("vendorInfo", JSON.stringify(data.vendor));
 
         setTimeout(() => navigate("/VendorDashboard"), 2000);
       } else {

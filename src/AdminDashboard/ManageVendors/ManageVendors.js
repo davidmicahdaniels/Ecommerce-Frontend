@@ -22,10 +22,10 @@ const ManageVendors = () => {
   const [approvingId, setApprovingId] = useState(null);
 
   // Approve Vendor Handler
-  const handleApprove = async (vendorId) => {
-    console.log(vendorId);
+  const handleApprove = async (vendor_id) => {
+    console.log(vendor_id);
     
-    setApprovingId(vendorId);
+    setApprovingId(vendor_id);
     setMessage("");
 
     try {
@@ -37,7 +37,7 @@ const ManageVendors = () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ vendor_id: vendorId }),
+        body: JSON.stringify({ vendorId: vendor_id, "approve": true }),
       });
 
       const data = await res.json();

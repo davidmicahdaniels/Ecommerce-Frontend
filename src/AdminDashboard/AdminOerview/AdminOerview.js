@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import classes from "./AdminOerview.module.css"
-import AdminSidebar from '../AdminSidebar/AdminSidebar';
-import { SiSimpleanalytics } from 'react-icons/si';
-import { IoAnalyticsSharp } from 'react-icons/io5';
-import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
-import { MdOutlineCancel } from 'react-icons/md';
-import { FaNairaSign } from 'react-icons/fa6';
-import { ProductData } from '../../Data/ProductData';
-import { baseUrl } from '../../App';
+import React, { useEffect, useState } from "react";
+import classes from "./AdminOerview.module.css";
+import AdminSidebar from "../AdminSidebar/AdminSidebar";
+import { SiSimpleanalytics } from "react-icons/si";
+import { IoAnalyticsSharp } from "react-icons/io5";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { MdOutlineCancel } from "react-icons/md";
+import { FaNairaSign } from "react-icons/fa6";
+import { ProductData } from "../../Data/ProductData";
+import { baseUrl } from "../../App";
 
 const AdminOerview = () => {
-
-     const [analytics, setAnalytics] = useState(null);
+  const [analytics, setAnalytics] = useState(null);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -39,7 +38,9 @@ const AdminOerview = () => {
         setAnalytics(data.analytics);
       } catch (error) {
         console.error(error);
-        setMessage(error.message || "Something went wrong while loading analytics");
+        setMessage(
+          error.message || "Something went wrong while loading analytics"
+        );
       } finally {
         setLoading(false);
       }
@@ -48,28 +49,21 @@ const AdminOerview = () => {
     fetchAnalytics();
   }, []);
 
-
   return (
     <div className={classes.dashboard}>
       <AdminSidebar />
 
+      <div className={classes.overview_area}>
+        <h2>Welcome back Admin!</h2>
 
-      
-        <div className={classes.overview_area}>
-
-            <h2>Welcome back Admin!</h2>
-
-
-             {loading && 
-                    <div className={classes.loaderWrapper}>
-                      <div className={classes.loader}></div>
-                      <p>Loading dashboard data...</p>
-                    </div>
-                    }
-
-        {message && !loading && (
-          <p className={classes.error_text}>{message}</p>
+        {loading && (
+          <div className={classes.loaderWrapper}>
+            <div className={classes.loader}></div>
+            <p>Loading dashboard data...</p>
+          </div>
         )}
+
+        {message && !loading && <p className={classes.error_text}>{message}</p>}
 
         {!loading && analytics && (
           <div className={classes.overview_grid}>
@@ -152,7 +146,6 @@ const AdminOerview = () => {
           </div>
         )}
 
-
         {/* <div className={classes.quick_overview}>
             <div className={classes.overview_box}>
                 <div className={classes.box_header}><SiSimpleanalytics /> <small>Total Customers</small></div>
@@ -176,81 +169,78 @@ const AdminOerview = () => {
             </div>
         </div> */}
 
+        {/* <h2 className={classes.header}>Top Selling Porducts</h2>
 
-        <h2 className={classes.header}>Top Selling Porducts</h2>
-
-            <div className={classes.top_products_wrapper}>
-            {
-                ProductData.laundry.slice(0, 2).map((item) => {
-                return <div className={classes.product_card}>
+        <div className={classes.top_products_wrapper}>
+          {ProductData.laundry.slice(0, 2).map((item) => {
+            return (
+              <div className={classes.product_card}>
                 <div className={classes.product_card_img_wrapper}>
-                    <img
+                  <img
                     src={item.image1}
                     alt=""
                     className={classes.product_img}
-                    />
+                  />
                 </div>
                 <div className={classes.product_body}>
-                    <div className={classes.product_nmae_wrapper}>
+                  <div className={classes.product_nmae_wrapper}>
                     <h3>{item.product_name}</h3>
 
                     <div className={classes.star_wrapper}>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
                     </div>
-                    </div>
-                    {/* <p>Perfume</p> */}
-                    <p>{item.product_description.short}</p>
+                  </div>
+                  <p>{item.product_description.short}</p>
 
-                    <div className={classes.card_bottom}>
+                  <div className={classes.card_bottom}>
                     <p className={classes.price}>{item.product_price}</p>
                     <button className={classes.card_btn}>View Product</button>
-                    </div>
+                  </div>
                 </div>
-                </div>
-                })
-            }
-            {
-                ProductData.cosmetics.slice(0, 2).map((item) => {
-                return <div className={classes.product_card}>
+              </div>
+            );
+          })}
+          {ProductData.cosmetics.slice(0, 2).map((item) => {
+            return (
+              <div className={classes.product_card}>
                 <div className={classes.product_card_img_wrapper}>
-                    <img
+                  <img
                     src={item.image1}
                     alt=""
                     className={classes.product_img}
-                    />
+                  />
                 </div>
                 <div className={classes.product_body}>
-                    <div className={classes.product_nmae_wrapper}>
+                  <div className={classes.product_nmae_wrapper}>
                     <h3>{item.product_name}</h3>
 
                     <div className={classes.star_wrapper}>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
                     </div>
-                    </div>
-                    {/* <p>Perfume</p> */}
-                    <p>{item.product_description.short}</p>
+                  </div>
+                  <p>{item.product_description.short}</p>
 
-                    <div className={classes.card_bottom}>
+                  <div className={classes.card_bottom}>
                     <p className={classes.price}>{item.product_price}</p>
                     <button className={classes.card_btn}>View Product</button>
-                    </div>
+                  </div>
                 </div>
-                </div>
-                })
-            }
-                
-            </div>
-        </div>
+              </div>
+            );
+          })}
+        </div> */}
+        
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default AdminOerview;
