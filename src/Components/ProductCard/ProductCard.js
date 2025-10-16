@@ -63,7 +63,7 @@ const ProductCard = (props) => {
       </div>
       <div className={classes.product_body}>
         <div className={classes.product_nmae_wrapper}>
-          <h3>{props.product_name}</h3>
+          <h3>{props.name}</h3>
 
           <div className={classes.star_wrapper}>
             <ion-icon name="star"></ion-icon>

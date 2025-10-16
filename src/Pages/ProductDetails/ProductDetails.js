@@ -78,10 +78,10 @@ const ProductDetailsArea = () => {
                     </div>
                 </div>
                 <div className={classes.description_area}>
-                    <h3>{localData.selectedProductDetails.product_name}</h3>
-                    <p>{localData.selectedProductDetails.p1}</p>
-                    <p>{localData.selectedProductDetails.p2}</p>
-                    <p>{localData.selectedProductDetails.p3}</p>
+                    <h3>{localData.selectedProductDetails.name}</h3>
+                    <p>{localData.selectedProductDetails.description}</p>
+                    {/* <p>{localData.selectedProductDetails.p2}</p>
+                    <p>{localData.selectedProductDetails.p3}</p> */}
 
                     <div>
                         <FaStar />

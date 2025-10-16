@@ -71,8 +71,8 @@ const UserLoginForm = () => {
 
       // Save user info and token if returned
       if (data?.token) {
-        localStorage.setItem("isUserLoggedIn", "true");
-        localStorage.setItem("authToken", data.token);
+        localStorage.setItem("edumart_isUserLoggedIn", "true");
+        localStorage.setItem("edumart_authToken", data.token);
       }
 
       localStorage.setItem("loggedinUserData", JSON.stringify({
@@ -80,7 +80,10 @@ const UserLoginForm = () => {
         password: password,
       }));
 
-      console.log("LocalStorage Snapshot:", getAppLocalStorage());
+      // console.log("LocalStorage Snapshot:", getAppLocalStorage());
+      console.log(JSON.parse(localStorage.getItem("edumart_isUserLoggedIn")));
+      console.log((localStorage.getItem("edumart_authToken")));
+      
 
       setLoginSuccess("Login successful! Redirecting...");
       setTimeout(() => {

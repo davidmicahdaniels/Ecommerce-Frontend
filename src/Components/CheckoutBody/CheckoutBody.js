@@ -6,6 +6,81 @@ import { useCartCount } from '../../App';
 
 
 
+// import React, { useState } from "react";
+// import styles from "./DeliveryOptionModal.module.css";
+
+const DeliveryOptionModal = ({ onClose, onComplete }) => {
+  const [option, setOption] = useState("");
+  const [location, setLocation] = useState("");
+
+  const handleCheckout = () => {
+    if (!option || !location) {
+      alert("Please select a delivery type and enter location.");
+      return;
+    }
+    onComplete({ type: option, location });
+    onClose();
+  };
+
+  return (
+    <div className={classes.overlay}>
+      <div className={classes.modal}>
+        <h2>Select Order Delivery Type</h2>
+
+        <div className={classes.options}>
+          <div
+            className={`${classes.optionBox} ${
+              option === "pickup" ? classes.active : ""
+            }`}
+            onClick={() => setOption("pickup")}
+          >
+            <h3>Order Pickup</h3>
+          </div>
+
+          <div
+            className={`${classes.optionBox} ${
+              option === "delivery" ? classes.active : ""
+            }`}
+            onClick={() => setOption("delivery")}
+          >
+            <h3>Delivery</h3>
+          </div>
+        </div>
+
+        {option && (
+          <div className={classes.inputSection}>
+            <label>
+              {option === "pickup" ? "Pickup Location:" : "Delivery Location:"}
+            </label>
+            <input
+              type="text"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              placeholder={
+                option === "pickup"
+                  ? "Enter pickup location"
+                  : "Enter delivery address"
+              }
+            />
+          </div>
+        )}
+
+        <div className={classes.actions}>
+          <button className={classes.cancelBtn} onClick={onClose}>
+            Cancel
+          </button>
+          <button className={classes.checkoutBtn} onClick={handleCheckout}>
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// export default DeliveryOptionModal;
+
+
 const CheckoutBody = () => {
     const navigate =  useNavigate();
 
@@ -84,6 +159,8 @@ const CheckoutBody = () => {
         localStorage.setItem('cartProducts', JSON.stringify(updatedCart));
     }
 
+
+    
   return (
     <div className={classes.checkout_body}>
       <div className={classes.checkout_content_wrapper}>
@@ -92,6 +169,7 @@ const CheckoutBody = () => {
             cartCount > 0 ? 
                 <div>
                     <h2>Checkout Items</h2>
+                    <DeliveryOptionModal/>
 
                     {
                         isModalOpen === true ?
@@ -115,9 +193,9 @@ const CheckoutBody = () => {
                                         <img src={item.img1} alt="cart item" />
                                     </div>
                                     <div className={classes.item_text_wrapper}>
-                                        <h3>{item.product_name}</h3>
-                                        <p>{item.p1}</p>
-                                    </div>
+                                        <h3>{item.name}</h3>
+                                        <p>{item.description}</p>
+                                    </div> 
                                     <div className={classes.action_area}>
                                         <ion-icon name="trash-outline" onClick={() => removeFromCartByName(item.product_name)}></ion-icon>
                                     </div>
@@ -145,14 +223,14 @@ const CheckoutBody = () => {
                         onChange={(e) => setFullname(e.target.value)}
                         />
 
-                        <label>Delivery Address:</label>
+                        {/* <label>Delivery Address:</label>
                         {errors.address && <p className={classes.error}>{errors.address}</p>}
                         <input
                         type='text'
                         placeholder='Delivery Address'
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
-                        />
+                        /> */}
 
                         <label>Receiver's Phone No.:</label>
                         {errors.phone && <p className={classes.error}>{errors.phone}</p>}
