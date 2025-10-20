@@ -36,14 +36,14 @@ const AdminSidebar = () => {
             </div>
             <ul className="">
                 <li onClick={viewOverview}>Overview</li>
-                <li onClick={viewAdminAnalysis}>Analysis</li>
+                {/* <li onClick={viewAdminAnalysis}>Analysis</li> */}
                 <li onClick={ManageUsers}>Manage Users</li>
                 <li onClick={manageVendors}>Manage Vendors</li>
                 {/* <li>Track Orders</li> */}
             </ul>
         </div>
         <ul className="">
-            <li onClick={viewFeedback}>Feedbacks</li>
+            {/* <li onClick={viewFeedback}>Feedbacks</li> */}
             <li>Signout</li>
         </ul>
     </div>

@@ -186,7 +186,7 @@ const VendorProfile = () => {
       <div className={classes.profile_main}>
         <div className={classes.profile_top}>
           <h2>Vendor's Profile</h2>
-          <button>Edit Profile</button>
+          {/* <button>Edit Profile</button> */}
         </div>
 
         <VendorProfileMain />

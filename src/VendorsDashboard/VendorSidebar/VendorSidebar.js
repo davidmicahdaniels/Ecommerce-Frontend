@@ -37,7 +37,7 @@ const VendorSidebar = () => {
                 <li onClick={manageProduct}>Manage Products</li>
                 {/* <li>Earnings</li> */}
                 <li onClick={manageOrders}>Manage Orders</li>
-                <li onClick={viewReviews}>Reviews</li>
+                {/* <li onClick={viewReviews}>Reviews</li> */}
             </ul>
         </div>
         <ul className="">
