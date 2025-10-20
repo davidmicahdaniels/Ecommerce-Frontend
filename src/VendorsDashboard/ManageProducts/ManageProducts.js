@@ -112,11 +112,13 @@ const ManageProducts = () => {
   return (
     <div className={classes.manageproducts_main}>
       <div className={classes.manage_prod_main_area}>
-        <h2>Manage Products</h2>
+        <div className={classes.header_wrapper}>
+          <h2>Manage Products</h2>
         
         <button className={classes.create_btn} onClick={() => setShowModal(true)}>
         + Create Product
       </button>
+        </div>
 
         {/* <h3>Fashion:</h3> */}
         <div className={classes.product_card_wrapper}>
