@@ -84,6 +84,7 @@ const DeliveryOptionModal = ({ onClose, onComplete }) => {
   const [location, setLocation] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const navigate = useNavigate();
   const handleCheckout = async () => {
     if (!option || !location) {
       alert("Please select a delivery type and enter location.");
@@ -93,7 +94,7 @@ const DeliveryOptionModal = ({ onClose, onComplete }) => {
     setLoading(true);
 
     try {
-      const token = localStorage.getItem("token"); // get token if needed
+      const token = localStorage.getItem("edumart_authToken"); // get token if needed
       const body =
         option === "delivery"
           ? {
@@ -121,11 +122,18 @@ const DeliveryOptionModal = ({ onClose, onComplete }) => {
 
       const data = await res.json();
 
+      console.log(data);
+      if (data.message === 'Order placed successfully') {
+        localStorage.removeItem("cartProducts")
+        alert("Order Placed successfully.");
+        navigate("/shop")
+      }
+      
       onComplete({ type: option, location, response: data });
       onClose();
     } catch (err) {
       console.error("Checkout error:", err);
-      alert("Failed to complete checkout. Please try again.");
+      // alert("Failed to complete checkout. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -194,172 +202,6 @@ const DeliveryOptionModal = ({ onClose, onComplete }) => {
     </div>
   );
 };
-// export default DeliveryOptionModal;
-
-
-// const CheckoutBody = () => {
-//     const navigate =  useNavigate();
-
-//     const visitShop = () => {
-//         navigate("/shop");
-//     }
-
-//     const cartCount = useCartCount(); 
-
-//     console.log(cartCount);
-    
-//     const [isModalOpen, SetisModalOpen] = useState(false);
-    
-//     // const checkoutCart = () => {
-//     //     SetisModalOpen(true)
-//     // }
-
-//     const [fullname, setFullname] = useState('');
-//   const [address, setAddress] = useState('');
-//   const [phone, setPhone] = useState('');
-
-//   const [errors, setErrors] = useState({
-//     fullname: '',
-//     address: '',
-//     phone: '',
-//   });
-
-//   const checkoutCart = () => {
-//     let hasError = false;
-//     const newErrors = {
-//       fullname: '',
-//       address: '',
-//       phone: '',
-//     };
-
-//     if (!fullname.trim()) {
-//       newErrors.fullname = 'Fullname is required';
-//       hasError = true;
-//     }
-
-//     if (!address.trim()) {
-//       newErrors.address = 'Delivery address is required';
-//       hasError = true;
-//     }
-
-//     if (!phone.trim()) {
-//       newErrors.phone = 'Phone number is required';
-//       hasError = true;
-//     }
-
-//     setErrors(newErrors);
-
-//     if (!hasError) {
-//       SetisModalOpen(true);
-//     }
-//   };
-
-//     const closeCheckoutModal = () => {
-//         navigate("/wallet") 
-//         SetisModalOpen(false)
-//         localStorage.setItem('cartProducts', JSON.stringify([]));
-//         console.log(isModalOpen);
-        
-//     }
-
-//     console.log(cartCount === 0, typeof cartCount);
-    
-//     const cartItems = JSON.parse(localStorage.getItem('cartProducts') || '[]');
-
-
-//     console.log(cartItems);
-    
-//     function removeFromCartByName(productName) {
-//         const cartItems = JSON.parse(localStorage.getItem('cartProducts') || '[]');
-//         const updatedCart = cartItems.filter(item => item.product_name !== productName);
-//         localStorage.setItem('cartProducts', JSON.stringify(updatedCart));
-//     }
-
-
-    
-//   return (
-//     <div className={classes.checkout_body}>
-//       <div className={classes.checkout_content_wrapper}>
-
-//         {
-//             cartCount > 0 ? 
-//                 <div>
-//                     <h2>Checkout Items</h2>
-//                     {/* <DeliveryOptionModal/> */}
-
-//                     {
-//                         isModalOpen === true ?
-//                             <div className={classes.checkout_modal}>
-//                                 <div className={classes.modal_content_wrapper}>
-//                                     <ion-icon name="checkmark-done-circle-outline"></ion-icon>
-//                                     <h2>Checkout Successful</h2>
-//                                     <p>Your order has been processed and would be delivered to you within 3 days.</p>
-//                                     <button onClick={closeCheckoutModal}>Done</button>
-//                                 </div>
-//                             </div>
-//                         : ""
-//                     }
-
-
-//                     <div className={classes.items_list}>
-//                         {
-//                             cartItems.map((item) => {
-//                                 return <div className={classes.item}>
-//                                     <div className={classes.item_img_wrapper}>
-//                                         <img src={item.img1} alt="cart item" />
-//                                     </div>
-//                                     <div className={classes.item_text_wrapper}>
-//                                         <h3>{item.name}</h3>
-//                                         <p>{item.description}</p>
-//                                     </div> 
-//                                     <div className={classes.action_area}>
-//                                         <ion-icon name="trash-outline" onClick={() => removeFromCartByName(item.product_name)}></ion-icon>
-//                                     </div>
-//                                 </div>
-//                             })
-//                         }
-
-                        
-
-//                         <div className={classes.checkout_details}>
-//                         <label>Customer's Fullname:</label>
-//                         {errors.fullname && <p className={classes.error}>{errors.fullname}</p>}
-//                         <input
-//                         type='text'
-//                         placeholder='Fullname'
-//                         value={fullname}
-//                         onChange={(e) => setFullname(e.target.value)}
-//                         />
-
-//                         <label>Receiver's Phone No.:</label>
-//                         {errors.phone && <p className={classes.error}>{errors.phone}</p>}
-//                         <input
-//                         type='text'
-//                         placeholder='Phone number'
-//                         value={phone}
-//                         onChange={(e) => setPhone(e.target.value)}
-//                         />
-//                     </div>
-//                     </div>
-
-//                     <div className={classes.checkout_btn_wrapper}>
-//                         <button onClick={checkoutCart}>Checkout Products</button>
-//                     </div>
-//                 </div>
-//             : 
-//                 <div className={classes.empty_cart_notice}>
-//                     <p>Your Cart is Empty, select products to checkout.</p>
-//                     <button onClick={visitShop}>Shop Now</button>
-//                 </div>
-//         }
-
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default CheckoutBody;
-
 
 
 const CheckoutBody = () => {
@@ -465,7 +307,8 @@ await Promise.all(
           <div>
             <h2>Checkout Items</h2>
 
-              <DeliveryOptionModal/>
+              {/* <DeliveryOptionModal/> */}
+
             {isModalOpen && (
               <DeliveryOptionModal
                 fullname={fullname}
