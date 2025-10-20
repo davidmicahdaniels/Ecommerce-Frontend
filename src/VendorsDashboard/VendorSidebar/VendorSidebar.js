@@ -21,6 +21,10 @@ const VendorSidebar = () => {
         navigate("/ManageProductRoute")
     }
 
+    const manageOrders = () => {
+        navigate("/VendorOrders")
+    }
+
   return (
     <div className={classes.sidebar}>
         <div>
@@ -32,6 +36,7 @@ const VendorSidebar = () => {
                 {/* <li>Manage Orders</li> */}
                 <li onClick={manageProduct}>Manage Products</li>
                 {/* <li>Earnings</li> */}
+                <li onClick={manageOrders}>Manage Orders</li>
                 <li onClick={viewReviews}>Reviews</li>
             </ul>
         </div>

@@ -1,0 +1,101 @@
+.tableContainer {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tableContainer h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.ordersTable th,
+.ordersTable td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.ordersTable th {
+  background-color: #f8f9fb;
+  font-weight: 600;
+  color: #444;
+}
+
+.ordersTable tr:hover {
+  background-color: #fafafa;
+}
+
+.status {
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.completed {
+  background: #e8f8ed;
+  color: #1b8f3d;
+}
+
+.pending {
+  background: #fff5e6;
+  color: #d18a00;
+}
+
+.processing {
+  background: #e7f1ff;
+  color: #1a73e8;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.loaderWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.loader {
+  width: 36px;
+  height: 36px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #1a73e8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  color: #d32f2f;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+  margin-top: 2rem;
+  font-size: 1rem;
+}

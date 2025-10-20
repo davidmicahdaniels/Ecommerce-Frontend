@@ -95,7 +95,7 @@ useEffect(() => {
   return (
     <div className={classes.overview_area}>
 
-        <h2>Welcome back Maryam!</h2>
+        <h2>Welcome back!</h2>
         {/* <p>Below is an overview of your overal Edumart Performance</p> */}
       {/* <div className={classes.quick_overview}>
         <div className={classes.overview_box}>

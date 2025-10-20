@@ -21,6 +21,7 @@ import SignupNext1 from "./Components/Vendor/Signup/SignupNext1";
 import SignupNext2 from "./Components/Vendor/Signup/SignupNext2";
 import Wallet from "./Components/Wallet/Wallet";
 import AdminLogin from "./AdminDashboard/AdminLogin/AdminLogin";
+import VendorOrders from "./VendorsDashboard/Routes/VendorOrders";
 
 export const baseUrl = "https://maryam-edu.onrender.com/api";
 
@@ -116,6 +117,7 @@ function App() {
           <Route exact path="/VendorDashboard" element={<VendorDashboard />} />
           <Route exact path="/VendorReviews" element={<VendoFeedbackRoute />} />
           <Route exact path="/VendorProfile" element={<VendorProfileRoute />} />
+          <Route exact path="/VendorOrders" element={<VendorOrders />} />
           <Route exact path="/ManageProductRoute" element={<ManageProductRoute />} />
           <Route exact path="/Feedback" element={<AdminDashboard />} />
           <Route exact path="/AdminDashboard" element={<AdminOerview />} />
